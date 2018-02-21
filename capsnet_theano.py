@@ -11,7 +11,7 @@ def relu(t_in):
     return results
     
 def softmax(v_in):
-    ex = theano.map(T.exp,sequences = v_in)
+    ex = T.exp(v_in)
     denom = T.sum(ex)
     return ex/denom
 
@@ -92,7 +92,7 @@ def caps_route(u, r=3):
         capsj = u_shape[1]
         capsi = u_shape[2]
         
-        def caps_route_inner_loop():
+        def caps_route_inner_loop(bat):
             bat = bat + 1
             #capsj x ulen
             v_b = v[bat]
@@ -100,7 +100,7 @@ def caps_route(u, r=3):
             u_b = u[bat]
             j = theano.shared(0)
             #loop over j for for u_b
-            def caps_inner_j():
+            def caps_inner_j(j):
                 j = j + 1
                 #capsi x ulen
                 u_j = u_b[j]
@@ -108,9 +108,10 @@ def caps_route(u, r=3):
                 u_jt = u.transpose()
                 #implicit ij loop with matmul
                 return T.dot(v_b,u_jt)
-            results, updates = theano.scan(caps_inner_j,n_steps=capsj)
+            results, updates = theano.scan(caps_inner_j,non_sequences=j,n_steps=capsj)
+            return results
                   
-        b_deltas, updates = theano.scan(caps_route_inner_loop,num_steps=bat_nums)
+        b_deltas, updates = theano.scan(caps_route_inner_loop,non_sequences=bat, n_steps=bat_nums)
         b = b + b_deltas
     return v
 
