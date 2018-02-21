@@ -5,10 +5,10 @@ from theano import function
 import numpy as np
 
 def relu(t_in):
-    in_size = t_in.shape()
+    in_size = T.shape(t_in)
     zeros = T.zeros(in_size)
-    results = theano.switch(T.lt(in_size,zeros),zeros,in_size)
-    return t_out
+    results = T.switch(T.lt(in_size,zeros),zeros,in_size)
+    return results
     
 def softmax(v_in):
     exp = theano.map(exp,sequences = v_in)
@@ -17,9 +17,9 @@ def softmax(v_in):
 
 def squash(v_in):
     sq_norm = T.dot(v_in,v_in)
-    factor = sq_norm/(1+sq_norm)
-    norm_in = T.normalize(v_in)
-    return norm_in*factor
+    norm = T.sqrt(sq_norm)
+    factor = sq_norm/(1+sq_norm)/norm
+    return v_in*factor
     
 
 """
@@ -33,7 +33,7 @@ def primary_capsule_layer(im_conv, w,ratio):
     #batch x height x width x cnum
     im_reshaped = im_conv.dimshuffle((0,2,3,1))
     #batch x capsi x capslen x 1
-    im_dim = im_reshaped.shape()
+    im_dim = list(T.shape(im_reshaped))
     im_dim[1] = im_dim[1]*im_dim[2]*im_dim[3]
     im_dim[2] = ratio
     im_dim[3] = 1
@@ -41,7 +41,7 @@ def primary_capsule_layer(im_conv, w,ratio):
     #batch x capsi x capslen
     im_reshaped = im_reshaped.dimshuffle((0,1,2))
     #squash
-    im_shape = im_reshaped.shape()
+    im_shape = T.shape(im_reshaped)
     im_flattened = im_reshaped.flatten(1)
     im_squashed, updates = theano.scan(lambda v: squash(v), sequences=im_flattened)
     im_squashed = im_squashed.reshape(im_shape)
@@ -49,14 +49,14 @@ def primary_capsule_layer(im_conv, w,ratio):
 
 #batch x capsi x inlen
 def capsule_layer(t_in,weights):
-    u_dim = T.shape(t_in)
+    u_dim = list(T.shape(t_in))
     in_flat = t_in.flatten(1) #flatten to list of vectors
     #apply_transformation
     in_transf, updates = theano.scan(lambda v,w: T.dot(v,w), sequences=(in_flat,weights))
     #flat x 1 x capsj  x ulen
     in_transf = in_transf.dimshuffle((0,'x',1, 2))
     #batch x capsi x capsj x ulen
-    fl_out_dim = T.shape(in_transf)
+    fl_out_dim = list(T.shape(in_transf))
     fl_out_dim[0:1] = u_dim[0:1]
     u = T.reshape(in_transf, u_dim)
     v_caps = caps_route(u)
@@ -67,7 +67,7 @@ def caps_route(u, r=3):
     v = None
     for i in range(r):
         #softmax
-        b_dim = b.shape()
+        b_dim = T.shape(b)
         b_flat = b.flatten(2)
         c, updates = theano.scan(lambda v: softmax(b),sequences=b_flat)
         c = c.reshape(b_dim)
@@ -75,13 +75,13 @@ def caps_route(u, r=3):
         #batch x capsj x vlen
         u_sum, updates = theano.scan(lambda u_b: route_sum(u_b,c), sequences = u)
         #squash
-        u_sum_dim = u_sum.shape()
+        u_sum_dim = T.shape(u_sum)
         u_flat = u_sum.flatten(2)
         u_squashed, updates = theano.scan(lambda v: squash(v), sequences = u_flat)
         v = u_squashed.reshape(u_sum_dim)
         #update b
         bat = theano.shared(0)
-        u_shape = u.shape()
+        u_shape = T.shape(u)
         bat_nums = u_shape[0]
         capsj = u_shape[1]
         capsi = u_shape[2]
@@ -131,7 +131,7 @@ class capsnet:
         for i in range(capslayers):
             weights.append(T.dmatrix())
             
-        caps_layers = [primary_capsule_layer(image_convolved,self.weights[0], primary_caps_ratio)]
+        caps_layers = [primary_capsule_layer(image_convs[-1],weights[0], primary_caps_ratio)]
         for i in range(1,capslayers):
             caps_layers.append(capsule_layer(caps_layers[-1],self.weights[i]))
             
@@ -143,7 +143,7 @@ class capsnet:
         
         
     def feed_foreward(images):
-        batch_size = images.shape()[0]
+        batch_size = T.shape(images)[0]
         #hack, not doing this is possible but would be annoying
         conv_stacks = [T.stack([convs]*batch_size) for convs in self.convolutions]
         weight_stacks = [T.stack([weights]*batch_size) for weights in self.weights]
