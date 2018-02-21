@@ -5,9 +5,9 @@ from theano import function
 import numpy as np
 
 def relu(t_in):
-    t_flat = t_in.flatten()
-    results, updates = theano.scan(lambda e: max(e,0), sequences=t_flat)
-    t_out = T.reshape(results,T.shape(t_in))
+    in_size = t_in.shape()
+    zeros = T.zeros(in_size)
+    results = theano.switch(T.lt(in_size,zeros),zeros,in_size)
     return t_out
     
 def softmax(v_in):
@@ -118,7 +118,7 @@ class capsnet:
         image = T.dtensor4('image') #n x 3 (rgb) x height x width
         
         convlayers = len(conv_arch)
-        capslayers = len(caps_layers)
+        capslayers = len(caps_arch)
         
         convolutions = []
         for i in range(convlayers):
@@ -154,7 +154,4 @@ if __name__=='__main__':
     conv_size = [10,10]
     conv_arch = [1000]
     caps_arch = [100,50,10]
-    c = capsnet(
-    
-    
-        
+    c = capsnet(conv_size,conv_arch,caps_arch)       
