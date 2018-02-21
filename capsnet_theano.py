@@ -1,12 +1,12 @@
 import theano
 from theano import tensor as T
-from theano import tensor.nnet as NN
+from theano.tensor import nnet as NN
 from theano import function
 
 def relu(t_in):
     t_flat = t_in.flatten()
     results, updates = theano.scan(lambda e: max(e,0), sequences=t_flat)
-    t_out = T.reshape(results,T.shape(t_in)
+    t_out = T.reshape(results,T.shape(t_in))
     return t_out
     
 def softmax(v_in):
@@ -20,7 +20,6 @@ def squash(v_in):
     norm_in = T.normalize(v_in)
     return norm_in*factor
     
-def 
 
 """
 handle the transition between convolutional layers and capsule layers
@@ -52,7 +51,7 @@ def capsule_layer(t_in,weights):
     u_dim = T.shape(t_in)
     in_flat = t_in.flatten(1) #flatten to list of vectors
     #apply_transformation
-    in_transf, updates = theano.scan(lambda v,w: T.dot(v,w), sequences=in_flat,weights)
+    in_transf, updates = theano.scan(lambda v,w: T.dot(v,w), sequences=(in_flat,weights))
     #flat x 1 x capsj  x ulen
     in_transf = in_transf.dimshuffle((0,'x',1, 2))
     #batch x capsi x capsj x ulen
@@ -114,14 +113,14 @@ def route_sum(u_b, c):
     return results
 
 class capsnet:
-    def init(self,convlayers=4, capslayers = 4, init_convs, init_weights):
+    def init(self,init_convs, init_weights, convlayers=4, capslayers = 4):
         image = T.dtensor4('image') #n x 3 (rgb) x height x width
         convolutions = []
         for i in range(convlayers):
             convolutions.append(T.dtensor4('convolutions')) #n x num_convs x rows x cols
         image_convs = [relu(NN.conv2d(image,convolutions[0]))]
         for i in range(1,convlayers):
-            image_convs.append(relu(NN.conv2d(image_convs[-1],convolutions[i]))
+            image_convs.append(relu(NN.conv2d(image_convs[-1],convolutions[i])))
         
         weights = []
         for i in range(capslayers):
