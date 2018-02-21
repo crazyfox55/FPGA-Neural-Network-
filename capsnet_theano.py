@@ -11,9 +11,9 @@ def relu(t_in):
     return results
     
 def softmax(v_in):
-    exp = theano.map(exp,sequences = v_in)
-    denom = theano.sum(exp)
-    return exp/denom
+    ex = theano.map(T.exp,sequences = v_in)
+    denom = T.sum(ex)
+    return ex/denom
 
 def squash(v_in):
     sq_norm = T.dot(v_in,v_in)
@@ -29,7 +29,7 @@ we solve this by paritioning the convolutional layers into groups of size ratio
 and interpreting each of the groups as a capsule output, which is then squashed
 """
 #batch x cnum x height x width
-def primary_capsule_layer(im_conv, w,ratio):
+def primary_capsule_layer(im_conv, w,ratio, capsj):
     #batch x height x width x cnum
     im_reshaped = im_conv.dimshuffle((0,2,3,1))
     #batch x capsi x capslen x 1
@@ -45,20 +45,26 @@ def primary_capsule_layer(im_conv, w,ratio):
     im_flattened = im_reshaped.flatten(1)
     im_squashed, updates = theano.scan(lambda v: squash(v), sequences=im_flattened)
     im_squashed = im_squashed.reshape(im_shape)
-    return capsule_layer(im_squashed,w)
+    return capsule_layer(im_squashed,w,capsj)
 
 #batch x capsi x inlen
-def capsule_layer(t_in,weights):
+def capsule_layer(t_in,weights,capsj):
     u_dim = list(T.shape(t_in))
     in_flat = t_in.flatten(1) #flatten to list of vectors
     #apply_transformation
+    #flat x flat
     in_transf, updates = theano.scan(lambda v,w: T.dot(v,w), sequences=(in_flat,weights))
-    #flat x 1 x capsj  x ulen
-    in_transf = in_transf.dimshuffle((0,'x',1, 2))
-    #batch x capsi x capsj x ulen
+    #flat x 1 x 1 x flat
+    in_transf = in_transf.dimshuffle((0,'x', 1))
+    #batch x capsi x ulen
     fl_out_dim = list(T.shape(in_transf))
     fl_out_dim[0:1] = u_dim[0:1]
-    u = T.reshape(in_transf, u_dim)
+    fl_out_dim[0] = u_dim[2]
+    u_i = T.reshape(in_transf, fl_out_dim)
+    #batch x 1 x capsi x ulen
+    u_i = u_i.dimshuffle((0,'x',1,2))
+    #batch x capsj x capsi x ulen    
+    u = T.tile(u_i,(1,capsj,1,1))
     v_caps = caps_route(u)
     return v_caps
 #batch  x capsj x capsi x ulen
@@ -131,9 +137,9 @@ class capsnet:
         for i in range(capslayers):
             weights.append(T.dmatrix())
             
-        caps_layers = [primary_capsule_layer(image_convs[-1],weights[0], primary_caps_ratio)]
+        caps_layers = [primary_capsule_layer(image_convs[-1],weights[0], primary_caps_ratio,caps_arch[0])]
         for i in range(1,capslayers):
-            caps_layers.append(capsule_layer(caps_layers[-1],self.weights[i]))
+            caps_layers.append(capsule_layer(caps_layers[-1],self.weights[i]),caps_arch[i])
             
         self.ff = function([image,*convolutions,*weights],caps_layers[-1]) #compile
         self.convolutions = [theano.shared(np.zeros((cnum,conv_size[0],conv_size[1]))) for cnum in conv_arch]
