@@ -2,6 +2,7 @@ import theano
 from theano import tensor as T
 from theano.tensor import nnet as NN
 from theano import function
+import numpy as np
 
 def relu(t_in):
     t_flat = t_in.flatten()
@@ -113,8 +114,12 @@ def route_sum(u_b, c):
     return results
 
 class capsnet:
-    def init(self,init_convs, init_weights, convlayers=4, capslayers = 4):
+    def __init__(self, conv_size, conv_arch, caps_arch, primary_caps_ratio = 10):
         image = T.dtensor4('image') #n x 3 (rgb) x height x width
+        
+        convlayers = len(conv_arch)
+        capslayers = len(caps_layers)
+        
         convolutions = []
         for i in range(convlayers):
             convolutions.append(T.dtensor4('convolutions')) #n x num_convs x rows x cols
@@ -126,14 +131,30 @@ class capsnet:
         for i in range(capslayers):
             weights.append(T.dmatrix())
             
-        caps_layers = [primary_capsule_layer(image_convolved,self.weights[0])]
+        caps_layers = [primary_capsule_layer(image_convolved,self.weights[0], primary_caps_ratio)]
         for i in range(1,capslayers):
             caps_layers.append(capsule_layer(caps_layers[-1],self.weights[i]))
             
         self.ff = function([image,*convolutions,*weights],caps_layers[-1]) #compile
-        self.convolutions = map(theano.shared, init_convs)
-        self.weights = map(theano.shared, init_weights)
+        self.convolutions = [theano.shared(np.zeros((cnum,conv_size[0],conv_size[1]))) for cnum in conv_arch]
+        convis = [conv_arch[-1]/primary_caps_ratio]+caps_arch      
+                
+        self.weights = [theano.shared(np.zeros((convi,primary_capsule_ratio,primary_capsule_ratio))) for convi in convis]
         
-    def feed_foreward(image):
-        return self.ff(image,*self.convolutions,*self.weights)
+        
+    def feed_foreward(images):
+        batch_size = images.shape()[0]
+        #hack, not doing this is possible but would be annoying
+        conv_stacks = [T.stack([convs]*batch_size) for convs in self.convolutions]
+        weight_stacks = [T.stack([weights]*batch_size) for weights in self.weights]
+        return self.ff(images,*conv_stacks,*weight_stacks)
+
+if __name__=='__main__':
+    
+    conv_size = [10,10]
+    conv_arch = [1000]
+    caps_arch = [100,50,10]
+    c = capsnet(
+    
+    
         
