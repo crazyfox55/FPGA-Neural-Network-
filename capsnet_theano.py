@@ -140,7 +140,7 @@ class capsnet:
             
         caps_layers = [primary_capsule_layer(image_convs[-1],weights[0], primary_caps_ratio,caps_arch[0])]
         for i in range(1,capslayers):
-            caps_layers.append(capsule_layer(caps_layers[-1],self.weights[i]),caps_arch[i])
+            caps_layers.append(capsule_layer(caps_layers[-1],weights[i],caps_arch[i]))
             
         self.ff = function([image,*convolutions,*weights],caps_layers[-1]) #compile
         self.convolutions = [theano.shared(np.zeros((cnum,conv_size[0],conv_size[1]))) for cnum in conv_arch]
