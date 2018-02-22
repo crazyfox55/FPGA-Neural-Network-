@@ -1,4 +1,5 @@
 import theano
+import cProfile
 from theano import tensor as T
 from theano.tensor import nnet as NN
 from theano import function
@@ -142,7 +143,7 @@ class capsnet:
         for i in range(1,capslayers):
             caps_layers.append(capsule_layer(caps_layers[-1],weights[i],caps_arch[i]))
             
-        self.ff = function([image,*convolutions,*weights],caps_layers[-1]) #compile
+        self.ff = function([image,*convolutions,*weights],caps_layers[-1], mode=theano.Mode(optimizer="name"), profile=True) #compile
         self.convolutions = [theano.shared(np.zeros((cnum,conv_size[0],conv_size[1]))) for cnum in conv_arch]
         convis = [conv_arch[-1]/primary_caps_ratio]+caps_arch      
                 
@@ -155,10 +156,16 @@ class capsnet:
         conv_stacks = [T.stack([convs]*batch_size) for convs in self.convolutions]
         weight_stacks = [T.stack([weights]*batch_size) for weights in self.weights]
         return self.ff(images,*conv_stacks,*weight_stacks)
+    
+def main():
+    conv_size = [10,10]
+    conv_arch = [30]
+    caps_arch = [30,20,10]
+    images = [np.zeros((1000,1000))]
+    c = capsnet(conv_size,conv_arch,caps_arch)
+    c.feed_foreward(images)
+    c.ff.profile.summary()
+    
 
 if __name__=='__main__':
-    
-    conv_size = [10,10]
-    conv_arch = [1000]
-    caps_arch = [100,50,10]
-    c = capsnet(conv_size,conv_arch,caps_arch)       
+    main()
