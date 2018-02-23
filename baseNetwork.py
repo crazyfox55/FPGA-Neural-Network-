@@ -235,8 +235,97 @@ class CapsuleLayer():
         self.inpt = inpt
         self.output = capsule_layer(self.inpt,self.weights, self.n_out)
 
+#represents a Convolutional output as a capsule output
 class PrimaryCapsuleLayer():        
+    def __init__(self, bwidth_out):
+        self.bwidth_out = bwidth_out
+    def set_connection(self, inpt):
+        self.inpt = inpt
+        self.output = primary_capsule_layer(self.inpt,self.bwidth_out)
+#batch x cnum x height x width
+def primary_capsule_layer(im_conv,ratio):
+    #batch x height x width x cnum
+    im_reshaped = im_conv.dimshuffle((0,2,3,1))
+    #batch x capsi x capslen x 1
+    im_dim = list(T.shape(im_reshaped))
+    im_dim[1] = im_dim[1]*im_dim[2]*im_dim[3]
+    im_dim[2] = ratio
+    im_dim[3] = 1
+    im_reshaped = im_reshaped.reshape(im_dim)
+    #batch x capsi x capslen
+    im_reshaped = im_reshaped.dimshuffle((0,1,2))
+    #squash
+    im_shape = T.shape(im_reshaped)
+    im_flattened = im_reshaped.flatten(1)
+    im_squashed, updates = theano.scan(lambda v: squash(v), sequences=im_flattened)
+    im_squashed = im_squashed.reshape(im_shape)
+    return im_squashed
+
+#batch x capsi x ilen, capsi x capsj x jlen x ilen -> batch x capsj x capsi x jlen
+def capsule_layer(u,weights)
+    #[ilen] <dot> [jlen x ilen]
+    udim = T.shape(u)
+    wdim = T.shape(weights)
+    def batil(u_b, w):
+        def dotil(u_i, w_i):
+            results, updates = theano.scan(lambda w_ij, u_i: T.dot(u_i,w_ij), sequences=w_i, nonsequences=u_i)
+            return results
+        results, updates = theano.scan(lambda i, u, w: dotil(u[i],w[i]), n_steps=udim[1], nonsequences=(u_b,w))
+        return results
+    results, updates = theano.scan(batil,sequences=u,nonsequences=weights)
+    return caps_route(results)
+#batch  x capsj x capsi x ulen
+def caps_route(u, r=3):
+    b = T.dtensor3('b')
+    v = None
+    for i in range(r):
+        #softmax
+        b_dim = T.shape(b)
+        b_flat = b.flatten(2)
+        c, updates = theano.scan(lambda v: softmax(b),sequences=b_flat)
+        c = c.reshape(b_dim)
+        #sum
+        #batch x capsj x vlen
+        u_sum, updates = theano.scan(lambda u_b: route_sum(u_b,c), sequences = u)
+        #squash
+        u_sum_dim = T.shape(u_sum)
+        u_flat = u_sum.flatten(2)
+        u_squashed, updates = theano.scan(lambda v: squash(v), sequences = u_flat)
+        v = u_squashed.reshape(u_sum_dim)
+        #update b
+        bat = theano.shared(0)
+        u_shape = T.shape(u)
+        bat_nums = u_shape[0]
+        capsj = u_shape[1]
+        capsi = u_shape[2]
         
+        def caps_route_inner_loop(bat):
+            bat = bat + 1
+            #capsj x ulen
+            v_b = v[bat]
+            #capsj x capsi x ulen
+            u_b = u[bat]
+            j = theano.shared(0)
+            #loop over j for for u_b
+            def caps_inner_j(j):
+                j = j + 1
+                #capsi x ulen
+                u_j = u_b[j]
+                #ulen x capsi
+                u_jt = u.transpose()
+                #implicit ij loop with matmul
+                return T.dot(v_b,u_jt)
+            results, updates = theano.scan(caps_inner_j,non_sequences=j,n_steps=capsj)
+            return results
+                  
+        b_deltas, updates = theano.scan(caps_route_inner_loop,non_sequences=bat, n_steps=bat_nums)
+        b = b + b_deltas
+    return v
+
+#capsj x capsi x ulen, capsj x capsi
+def route_sum(u_b, c):
+    results, updates = theano.scan(lambda u: T.dot(u,c), sequences=u_b)
+    return results
 
 class ConvPoolLayer():
     """Used to create a combination of a convolutional and a max-pooling
