@@ -222,6 +222,21 @@ class SoftmaxLayer():
         "Return the accuracy for the mini-batch."
         return T.mean(T.eq(y, self.y_out))
 
+class CapsuleLayer():
+    def __init__(self, n_in, n_out, bwidth_in, bwidth_out):
+        self.w = theano.shared(
+            np.random.normal(loc=0.0, scale=0.01, size=(n_in, n_out, bwidth_out, bwidth_in)),
+            name='w', borrow=True)
+        self.n_in = n_in
+        self.n_out = n_out
+        self.bwidth_in = self.bwidth_in
+        self.bwidth_out = self.bwidth_out
+    def set_connection(self, inpt):
+        self.inpt = inpt
+        self.output = capsule_layer(self.inpt,self.weights, self.n_out)
+
+class PrimaryCapsuleLayer():        
+        
 
 class ConvPoolLayer():
     """Used to create a combination of a convolutional and a max-pooling

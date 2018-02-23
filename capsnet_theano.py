@@ -48,26 +48,19 @@ def primary_capsule_layer(im_conv, w,ratio, capsj):
     im_squashed = im_squashed.reshape(im_shape)
     return capsule_layer(im_squashed,w,capsj)
 
-#batch x capsi x inlen
-def capsule_layer(t_in,weights,capsj):
-    u_dim = list(T.shape(t_in))
-    in_flat = t_in.flatten(1) #flatten to list of vectors
-    #apply_transformation
-    #flat x flat
-    in_transf, updates = theano.scan(lambda v,w: T.dot(v,w), sequences=(in_flat,weights))
-    #flat x 1 x 1 x flat
-    in_transf = in_transf.dimshuffle((0,'x', 1))
-    #batch x capsi x ulen
-    fl_out_dim = list(T.shape(in_transf))
-    fl_out_dim[0:1] = u_dim[0:1]
-    fl_out_dim[0] = u_dim[2]
-    u_i = T.reshape(in_transf, fl_out_dim)
-    #batch x 1 x capsi x ulen
-    u_i = u_i.dimshuffle((0,'x',1,2))
-    #batch x capsj x capsi x ulen    
-    u = T.tile(u_i,(1,capsj,1,1))
-    v_caps = caps_route(u)
-    return v_caps
+#batch x capsi x ilen, capsi x capsj x jlen x ilen -> batch x capsj x capsi x jlen
+def capsule_layer(u,weights)
+    #[ilen] <dot> [jlen x ilen]
+    udim = T.shape(u)
+    wdim = T.shape(weights)
+    def batil(u_b, w):
+        def dotil(u_i, w_i):
+            results, updates = theano.scan(lambda w_ij, u_i: T.dot(u_i,w_ij), sequences=w_i, nonsequences=u_i)
+            return results
+        results, updates = theano.scan(lambda i, u, w: dotil(u[i],w[i]), n_steps=udim[1], nonsequences=(u_b,w))
+        return results
+    results, updates = theano.scan(batil,sequences=u,nonsequences=weights)
+    return caps_route(results)
 #batch  x capsj x capsi x ulen
 def caps_route(u, r=3):
     b = T.dtensor3('b')
