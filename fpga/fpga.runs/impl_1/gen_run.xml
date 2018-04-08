@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1520562454">
+  <File Type="PA-TCL" Name="DotProduct.tcl"/>
+  <File Type="PWROPT-DCP" Name="DotProduct_pwropt.dcp"/>
+  <File Type="REPORTS-TCL" Name="DotProduct_reports.tcl"/>
+  <File Type="BG-DRC" Name="DotProduct.drc"/>
+  <File Type="OPT-HWDEF" Name="DotProduct.hwdef"/>
+  <File Type="OPT-DCP" Name="DotProduct_opt.dcp"/>
+  <File Type="OPT-DRC" Name="DotProduct_drc_opted.rpt"/>
+  <File Type="PLACE-DCP" Name="DotProduct_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="DotProduct_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="DotProduct_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="DotProduct_physopt.dcp"/>
+  <File Type="BG-BIT" Name="DotProduct.bit"/>
+  <File Type="ROUTE-ERROR-DCP" Name="DotProduct_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="DotProduct_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="DotProduct_routed_bb.dcp"/>
+  <File Type="BITSTR-MSK" Name="DotProduct.msk"/>
+  <File Type="BG-BGN" Name="DotProduct.bgn"/>
+  <File Type="BITSTR-RBT" Name="DotProduct.rbt"/>
+  <File Type="BG-BIN" Name="DotProduct.bin"/>
+  <File Type="ROUTE-TIMING-PB" Name="DotProduct_timing_summary_routed.pb"/>
+  <File Type="RDI-RDI" Name="DotProduct.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="DotProduct_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="DotProduct_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-NKY" Name="DotProduct.nky"/>
+  <File Type="BITSTR-BMM" Name="DotProduct_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="DotProduct.mmi"/>
+  <File Type="BITSTR-LTX" Name="DotProduct.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="DotProduct.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ElementwiseMultiplier.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SumReduceLayer.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DotProduct.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ExpGate.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="DotProduct"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

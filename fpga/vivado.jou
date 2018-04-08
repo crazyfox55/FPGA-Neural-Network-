@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Apr  5 19:34:17 2018
+# Process ID: 12868
+# Current directory: H:/FPGA-Neural-Network-/fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12924 H:\FPGA-Neural-Network-\fpga\fpga.xpr
+# Log file: H:/FPGA-Neural-Network-/fpga/vivado.log
+# Journal file: H:/FPGA-Neural-Network-/fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/FPGA-Neural-Network-/fpga/fpga.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design

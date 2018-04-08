@@ -1,0 +1,234 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:22 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 12868
+License: Customer
+
+Current time: 	Thu Apr 05 19:34:30 CDT 2018
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 761 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre/bin/java.exe
+
+User name: 	rpolley
+User home directory: C:/Users/rpolley
+User working directory: H:/FPGA-Neural-Network-/fpga
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.3
+RDI_DATADIR: C:/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.3/bin
+
+User preferences location: C:/Users/rpolley/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/rpolley/AppData/Roaming/Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: C:/Users/rpolley/AppData/Roaming/Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	H:/FPGA-Neural-Network-/fpga/vivado.log
+Vivado journal file location: 	H:/FPGA-Neural-Network-/fpga/vivado.jou
+Engine tmp dir: 	H:/FPGA-Neural-Network-/fpga/.Xil/Vivado-12868-CS-S128
+
+GUI allocated memory:	186 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 584 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: H:\FPGA-Neural-Network-\fpga\fpga.xpr. Version: Vivado v2017.3 
+// bs (cl):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project H:/FPGA-Neural-Network-/fpga/fpga.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// [GUI Memory]: 57 MB (+57301kb) [00:00:05]
+// [Engine Memory]: 532 MB (+406374kb) [00:00:05]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project H:/FPGA-Neural-Network-/fpga/fpga.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 66 MB (+6285kb) [00:00:06]
+// [GUI Memory]: 72 MB (+2798kb) [00:00:08]
+// [Engine Memory]: 570 MB (+11832kb) [00:00:08]
+// [GUI Memory]: 77 MB (+1799kb) [00:00:08]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 595 MB. GUI used memory: 40 MB. Current time: 4/5/18 7:34:30 PM CDT
+// Project name: fpga; location: H:/FPGA-Neural-Network-/fpga; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 812.449 ; gain = 51.391 
+dismissDialog("Open Project"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (cl): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+// [Engine Memory]: 606 MB (+7715kb) [00:00:13]
+dismissDialog("Critical Messages"); // a (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// aF (cl): Create Block Design: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aF)
+dismissDialog("Create Block Design"); // aF (cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// x (cl): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cl):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // x (cl)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7z010clg400-1 Top: DotProduct 
+// [Engine Memory]: 639 MB (+3216kb) [00:00:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 706 MB. GUI used memory: 41 MB. Current time: 4/5/18 7:34:50 PM CDT
+// TclEventType: ELABORATE_FINISH
+// [Engine Memory]: 740 MB (+71938kb) [00:00:31]
+// [Engine Memory]: 886 MB (+114174kb) [00:00:36]
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 904 MB. GUI used memory: 40 MB. Current time: 4/5/18 7:34:58 PM CDT
+// [Engine Memory]: 944 MB (+14979kb) [00:00:36]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,001 MB (+9461kb) [00:00:37]
+// [GUI Memory]: 84 MB (+3311kb) [00:00:38]
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 879.418 ; gain = 57.039 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'DotProduct' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 8 - type: integer  	Parameter DIV_EXP bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'SumReduceLayer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized0' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized1' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'ElementwiseMultiplier' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 8 - type: integer  	Parameter DIV_EXP bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'ElementwiseMultiplier' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23] INFO: [Synth 8-256] done synthesizing module 'DotProduct' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 910.477 ; gain = 88.098 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 910.477 ; gain = 88.098 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1239.145 ; gain = 416.766 
+// Tcl Message: 14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1239.145 ; gain = 416.766 
+// 'dM' command handler elapsed time: 18 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Open Elaborated Design"); // bs (cl)
+// PAPropertyPanels.initPanels (sum_layer[8].sum (SumReduceLayer)) elapsed time: 0.2s
+// [GUI Memory]: 91 MB (+2691kb) [00:01:03]
+// Elapsed time: 72 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+// [GUI Memory]: 96 MB (+41kb) [00:01:52]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+// [GUI Memory]: 101 MB (+57kb) [00:01:56]
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aF (Q, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DotProduct (DotProduct.sv)]", 1, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DotProduct (DotProduct.sv)]", 1, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DotProduct (DotProduct.sv)]", 1, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+// [GUI Memory]: 106 MB (+601kb) [00:01:58]
+selectCodeEditor("DotProduct.sv", 134, 346); // cd (w, cl)
+selectCodeEditor("DotProduct.sv", 128, 286); // cd (w, cl)
+selectCodeEditor("DotProduct.sv", 126, 315); // cd (w, cl)
+selectCodeEditor("DotProduct.sv", 157, 322); // cd (w, cl)
+selectCodeEditor("DotProduct.sv", 108, 319); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DotProduct.sv", 2); // k (j, cl)
+selectCodeEditor("DotProduct.sv", 153, 308); // cd (w, cl)
+selectCodeEditor("DotProduct.sv", 144, 309); // cd (w, cl)
+// [GUI Memory]: 113 MB (+1867kb) [00:03:32]
+// Elapsed time: 81 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DotProduct.sv", 2); // k (j, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 119 MB (+570kb) [00:04:10]
+// Elapsed time: 10 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cZ, cl)
+// bs (cl):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: refresh_design 
+// [Engine Memory]: 1,058 MB (+7745kb) [00:04:15]
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1239.145 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'DotProduct' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 16 - type: integer  	Parameter DIV_EXP bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'SumReduceLayer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 16 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized0' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized1' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized2' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized2' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23] INFO: [Synth 8-638] synthesizing module 'ElementwiseMultiplier' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23] 
+// Tcl Message: 	Parameter BITW bound to: 10 - type: integer  	Parameter INW bound to: 16 - type: integer  	Parameter DIV_EXP bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'ElementwiseMultiplier' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23] INFO: [Synth 8-256] done synthesizing module 'DotProduct' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1250.082 ; gain = 10.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 69 MB. Current time: 4/5/18 7:38:40 PM CDT
+// Engine heap size: 1,084 MB. GUI used memory: 70 MB. Current time: 4/5/18 7:38:40 PM CDT
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1250.082 ; gain = 10.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 47 MB. Current time: 4/5/18 7:38:40 PM CDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.227 ; gain = 36.082 
+// Elapsed time: 10 seconds
+dismissDialog("Reloading"); // bs (cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cl)
+// Elapsed time: 319 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[DotProduct, Nets (630)]", 1, false); // aW (O, cl)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[DotProduct]", 0, true); // aW (O, cl) - Node
+closeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax (aF, cl)
+// Schematic: addNotify
+// [GUI Memory]: 126 MB (+588kb) [00:21:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 76 MB. Current time: 4/5/18 8:08:45 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 72 MB. Current time: 4/5/18 8:38:46 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 73 MB. Current time: 4/5/18 9:08:46 PM CDT

@@ -1,0 +1,51 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Thu Mar  8 20:28:07 2018
+| Host         : CS-S109 running 64-bit major release  (build 9200)
+| Command      : report_drc -file DotProduct_drc_opted.rpt -pb DotProduct_drc_opted.pb -rpx DotProduct_drc_opted.rpx
+| Design       : DotProduct
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Placed
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++---------+----------+--------------------+------------+
+| Rule    | Severity | Description        | Violations |
++---------+----------+--------------------+------------+
+| IOCNT-1 | Warning  | Number of IOs      | 1          |
+| ZPS7-1  | Warning  | PS7 block required | 1          |
++---------+----------+--------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+IOCNT-1#1 Warning
+Number of IOs  
+The design contains 170 unplaced I/O ports while the target device, xc7z010clg400-1, has 100 remaining available user I/O pins. This DRC assumes that all ports which do not drive MGT pins should be placed on user I/O pins. To correct this issue:
+1. Ensure you are targeting the correct device and package. Select a larger device or different package if necessary.
+2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+3. Consider design changes to reduce the number of user I/O pins needed.
+
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

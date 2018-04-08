@@ -1,0 +1,313 @@
+
+*** Running vivado
+    with args -log DotProduct.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DotProduct.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source DotProduct.tcl -notrace
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Command: synth_design -top DotProduct -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15560 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 345.508 ; gain = 94.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DotProduct' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized0' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized1' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ElementwiseMultiplier' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ElementwiseMultiplier' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DotProduct' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.594 ; gain = 135.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.594 ; gain = 135.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.594 ; gain = 135.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.594 ; gain = 135.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SumReduceLayer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
+Module SumReduceLayer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module SumReduceLayer__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[7][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[7][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[7][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[6][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[6][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[6][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[5][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[5][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[5][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[4][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[4][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[4][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[3][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[3][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[3][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[2][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[2][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[2][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[1][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[1][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[1][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[0][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[0][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In1[0][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[7][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[7][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[7][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[6][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[6][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[6][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[5][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[5][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[5][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[4][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[4][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[4][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[3][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[3][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[3][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[2][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[2][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[2][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[1][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[1][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[1][0]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[0][2]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[0][1]
+WARNING: [Synth 8-3331] design DotProduct has unconnected port In2[0][0]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[9] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][9]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[9] with 2nd driver pin 'Out[9]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[8] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][8]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[8] with 2nd driver pin 'Out[8]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[7] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][7]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[7] with 2nd driver pin 'Out[7]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[6] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][6]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[6] with 2nd driver pin 'Out[6]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[5] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][5]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[5] with 2nd driver pin 'Out[5]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[4] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][4]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[4] with 2nd driver pin 'Out[4]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[3] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][3]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[3] with 2nd driver pin 'Out[3]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[2] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][2]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[2] with 2nd driver pin 'Out[2]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[1] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][1]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[1] with 2nd driver pin 'Out[1]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[0] with 1st driver pin 'sum_layer[2].sum/Out[0]_inferred/Out[0][0]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:36]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Out[0] with 2nd driver pin 'Out[0]' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 512.379 ; gain = 261.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 512.379 ; gain = 261.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 20 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.117 ; gain = 265.496
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 48 Warnings, 21 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 598.781 ; gain = 359.684
+INFO: [Common 17-1381] The checkpoint 'H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/DotProduct.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DotProduct_utilization_synth.rpt -pb DotProduct_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 598.781 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  8 20:26:43 2018...
