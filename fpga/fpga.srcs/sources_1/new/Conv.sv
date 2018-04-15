@@ -21,21 +21,21 @@
 
 
 module Conv #(
-    W = 32,
-    SCALE_FACTOR = 24
+    W = 32
 )
 
 (
-    input signed [W-1:0] PixelIn,
-    input signed [W-1:0] ConvVal,
+    input signed [W-1:0] pixelIn,
+    input signed [W-1:0] convVal,
     input reset,
     input CLK,
-    output signed [W-1:0] PixelOut,
+    output signed [W-1:0] pixelOut,
     input valid //indicates that the inputs were written this cycle
     );
     logic signed [W-1:0] pDelta;
     logic signed [W-1:0] pBuffer;
-    FWMult #(.W(W), .SCALE_FACTOR(SCALE_FACTOR)) prod(.N1(PixelIn), .N2(ConvVal), .Out(pDelta));
+    FWMult #(.W(W)) prod(.N1(pixelIn), .N2(convVal), .Out(pDelta));
+    assign pixelOut = pBuffer;
     always_ff@(posedge CLK) begin
         if(reset == 1) begin
             if(valid == 1) begin
