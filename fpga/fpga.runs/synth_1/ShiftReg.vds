@@ -2,49 +2,44 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Apr 22 14:24:14 2018
-# Process ID: 17180
+# Start of session at: Sun Apr 22 16:20:12 2018
+# Process ID: 28532
 # Current directory: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1
-# Command line: vivado.exe -log Conv.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Conv.tcl
-# Log file: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/Conv.vds
+# Command line: vivado.exe -log ShiftReg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ShiftReg.tcl
+# Log file: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/ShiftReg.vds
 # Journal file: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Conv.tcl -notrace
+source ShiftReg.tcl -notrace
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
-Command: synth_design -top Conv -part xc7z010clg400-1
+Command: synth_design -top ShiftReg -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17300 
+INFO: Helper process launched with PID 28592 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 345.582 ; gain = 94.984
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 345.711 ; gain = 95.137
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Conv' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Conv.sv:23]
-	Parameter W bound to: 8 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'FWMult' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/FWMult.sv:23]
-	Parameter W bound to: 8 - type: integer 
-	Parameter SCALE_FACTOR bound to: 8 - type: integer 
-	Parameter DW bound to: 16 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'FWMult' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/FWMult.sv:23]
-INFO: [Synth 8-256] done synthesizing module 'Conv' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Conv.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 75 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.660 ; gain = 136.063
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.789 ; gain = 136.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.660 ; gain = 136.063
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.789 ; gain = 136.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.660 ; gain = 136.063
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.789 ; gain = 136.215
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element pBuffer_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Conv.sv:37]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 386.660 ; gain = 136.063
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 386.789 ; gain = 136.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -57,10 +52,8 @@ No constraint files found.
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 1     
+	                8 Bit    Registers := 75    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -68,12 +61,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module Conv 
+Module ShiftReg 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 1     
+	                8 Bit    Registers := 75    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -90,9 +81,8 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element pBuffer_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Conv.sv:37]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 536.391 ; gain = 285.793
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 503.438 ; gain = 252.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -105,7 +95,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 536.391 ; gain = 285.793
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 503.438 ; gain = 252.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -117,7 +107,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,7 +131,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -154,7 +144,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -166,25 +156,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -197,47 +187,41 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT2   |    32|
-|4     |LUT3   |     3|
-|5     |LUT4   |    21|
-|6     |LUT5   |     3|
-|7     |LUT6   |    37|
-|8     |FDRE   |     8|
-|9     |IBUF   |    18|
-|10    |OBUF   |     8|
-+------+-------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDRE |   600|
+|3     |IBUF |     9|
+|4     |OBUF |   608|
++------+-----+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   143|
-|2     |  prod   |FWMult |    61|
+|1     |top      |       |  1218|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 538.395 ; gain = 287.797
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 516.336 ; gain = 265.762
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ShiftReg' is not ideal for floorplanning, since the cellview 'ShiftReg' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-13 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+11 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 613.953 ; gain = 374.879
-INFO: [Common 17-1381] The checkpoint 'H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/Conv.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Conv_utilization_synth.rpt -pb DotProduct_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 613.953 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 22 14:24:33 2018...
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 591.859 ; gain = 352.809
+INFO: [Common 17-1381] The checkpoint 'H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/ShiftReg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ShiftReg_utilization_synth.rpt -pb DotProduct_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 591.859 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 22 16:20:30 2018...
