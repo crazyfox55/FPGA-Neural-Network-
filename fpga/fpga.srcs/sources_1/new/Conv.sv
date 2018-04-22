@@ -21,7 +21,7 @@
 
 
 module Conv #(
-    W = 32
+    W = 8
 )
 
 (
@@ -29,29 +29,18 @@ module Conv #(
     input signed [W-1:0] convVal,
     input reset,
     input CLK,
-    output signed [W-1:0] pixelOut,
-    input valid //indicates that the inputs were written this cycle
+    output signed [W-1:0] pixelOut
     );
     logic signed [W-1:0] pDelta;
     logic signed [W-1:0] pBuffer;
     FWMult #(.W(W)) prod(.N1(pixelIn), .N2(convVal), .Out(pDelta));
     assign pixelOut = pBuffer;
     always_ff@(posedge CLK) begin
-        if(reset == 1) begin
-            if(valid == 1) begin
-                pBuffer <= pDelta; 
-            end
-            else begin
-                pBuffer <= 0;
-            end
+        if(reset) begin
+            pBuffer <= 0;
         end
         else begin
-            if(valid == 1) begin
-                pBuffer <= pBuffer + pDelta;
-            end
-            else begin
-                pBuffer <= pBuffer;
-            end
+            pBuffer <= pBuffer+pDelta;
         end
      end 
 endmodule

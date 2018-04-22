@@ -21,18 +21,22 @@
 
 
 module FWMult #(
-    W = 32,
-    SCALE_FACTOR = 24
+    W = 8,
+    SCALE_FACTOR = 8,
+    DW = W*2
 )
 (
-        input signed [W-1:0] N1,
-        input signed [W-1:0] N2,
-        output signed [W-1:0] Out
+        input  [W-1:0] N1,
+        input  [W-1:0] N2,
+        output [W-1:0] Out
     );
-    logic signed [W-1:0] n1_scaled;
-    logic signed [W-1:0] n2_scaled;
+    logic [W-1:0] zeroes = '0;
+    logic [DW-1:0] dwN1;
+    logic [DW-1:0] dwN2;
+    logic [DW-1:0] dwOut;
     
-    assign n1_scaled = N1>>(SCALE_FACTOR/2);
-    assign n2_scaled = N2>>(SCALE_FACTOR/2);
-    assign Out = n1_scaled*n2_scaled;
+    assign dwN1 = {zeroes,N1};
+    assign dwN2 = {zeroes,N2};
+    assign dwOut = dwN1*dwN2 >> SCALE_FACTOR;
+    assign Out = dwOut[W-:8];
 endmodule

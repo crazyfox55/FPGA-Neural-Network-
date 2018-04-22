@@ -1,6 +1,6 @@
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 96b58dc8edab4dbeb572bb0a98b6196d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot FWMultTest_behav xil_defaultlib.FWMultTest xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 96b58dc8edab4dbeb572bb0a98b6196d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ConvTest_behav xil_defaultlib.ConvTest xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -8,6 +8,7 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.FWMult
-Compiling module xil_defaultlib.FWMultTest
+Compiling module xil_defaultlib.Conv
+Compiling module xil_defaultlib.ConvTest
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot FWMultTest_behav
+Built simulation snapshot ConvTest_behav

@@ -22,52 +22,35 @@
 
 module ConvWrapper #(
     WIDTH = 5,
-    HEIGHT = 5,
-    DWIDTH = 32,
-    PX_ROW_OFFSET,
-    W_IDX_SIZE = $clog2(WIDTH),
-    H_IDX_SIZE = $clog2(HEIGHT)
-)
+    W2 = WIDTH * WIDTH,
+    IDX_SIZE = $clog2(W2)
+    )
 
 (
-        input [DWIDTH-1:0] [WIDTH-1:0] px,
-        input [H_IDX_SIZE-1:0] pxRow,
-        input [W_IDX_SIZE-1:0] pxCol,
-        input [H_IDX_SIZE-1:0] cachePXRowRel,
-        input [W_IDX_SIZE-1:0] cachePXColRel,
-        input [WIDTH-1:0] [HEIGHT-1:0] [DWIDTH-1:0]  conv,
-        input fcompute,
+        input  [7:0]  px [W2-1:0],        
+        input [IDX_SIZE-1:0] select,
+        input [8:0]  conv [W2-1:0],
         input CLK,
         input reset,
-        output logic [DWIDTH-1:0] pxCache,
-        output logic [H_IDX_SIZE-1:0] pxRowRelCache,
-        output logic [W_IDX_SIZE-1:0] pxColRelCache,
-        output [DWIDTH-1:0] pxOut
+        input enable,
+        output [7:0] pxOut,
+        output dataReady
     );
-    logic [DWIDTH-1:0] convVal;
-    logic valid;
-    logic [H_IDX_SIZE-1:0] pxRowRel;
-    logic [H_IDX_SIZE-1:0] pxColRel;
-
-    assign valid = fcompute || (((cachePXRowRel-1)>0) && ((cachePXColRel-1)>0));
-    assign pxRowRel = fcompute ? pxRow - PX_ROW_OFFSET : cachePXRowRel;
-    assign pxColRel = fcompute ? pxCol : cachePXColRel;
-    assign convVal = conv[pxRowRel][pxColRel];
+    logic [7:0] pixelValue;
+    logic [15:0] dwOut;
     
-    always_ff @(posedge CLK) begin
-        if(valid) begin
-            pxRowRelCache <= pxRowRel-1;
-            pxColRelCache <= pxColRel;
+        always_ff@(posedge CLK) begin
+            if(enable) begin
+                pixelValue <= px[select];
+            end
+            else begin
+                pixelValue <= 0;
+            end
         end
-        else begin
-            pxRowRelCache <= 0;
-            pxRowRelCache <= 0;
-        end
-        pxCache <= px[pxRowRel];
-
-    end
     
-    Conv #(.W(DWIDTH)) convCalc(.pixelIn(px[pxRowRel]), .convVal(convVal), .CLK(CLK), .reset(reset), .valid(valid), .pixelOut(pxOut));
+    assign pxOut = dwOut[15:8];
+    
+    design_1_wrapper mult_acc(.A_0(pixelValue),.B_0(conv[select]),.P_0(dwOut),.reset_rtl(reset), .sys_clock(CLK));
     
     
 endmodule
