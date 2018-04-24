@@ -28,8 +28,7 @@ module ShiftReg #(
     (
         input [DWIDTH-1:0] head,
         input CLK,
-        output logic [DWIDTH-1:0] body [0:WIDTH-1],
-        output [DWIDTH-1:0] tail
+        output logic [DWIDTH-1:0] body [0:WIDTH-1]
     );
     always_ff@(posedge CLK) begin
         body[0] <= head;
@@ -42,5 +41,4 @@ module ShiftReg #(
         end
     end
     endgenerate
-    assign tail = body[WIDTH-1];
 endmodule
