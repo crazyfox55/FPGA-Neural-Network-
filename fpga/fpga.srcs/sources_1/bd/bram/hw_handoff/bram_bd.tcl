@@ -165,26 +165,27 @@ proc create_root_design { parentCell } {
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
    CONFIG.Additional_Inputs_for_Power_Estimation {false} \
-   CONFIG.Assume_Synchronous_Clk {false} \
+   CONFIG.Assume_Synchronous_Clk {true} \
    CONFIG.Byte_Size {9} \
    CONFIG.EN_SAFETY_CKT {false} \
    CONFIG.Enable_32bit_Address {false} \
    CONFIG.Enable_B {Use_ENB_Pin} \
    CONFIG.Memory_Type {Simple_Dual_Port_RAM} \
-   CONFIG.Operating_Mode_A {NO_CHANGE} \
+   CONFIG.Operating_Mode_A {READ_FIRST} \
+   CONFIG.Operating_Mode_B {READ_FIRST} \
    CONFIG.Port_A_Write_Rate {50} \
    CONFIG.Port_B_Clock {100} \
    CONFIG.Port_B_Enable_Rate {100} \
    CONFIG.Port_B_Write_Rate {0} \
-   CONFIG.Read_Width_A {24} \
-   CONFIG.Read_Width_B {24} \
+   CONFIG.Read_Width_A {8} \
+   CONFIG.Read_Width_B {8} \
    CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
    CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
    CONFIG.Use_Byte_Write_Enable {false} \
    CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {240} \
-   CONFIG.Write_Width_A {24} \
-   CONFIG.Write_Width_B {24} \
+   CONFIG.Write_Depth_A {1876} \
+   CONFIG.Write_Width_A {8} \
+   CONFIG.Write_Width_B {8} \
    CONFIG.use_bram_block {Stand_Alone} \
  ] $blk_mem_gen_0
 

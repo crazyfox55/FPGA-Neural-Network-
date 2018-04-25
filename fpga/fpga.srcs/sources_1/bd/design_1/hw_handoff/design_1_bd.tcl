@@ -159,7 +159,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set A_0 [ create_bd_port -dir I -from 7 -to 0 -type data A_0 ]
-  set B_0 [ create_bd_port -dir I -from 8 -to 0 -type data B_0 ]
+  set B_0 [ create_bd_port -dir I -from 7 -to 0 -type data B_0 ]
   set P_0 [ create_bd_port -dir O -from 15 -to 0 -type data P_0 ]
   set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
   set_property -dict [ list \
@@ -184,7 +184,8 @@ proc create_root_design { parentCell } {
    CONFIG.a_width {8} \
    CONFIG.areg_3 {true} \
    CONFIG.areg_4 {true} \
-   CONFIG.b_width {9} \
+   CONFIG.b_binarywidth {0} \
+   CONFIG.b_width {8} \
    CONFIG.breg_3 {true} \
    CONFIG.breg_4 {true} \
    CONFIG.creg_3 {false} \

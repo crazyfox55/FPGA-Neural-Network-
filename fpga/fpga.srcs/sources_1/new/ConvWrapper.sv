@@ -22,35 +22,24 @@
 
 module ConvWrapper #(
     WIDTH = 5,
-    W2 = WIDTH * WIDTH,
-    IDX_SIZE = $clog2(W2)
+    IDX_SIZE = $clog2(WIDTH)
     )
 
 (
-        input  [7:0]  px [W2-1:0],        
+        input  [7:0]  px [WIDTH-1:0],        
         input [IDX_SIZE-1:0] select,
-        input [8:0]  conv [W2-1:0],
+        input [7:0]  conv,
         input CLK,
         input reset,
-        input enable,
         output [7:0] pxOut,
         output dataReady
     );
-    logic [7:0] pixelValue;
     logic [15:0] dwOut;
     
-        always_ff@(posedge CLK) begin
-            if(enable) begin
-                pixelValue <= px[select];
-            end
-            else begin
-                pixelValue <= 0;
-            end
-        end
     
     assign pxOut = dwOut[15:8];
     
-    design_1_wrapper mult_acc(.A_0(pixelValue),.B_0(conv[select]),.P_0(dwOut),.reset_rtl(reset), .sys_clock(CLK));
+    design_1_wrapper mult_acc(.A_0(px[select]),.B_0(conv),.P_0(dwOut),.reset_rtl(reset), .sys_clock(CLK));
     
     
 endmodule

@@ -25,28 +25,41 @@ module Buffer #(
 )
 
 (
-    input [7:0] waddr,
-    input [23:0] wval,
-    input we,
-    input DDR_BRIDGE_CLK,
+    input [7:0] ddr_data,
     input CLK,
-    input [7:0] raddr,
-    output [7:0] shiftreg_buffer [0:2] [0:74]
+    output [7:0] shiftreg_buffer [0:4] [0:44]
     );
-    logic [2:0] [7:0]  rval;
-    bram_wrapper bram(.BRAM_PORTA_0_addr(waddr),
-                      .BRAM_PORTA_0_clk(DDR_BRIDGE_CLK),
-                      .BRAM_PORTA_0_din(wval),
-                      .BRAM_PORTA_0_en(1'b1),
-                      .BRAM_PORTA_0_we(we),
-                      .BRAM_PORTB_0_addr(raddr),
-                      .BRAM_PORTB_0_clk(CLK),
-                      .BRAM_PORTB_0_dout(rval),
-                      .BRAM_PORTB_0_en(1'b1));
+    logic [4:0] [7:0] bram_rvals;
+    logic [3:0] [7:0] bram_wvals;
+    logic [10:0] bram_idx;
+    
+    assign bram_rvals[0] = ddr_data;
+    
+    always_ff@(posedge CLK) begin
+        if(bram_idx<1875) begin
+            bram_idx <= bram_idx+1;
+        end
+        else begin
+            bram_idx <= 0;
+        end
+    end
+    
     generate
     genvar i;
-    for( i = 0; i < 3; i = i + 1) begin: shiftregs
-        ShiftReg #(.WIDTH(75),.DWIDTH(8)) sr(.head(rval[i]), .CLK(CLK), .body(shiftreg_buffer[i]));
+    
+    for( i = 0; i < 4; i = i + 1) begin: brams
+        bram_wrapper bram(.BRAM_PORTA_0_addr(bram_idx),
+                          .BRAM_PORTA_0_clk(CLK),
+                          .BRAM_PORTA_0_din(bram_wvals[i]),
+                          .BRAM_PORTA_0_en(1'b1),
+                          .BRAM_PORTA_0_we(1'b1),
+                          .BRAM_PORTB_0_addr(bram_idx),
+                          .BRAM_PORTB_0_clk(CLK),
+                          .BRAM_PORTB_0_dout(bram_rvals[i+1]),
+                          .BRAM_PORTB_0_en(1'b1));
+    end
+    for( i = 0; i < 5; i = i + 1) begin: shiftregs
+        ShiftReg #(.WIDTH(45),.DWIDTH(8)) sr(.head(bram_rvals[i]), .CLK(CLK), .body(shiftreg_buffer[i]), .tail(bram_wvals[i]));
     end
     endgenerate
 endmodule

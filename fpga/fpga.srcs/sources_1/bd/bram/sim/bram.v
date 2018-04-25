@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Tue Apr 24 17:43:53 2018
-//Host        : CS-S110 running 64-bit major release  (build 9200)
+//Date        : Wed Apr 25 12:59:46 2018
+//Host        : CS-S135 running 64-bit major release  (build 9200)
 //Command     : generate_target bram.bd
 //Design      : bram
 //Purpose     : IP block netlist
@@ -20,35 +20,35 @@ module bram
     BRAM_PORTB_0_clk,
     BRAM_PORTB_0_dout,
     BRAM_PORTB_0_en);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input [7:0]BRAM_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input [10:0]BRAM_PORTA_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 CLK" *) input BRAM_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 DIN" *) input [23:0]BRAM_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 DIN" *) input [7:0]BRAM_PORTA_0_din;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 EN" *) input BRAM_PORTA_0_en;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_0 WE" *) input [0:0]BRAM_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input [7:0]BRAM_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input [10:0]BRAM_PORTB_0_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 CLK" *) input BRAM_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 DOUT" *) output [23:0]BRAM_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 DOUT" *) output [7:0]BRAM_PORTB_0_dout;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 EN" *) input BRAM_PORTB_0_en;
 
-  wire [7:0]BRAM_PORTA_0_1_ADDR;
+  wire [10:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;
-  wire [23:0]BRAM_PORTA_0_1_DIN;
+  wire [7:0]BRAM_PORTA_0_1_DIN;
   wire BRAM_PORTA_0_1_EN;
   wire [0:0]BRAM_PORTA_0_1_WE;
-  wire [7:0]BRAM_PORTB_0_1_ADDR;
+  wire [10:0]BRAM_PORTB_0_1_ADDR;
   wire BRAM_PORTB_0_1_CLK;
-  wire [23:0]BRAM_PORTB_0_1_DOUT;
+  wire [7:0]BRAM_PORTB_0_1_DOUT;
   wire BRAM_PORTB_0_1_EN;
 
-  assign BRAM_PORTA_0_1_ADDR = BRAM_PORTA_0_addr[7:0];
+  assign BRAM_PORTA_0_1_ADDR = BRAM_PORTA_0_addr[10:0];
   assign BRAM_PORTA_0_1_CLK = BRAM_PORTA_0_clk;
-  assign BRAM_PORTA_0_1_DIN = BRAM_PORTA_0_din[23:0];
+  assign BRAM_PORTA_0_1_DIN = BRAM_PORTA_0_din[7:0];
   assign BRAM_PORTA_0_1_EN = BRAM_PORTA_0_en;
   assign BRAM_PORTA_0_1_WE = BRAM_PORTA_0_we[0];
-  assign BRAM_PORTB_0_1_ADDR = BRAM_PORTB_0_addr[7:0];
+  assign BRAM_PORTB_0_1_ADDR = BRAM_PORTB_0_addr[10:0];
   assign BRAM_PORTB_0_1_CLK = BRAM_PORTB_0_clk;
   assign BRAM_PORTB_0_1_EN = BRAM_PORTB_0_en;
-  assign BRAM_PORTB_0_dout[23:0] = BRAM_PORTB_0_1_DOUT;
+  assign BRAM_PORTB_0_dout[7:0] = BRAM_PORTB_0_1_DOUT;
   bram_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra(BRAM_PORTA_0_1_ADDR),
         .addrb(BRAM_PORTB_0_1_ADDR),

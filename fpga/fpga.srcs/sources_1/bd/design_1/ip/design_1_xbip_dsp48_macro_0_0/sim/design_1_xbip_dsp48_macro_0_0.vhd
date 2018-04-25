@@ -60,7 +60,7 @@ ENTITY design_1_xbip_dsp48_macro_0_0 IS
   PORT (
     CLK : IN STD_LOGIC;
     A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END design_1_xbip_dsp48_macro_0_0;
@@ -133,7 +133,7 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
       ACIN : IN STD_LOGIC_VECTOR(29 DOWNTO 0);
       BCIN : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
       A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       C : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
       D : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
       CONCAT : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
@@ -232,7 +232,7 @@ BEGIN
       C_HAS_CONCAT => 0,
       C_HAS_C => 0,
       C_A_WIDTH => 8,
-      C_B_WIDTH => 9,
+      C_B_WIDTH => 8,
       C_C_WIDTH => 48,
       C_D_WIDTH => 18,
       C_CONCAT_WIDTH => 48,

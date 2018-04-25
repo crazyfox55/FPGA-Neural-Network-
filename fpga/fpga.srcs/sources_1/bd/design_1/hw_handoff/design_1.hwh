@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 22 15:47:12 2018" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 25 13:40:55 2018" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,7 +24,7 @@
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="A"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="8" NAME="B_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B_0">
+    <PORT DIR="I" LEFT="7" NAME="B_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="B"/>
       </CONNECTIONS>
@@ -662,7 +662,7 @@
         <PARAMETER NAME="C_HAS_CONCAT" VALUE="0"/>
         <PARAMETER NAME="C_HAS_C" VALUE="0"/>
         <PARAMETER NAME="C_A_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_B_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_B_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_C_WIDTH" VALUE="48"/>
         <PARAMETER NAME="C_D_WIDTH" VALUE="18"/>
         <PARAMETER NAME="C_CONCAT_WIDTH" VALUE="48"/>
@@ -733,7 +733,7 @@
         <PARAMETER NAME="d_binarywidth" VALUE="0"/>
         <PARAMETER NAME="a_width" VALUE="8"/>
         <PARAMETER NAME="a_binarywidth" VALUE="0"/>
-        <PARAMETER NAME="b_width" VALUE="9"/>
+        <PARAMETER NAME="b_width" VALUE="8"/>
         <PARAMETER NAME="b_binarywidth" VALUE="0"/>
         <PARAMETER NAME="concat_width" VALUE="48"/>
         <PARAMETER NAME="concat_binarywidth" VALUE="0"/>
@@ -781,7 +781,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="A_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="B" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B_0">
+        <PORT DIR="I" LEFT="7" NAME="B" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="B_0"/>
           </CONNECTIONS>

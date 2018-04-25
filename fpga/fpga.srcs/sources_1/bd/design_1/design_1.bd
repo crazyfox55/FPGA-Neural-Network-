@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x3DACA1F6E4D9CDCA" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.3" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xD5386557D265A3DF" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.3" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -223,7 +223,7 @@
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
-              <spirit:left>8</spirit:left>
+              <spirit:left>7</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -256,7 +256,8 @@
           <spirit:configurableElementValue spirit:referenceId="preg_6">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="d_width">18</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="a_width">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="b_width">9</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="b_width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="b_binarywidth">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="output_properties">User_Defined</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="p_full_width">48</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="p_width">16</spirit:configurableElementValue>

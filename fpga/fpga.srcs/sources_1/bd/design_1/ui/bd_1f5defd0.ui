@@ -15,7 +15,7 @@ preplace netloc A_0_1 1 0 2 NJ 20 200J
 preplace netloc sys_clock_1 1 0 1 NJ
 preplace netloc reset_rtl_1 1 0 1 NJ
 preplace netloc clk_wiz_clk_out1 1 1 1 N
-levelinfo -pg 1 0 110 300 420 -top 0 -bot 160
+levelinfo -pg 1 -10 110 310 430 -top 0 -bot 160
 ",
 }
 {

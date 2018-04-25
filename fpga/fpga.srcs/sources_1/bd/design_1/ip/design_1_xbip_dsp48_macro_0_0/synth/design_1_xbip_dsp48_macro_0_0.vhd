@@ -60,7 +60,7 @@ ENTITY design_1_xbip_dsp48_macro_0_0 IS
   PORT (
     CLK : IN STD_LOGIC;
     A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END design_1_xbip_dsp48_macro_0_0;
@@ -133,7 +133,7 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
       ACIN : IN STD_LOGIC_VECTOR(29 DOWNTO 0);
       BCIN : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
       A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       C : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
       D : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
       CONCAT : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
@@ -191,7 +191,7 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_xbip_dsp48_macro_0_0_arch : ARCHITECTURE IS "design_1_xbip_dsp48_macro_0_0,xbip_dsp48_macro_v3_0_15,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
   ATTRIBUTE CORE_GENERATION_INFO OF design_1_xbip_dsp48_macro_0_0_arch: ARCHITECTURE IS "design_1_xbip_dsp48_macro_0_0,xbip_dsp48_macro_v3_0_15,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xbip_dsp48_macro,x_ipVersion=3.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_VERBOSITY=0,C_MODEL_TYPE=0,C_XDEVICEFAMILY=zynq,C_HAS_CE=0,C_HAS_INDEP_CE=0,C_HAS_CED=0,C_HAS_CEA=0,C_HAS_CEB=0,C_HAS_CEC=0,C_HAS_CECONCAT=0,C_HAS_CEM=0,C_HAS_CEP=0,C_HAS_CESEL=0,C_HAS_SCLR=0,C_HAS_INDEP_SCLR=0,C_HAS_SCLRD=0,C_HAS_SCLRA=0,C_HAS_SCLRB=0,C_HAS_SCLRC=0,C_HAS_S" & 
-"CLRM=0,C_HAS_SCLRP=0,C_HAS_SCLRCONCAT=0,C_HAS_SCLRSEL=0,C_HAS_CARRYCASCIN=0,C_HAS_CARRYIN=0,C_HAS_ACIN=0,C_HAS_BCIN=0,C_HAS_PCIN=0,C_HAS_A=1,C_HAS_B=1,C_HAS_D=0,C_HAS_CONCAT=0,C_HAS_C=0,C_A_WIDTH=8,C_B_WIDTH=9,C_C_WIDTH=48,C_D_WIDTH=18,C_CONCAT_WIDTH=48,C_P_MSB=47,C_P_LSB=32,C_SEL_WIDTH=0,C_HAS_ACOUT=0,C_HAS_BCOUT=0,C_HAS_CARRYCASCOUT=0,C_HAS_CARRYOUT=0,C_HAS_PCOUT=0,C_CONSTANT_1=1,C_LATENCY=-1,C_OPMODES=000000000010010100000000,C_REG_CONFIG=00000000000011000011000001000100,C_TEST_CORE=0}";
+"CLRM=0,C_HAS_SCLRP=0,C_HAS_SCLRCONCAT=0,C_HAS_SCLRSEL=0,C_HAS_CARRYCASCIN=0,C_HAS_CARRYIN=0,C_HAS_ACIN=0,C_HAS_BCIN=0,C_HAS_PCIN=0,C_HAS_A=1,C_HAS_B=1,C_HAS_D=0,C_HAS_CONCAT=0,C_HAS_C=0,C_A_WIDTH=8,C_B_WIDTH=8,C_C_WIDTH=48,C_D_WIDTH=18,C_CONCAT_WIDTH=48,C_P_MSB=47,C_P_LSB=32,C_SEL_WIDTH=0,C_HAS_ACOUT=0,C_HAS_BCOUT=0,C_HAS_CARRYCASCOUT=0,C_HAS_CARRYOUT=0,C_HAS_PCOUT=0,C_CONSTANT_1=1,C_LATENCY=-1,C_OPMODES=000000000010010100000000,C_REG_CONFIG=00000000000011000011000001000100,C_TEST_CORE=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} DATA_WIDTH 16}";
@@ -239,7 +239,7 @@ BEGIN
       C_HAS_CONCAT => 0,
       C_HAS_C => 0,
       C_A_WIDTH => 8,
-      C_B_WIDTH => 9,
+      C_B_WIDTH => 8,
       C_C_WIDTH => 48,
       C_D_WIDTH => 18,
       C_CONCAT_WIDTH => 48,
