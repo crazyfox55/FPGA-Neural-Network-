@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1524432010">
-  <File Type="PA-TCL" Name="ShiftReg.tcl"/>
-  <File Type="REPORTS-TCL" Name="ShiftReg_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ShiftReg.vds"/>
-  <File Type="RDS-UTIL" Name="ShiftReg_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ShiftReg_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ShiftReg.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1524794355">
+  <File Type="PA-TCL" Name="ConvEngine.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ConvEngine_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ConvEngine_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ConvEngine.vds"/>
+  <File Type="RDS-UTIL" Name="ConvEngine_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ConvEngine_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ConvEngine.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ConvEngine_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ConvEngine_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/ShiftReg.sv">
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+    <File Path="$PSRCDIR/sources_1/bd/bram/bram.bd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/bram/hdl/bram_wrapper.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -25,7 +34,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Buffer.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -33,13 +48,36 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ConvWrapper.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FWMult.sv">
+    <File Path="$PSRCDIR/sources_1/new/DDR_Shiftreg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ShiftReg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ConvEngine.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -47,7 +85,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Conv.sv">
+    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -57,7 +95,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ShiftReg"/>
+      <Option Name="TopModule" Val="ConvEngine"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -70,6 +109,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbip_dsp48_macro_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bram_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbip_dsp48_macro_0_0"/>
 </GenRun>

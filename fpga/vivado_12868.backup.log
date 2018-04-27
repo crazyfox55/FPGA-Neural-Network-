@@ -1,0 +1,130 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Apr  5 19:34:17 2018
+# Process ID: 12868
+# Current directory: H:/FPGA-Neural-Network-/fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12924 H:\FPGA-Neural-Network-\fpga\fpga.xpr
+# Log file: H:/FPGA-Neural-Network-/fpga/vivado.log
+# Journal file: H:/FPGA-Neural-Network-/fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/FPGA-Neural-Network-/fpga/fpga.xpr
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 812.449 ; gain = 51.391
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: DotProduct
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 879.418 ; gain = 57.039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DotProduct' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized0' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized1' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ElementwiseMultiplier' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ElementwiseMultiplier' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DotProduct' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 910.477 ; gain = 88.098
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 910.477 ; gain = 88.098
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1239.145 ; gain = 416.766
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1239.145 ; gain = 416.766
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1239.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DotProduct' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 16 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized0' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized1' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'SumReduceLayer__parameterized2' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SumReduceLayer__parameterized2' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/SumReduceLayer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ElementwiseMultiplier' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+	Parameter BITW bound to: 10 - type: integer 
+	Parameter INW bound to: 16 - type: integer 
+	Parameter DIV_EXP bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ElementwiseMultiplier' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ElementwiseMultiplier.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DotProduct' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DotProduct.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1250.082 ; gain = 10.938
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1250.082 ; gain = 10.938
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.227 ; gain = 36.082

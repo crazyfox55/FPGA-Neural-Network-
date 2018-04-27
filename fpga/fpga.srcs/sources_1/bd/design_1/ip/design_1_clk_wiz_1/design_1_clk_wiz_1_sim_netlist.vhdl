@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sun Apr 22 15:48:38 2018
--- Host        : CS-S118 running 64-bit major release  (build 9200)
+-- Date        : Thu Apr 26 21:03:27 2018
+-- Host        : CS-S110 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_sim_netlist.vhdl
+--               H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_sim_netlist.vhdl
 -- Design      : design_1_clk_wiz_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,7 +26,6 @@ entity design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz is
 end design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz;
 
 architecture STRUCTURE of design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz is
-  signal clk_in1_design_1_clk_wiz_1 : STD_LOGIC;
   signal clk_out1_design_1_clk_wiz_1 : STD_LOGIC;
   signal clkfbout_buf_design_1_clk_wiz_1 : STD_LOGIC;
   signal clkfbout_design_1_clk_wiz_1 : STD_LOGIC;
@@ -48,13 +47,6 @@ architecture STRUCTURE of design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz is
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
-  attribute BOX_TYPE of clkin1_ibufg : label is "PRIMITIVE";
-  attribute CAPACITANCE : string;
-  attribute CAPACITANCE of clkin1_ibufg : label is "DONT_CARE";
-  attribute IBUF_DELAY_VALUE : string;
-  attribute IBUF_DELAY_VALUE of clkin1_ibufg : label is "0";
-  attribute IFD_DELAY_VALUE : string;
-  attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
@@ -62,14 +54,6 @@ clkf_buf: unisim.vcomponents.BUFG
      port map (
       I => clkfbout_design_1_clk_wiz_1,
       O => clkfbout_buf_design_1_clk_wiz_1
-    );
-clkin1_ibufg: unisim.vcomponents.IBUF
-    generic map(
-      IOSTANDARD => "DEFAULT"
-    )
-        port map (
-      I => clk_in1,
-      O => clk_in1_design_1_clk_wiz_1
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
@@ -132,7 +116,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKFBOUT => clkfbout_design_1_clk_wiz_1,
       CLKFBOUTB => NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED,
       CLKFBSTOPPED => NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED,
-      CLKIN1 => clk_in1_design_1_clk_wiz_1,
+      CLKIN1 => clk_in1,
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,

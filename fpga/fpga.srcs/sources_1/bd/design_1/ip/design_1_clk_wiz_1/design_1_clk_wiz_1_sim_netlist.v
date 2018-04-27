@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sun Apr 22 15:48:38 2018
-// Host        : CS-S118 running 64-bit major release  (build 9200)
+// Date        : Thu Apr 26 21:03:27 2018
+// Host        : CS-S110 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_sim_netlist.v
+//               H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_sim_netlist.v
 // Design      : design_1_clk_wiz_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,7 +23,7 @@ module design_1_clk_wiz_1
   output locked;
   input clk_in1;
 
-  (* IBUF_LOW_PWR *) wire clk_in1;
+  wire clk_in1;
   wire clk_out1;
   wire locked;
   wire reset;
@@ -47,7 +47,6 @@ module design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz
   input clk_in1;
 
   wire clk_in1;
-  wire clk_in1_design_1_clk_wiz_1;
   wire clk_out1;
   wire clk_out1_design_1_clk_wiz_1;
   wire clkfbout_buf_design_1_clk_wiz_1;
@@ -75,15 +74,6 @@ module design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz
   BUFG clkf_buf
        (.I(clkfbout_design_1_clk_wiz_1),
         .O(clkfbout_buf_design_1_clk_wiz_1));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* CAPACITANCE = "DONT_CARE" *) 
-  (* IBUF_DELAY_VALUE = "0" *) 
-  (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUF #(
-    .IOSTANDARD("DEFAULT")) 
-    clkin1_ibufg
-       (.I(clk_in1),
-        .O(clk_in1_design_1_clk_wiz_1));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
        (.I(clk_out1_design_1_clk_wiz_1),
@@ -143,7 +133,7 @@ module design_1_clk_wiz_1_design_1_clk_wiz_1_clk_wiz
         .CLKFBOUT(clkfbout_design_1_clk_wiz_1),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
-        .CLKIN1(clk_in1_design_1_clk_wiz_1),
+        .CLKIN1(clk_in1),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),

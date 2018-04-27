@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
 // Date        : Wed Apr 25 12:59:45 2018
 // Host        : CS-S135 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_0/bram_blk_mem_gen_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top bram_blk_mem_gen_0_0 -prefix
+//               bram_blk_mem_gen_0_0_ bram_blk_mem_gen_0_0_sim_netlist.v
 // Design      : bram_blk_mem_gen_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -204,7 +204,6 @@ module bram_blk_mem_gen_0_0
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
    (doutb,
     clka,
@@ -243,7 +242,6 @@ module bram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_prim_width
    (doutb,
     clka,
@@ -282,7 +280,6 @@ module bram_blk_mem_gen_0_0_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
    (doutb,
     clka,
@@ -441,7 +438,6 @@ module bram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_top
    (doutb,
     clka,
@@ -504,7 +500,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "1876" *) (* C_WRITE_DEPTH_B = "1876" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
 (* C_WRITE_MODE_B = "READ_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "zynq" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "zynq" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_v8_4_0
    (clka,
     rsta,
@@ -718,7 +714,6 @@ module bram_blk_mem_gen_0_0_blk_mem_gen_v8_4_0
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_0_synth" *) 
 module bram_blk_mem_gen_0_0_blk_mem_gen_v8_4_0_synth
    (doutb,
     clka,

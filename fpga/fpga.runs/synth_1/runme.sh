@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ShiftReg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ShiftReg.tcl
+EAStep vivado -log ConvEngine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConvEngine.tcl

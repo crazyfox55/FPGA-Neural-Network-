@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Apr 26 20:59:28 2018
+# Process ID: 51872
+# Current directory: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1
+# Command line: vivado.exe -log ConvEngine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConvEngine.tcl
+# Log file: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/ConvEngine.vds
+# Journal file: H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ConvEngine.tcl -notrace
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbip_dsp48_macro_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_clk_wiz_1' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_blk_mem_gen_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_0/stats.txt'. Please regenerate to continue.
+Command: synth_design -top ConvEngine -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 50200 
+ERROR: [Synth 8-1718] cannot assign an unpacked type to a packed type [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:89]
+INFO: [Synth 8-2350] module ConvEngine ignored due to previous errors [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+Failed to read verilog 'H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 5 Warnings, 1 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 20:59:39 2018...
