@@ -19,19 +19,1261 @@ WARNING: [IP_Flow 19-2207] Repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'design_1_xbip_dsp48_macro_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_clk_wiz_1' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'bram_blk_mem_gen_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_0/stats.txt'. Please regenerate to continue.
 Command: synth_design -top ConvEngine -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 50200 
-ERROR: [Synth 8-1718] cannot assign an unpacked type to a packed type [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:89]
-INFO: [Synth 8-2350] module ConvEngine ignored due to previous errors [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
-Failed to read verilog 'H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv'
+INFO: Helper process launched with PID 20220 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 356.590 ; gain = 95.313
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_0' [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/realtime/bram_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_0' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/realtime/bram_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (7#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:62]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:62]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+WARNING: [Synth 8-3331] design ConvWrapper has unconnected port dataReady
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 400.047 ; gain = 138.770
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 400.047 ; gain = 138.770
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[0].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[1].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[1].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[2].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[3].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[4].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[5].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[6].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[7].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[8].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[9].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[10].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[11].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[12].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[13].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[14].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[15].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[16].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[17].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[18].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[19].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[20].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[21].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[22].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[23].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp5/design_1_xbip_dsp48_macro_0_0_in_context.xdc] for cell 'buffers[2].channel[24].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[0].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[1].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[0].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[1].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[2].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/.Xil/Vivado-20144-CS-S110/dcp7/bram_blk_mem_gen_0_0_in_context.xdc] for cell 'buffers[2].buffer/brams[3].bram/bram_i/blk_mem_gen_0'
+Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 718.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[0].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[0].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[1].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[1].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[2].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[2].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[3].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].buffer /\brams[3].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[0].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[0].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[10].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[10].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[11].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[11].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[12].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[12].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[13].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[13].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[14].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[14].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[15].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[15].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[16].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[16].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[17].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[17].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[18].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[18].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[19].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[19].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[1].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[1].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[20].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[20].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[21].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[21].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[22].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[22].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[23].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[23].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[24].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[24].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[2].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[2].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[3].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[3].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[4].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[4].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[5].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[5].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[6].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[6].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[7].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[7].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[8].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[8].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[9].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[0].channel[9].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[0].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[0].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[1].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[1].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[2].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[2].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[3].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].buffer /\brams[3].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[0].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[0].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[10].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[10].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[11].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[11].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[12].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[12].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[13].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[13].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[14].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[14].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[15].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[15].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[16].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[16].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[17].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[17].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[18].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[18].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[19].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[19].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[1].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[1].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[20].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[20].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[21].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[21].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[22].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[22].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[23].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[23].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[24].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[24].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[2].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[2].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[3].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[3].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[4].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[4].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[5].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[5].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[6].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[6].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[7].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[7].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[8].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[8].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[9].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[1].channel[9].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[0].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[0].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[1].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[1].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[2].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[2].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[3].bram /bram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].buffer /\brams[3].bram /bram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[0].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[0].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[10].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[10].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[11].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[11].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[12].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[12].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[13].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[13].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[14].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[14].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[15].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[15].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[16].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[16].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[17].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[17].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[18].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[18].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[19].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[19].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[1].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[1].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[20].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[20].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[21].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[21].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[22].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[22].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[23].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[23].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[24].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[24].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[2].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[2].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[3].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[3].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[4].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[4].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[5].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[5].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[6].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[6].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[7].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[7].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[8].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[8].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[9].conv /mult_acc/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \buffers[2].channel[9].conv /mult_acc/design_1_i/xbip_dsp48_macro_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element bram_idx_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:39]
+WARNING: [Synth 8-6014] Unused sequential element bram_idx_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:39]
+WARNING: [Synth 8-6014] Unused sequential element bram_idx_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:39]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 24    
+	               11 Bit    Registers := 3     
+	                8 Bit    Registers := 690   
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ConvEngine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 12    
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module DDR_Shiftreg 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 24    
+	                8 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 24    
+Module ShiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 45    
+Module Buffer__xdcDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+Module Buffer__xdcDup__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+Module Buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[25].body_reg[25] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[26].body_reg[26] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[27].body_reg[27] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[28].body_reg[28] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[29].body_reg[29] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[30].body_reg[30] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[31].body_reg[31] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[32].body_reg[32] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[33].body_reg[33] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[34].body_reg[34] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[0].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[30].body_reg[30] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[31].body_reg[31] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[32].body_reg[32] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[33].body_reg[33] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[34].body_reg[34] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[1].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[2].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[3].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[3].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[3].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[3].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[0].buffer/shiftregs[3].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[25].body_reg[25] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[26].body_reg[26] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[27].body_reg[27] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[28].body_reg[28] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[29].body_reg[29] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[30].body_reg[30] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[31].body_reg[31] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[32].body_reg[32] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[33].body_reg[33] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[34].body_reg[34] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[0].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[30].body_reg[30] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[31].body_reg[31] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[32].body_reg[32] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[33].body_reg[33] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[34].body_reg[34] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[1].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[35].body_reg[35] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[36].body_reg[36] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[37].body_reg[37] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[38].body_reg[38] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[39].body_reg[39] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[41].body_reg[41] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[42].body_reg[42] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[43].body_reg[43] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[2].sr/genblk1[44].body_reg[44] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element buffers[1].buffer/shiftregs[3].sr/genblk1[40].body_reg[40] was removed.  [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:41]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__67 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__66 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__65 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__64 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__63 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__61 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__60 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__59 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__58 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__57 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__56 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__55 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__54 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__53 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__52 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__74 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__73 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__72 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__71 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__70 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__69 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__68 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__62 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__51 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__42 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__41 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__40 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__39 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__38 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__36 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__35 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__34 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__33 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__32 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__31 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__30 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__29 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__28 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__27 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__50 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__49 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__48 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__47 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__46 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__45 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__44 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__43 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__37 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__26 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__17 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__16 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__15 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__14 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__13 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__11 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__10 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__9 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__8 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__7 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__6 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__5 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__4 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__3 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__2 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__25 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__24 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__23 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__22 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__21 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__20 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__19 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__18 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__12 has unconnected port dataReady
+WARNING: [Synth 8-3331] design ConvWrapper__xdcDup__1 has unconnected port dataReady
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][7]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][6]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][5]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][4]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][3]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][2]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][1]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[4].ddr_write_queue_reg[4][0]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][7]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][6]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][5]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][4]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][3]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][2]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][1]) is unused and will be removed from module ConvEngine.
+WARNING: [Synth 8-3332] Sequential element (out/genblk3[5].ddr_write_queue_reg[5][0]) is unused and will be removed from module ConvEngine.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|ConvEngine  | conv_regs  | 32x5          | LUT            | 
+|ConvEngine  | conv_regs  | 32x5          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 718.957 ; gain = 457.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|ConvEngine  | buffers[0].buffer/shiftregs[1].sr/genblk1[5].body_reg[5][7]   | 6      | 24    | NO           | NO                 | YES               | 24     | 0       | 
+|ConvEngine  | buffers[0].buffer/shiftregs[2].sr/genblk1[7].body_reg[7][7]   | 8      | 72    | NO           | NO                 | YES               | 72     | 0       | 
+|ConvEngine  | buffers[0].buffer/shiftregs[2].sr/genblk1[10].body_reg[10][7] | 3      | 24    | NO           | NO                 | YES               | 24     | 0       | 
+|ConvEngine  | buffers[0].buffer/shiftregs[4].sr/genblk1[20].body_reg[20][7] | 21     | 24    | NO           | NO                 | YES               | 0      | 24      | 
++------------+---------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |bram_blk_mem_gen_0_0          |        12|
+|2     |design_1_xbip_dsp48_macro_0_0 |        75|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------+------+
+|      |Cell                               |Count |
++------+-----------------------------------+------+
+|1     |bram_blk_mem_gen_0_0               |     1|
+|2     |bram_blk_mem_gen_0_0__12           |     1|
+|3     |bram_blk_mem_gen_0_0__13           |     1|
+|4     |bram_blk_mem_gen_0_0__14           |     1|
+|5     |bram_blk_mem_gen_0_0__15           |     1|
+|6     |bram_blk_mem_gen_0_0__16           |     1|
+|7     |bram_blk_mem_gen_0_0__17           |     1|
+|8     |bram_blk_mem_gen_0_0__18           |     1|
+|9     |bram_blk_mem_gen_0_0__19           |     1|
+|10    |bram_blk_mem_gen_0_0__20           |     1|
+|11    |bram_blk_mem_gen_0_0__21           |     1|
+|12    |bram_blk_mem_gen_0_0__22           |     1|
+|13    |design_1_xbip_dsp48_macro_0_0      |     1|
+|14    |design_1_xbip_dsp48_macro_0_0__100 |     1|
+|15    |design_1_xbip_dsp48_macro_0_0__101 |     1|
+|16    |design_1_xbip_dsp48_macro_0_0__102 |     1|
+|17    |design_1_xbip_dsp48_macro_0_0__103 |     1|
+|18    |design_1_xbip_dsp48_macro_0_0__104 |     1|
+|19    |design_1_xbip_dsp48_macro_0_0__105 |     1|
+|20    |design_1_xbip_dsp48_macro_0_0__106 |     1|
+|21    |design_1_xbip_dsp48_macro_0_0__107 |     1|
+|22    |design_1_xbip_dsp48_macro_0_0__108 |     1|
+|23    |design_1_xbip_dsp48_macro_0_0__109 |     1|
+|24    |design_1_xbip_dsp48_macro_0_0__110 |     1|
+|25    |design_1_xbip_dsp48_macro_0_0__111 |     1|
+|26    |design_1_xbip_dsp48_macro_0_0__112 |     1|
+|27    |design_1_xbip_dsp48_macro_0_0__113 |     1|
+|28    |design_1_xbip_dsp48_macro_0_0__114 |     1|
+|29    |design_1_xbip_dsp48_macro_0_0__115 |     1|
+|30    |design_1_xbip_dsp48_macro_0_0__116 |     1|
+|31    |design_1_xbip_dsp48_macro_0_0__117 |     1|
+|32    |design_1_xbip_dsp48_macro_0_0__118 |     1|
+|33    |design_1_xbip_dsp48_macro_0_0__119 |     1|
+|34    |design_1_xbip_dsp48_macro_0_0__120 |     1|
+|35    |design_1_xbip_dsp48_macro_0_0__121 |     1|
+|36    |design_1_xbip_dsp48_macro_0_0__122 |     1|
+|37    |design_1_xbip_dsp48_macro_0_0__123 |     1|
+|38    |design_1_xbip_dsp48_macro_0_0__124 |     1|
+|39    |design_1_xbip_dsp48_macro_0_0__125 |     1|
+|40    |design_1_xbip_dsp48_macro_0_0__126 |     1|
+|41    |design_1_xbip_dsp48_macro_0_0__127 |     1|
+|42    |design_1_xbip_dsp48_macro_0_0__128 |     1|
+|43    |design_1_xbip_dsp48_macro_0_0__129 |     1|
+|44    |design_1_xbip_dsp48_macro_0_0__130 |     1|
+|45    |design_1_xbip_dsp48_macro_0_0__131 |     1|
+|46    |design_1_xbip_dsp48_macro_0_0__132 |     1|
+|47    |design_1_xbip_dsp48_macro_0_0__133 |     1|
+|48    |design_1_xbip_dsp48_macro_0_0__134 |     1|
+|49    |design_1_xbip_dsp48_macro_0_0__135 |     1|
+|50    |design_1_xbip_dsp48_macro_0_0__136 |     1|
+|51    |design_1_xbip_dsp48_macro_0_0__137 |     1|
+|52    |design_1_xbip_dsp48_macro_0_0__138 |     1|
+|53    |design_1_xbip_dsp48_macro_0_0__139 |     1|
+|54    |design_1_xbip_dsp48_macro_0_0__140 |     1|
+|55    |design_1_xbip_dsp48_macro_0_0__141 |     1|
+|56    |design_1_xbip_dsp48_macro_0_0__142 |     1|
+|57    |design_1_xbip_dsp48_macro_0_0__143 |     1|
+|58    |design_1_xbip_dsp48_macro_0_0__144 |     1|
+|59    |design_1_xbip_dsp48_macro_0_0__145 |     1|
+|60    |design_1_xbip_dsp48_macro_0_0__146 |     1|
+|61    |design_1_xbip_dsp48_macro_0_0__147 |     1|
+|62    |design_1_xbip_dsp48_macro_0_0__148 |     1|
+|63    |design_1_xbip_dsp48_macro_0_0__75  |     1|
+|64    |design_1_xbip_dsp48_macro_0_0__76  |     1|
+|65    |design_1_xbip_dsp48_macro_0_0__77  |     1|
+|66    |design_1_xbip_dsp48_macro_0_0__78  |     1|
+|67    |design_1_xbip_dsp48_macro_0_0__79  |     1|
+|68    |design_1_xbip_dsp48_macro_0_0__80  |     1|
+|69    |design_1_xbip_dsp48_macro_0_0__81  |     1|
+|70    |design_1_xbip_dsp48_macro_0_0__82  |     1|
+|71    |design_1_xbip_dsp48_macro_0_0__83  |     1|
+|72    |design_1_xbip_dsp48_macro_0_0__84  |     1|
+|73    |design_1_xbip_dsp48_macro_0_0__85  |     1|
+|74    |design_1_xbip_dsp48_macro_0_0__86  |     1|
+|75    |design_1_xbip_dsp48_macro_0_0__87  |     1|
+|76    |design_1_xbip_dsp48_macro_0_0__88  |     1|
+|77    |design_1_xbip_dsp48_macro_0_0__89  |     1|
+|78    |design_1_xbip_dsp48_macro_0_0__90  |     1|
+|79    |design_1_xbip_dsp48_macro_0_0__91  |     1|
+|80    |design_1_xbip_dsp48_macro_0_0__92  |     1|
+|81    |design_1_xbip_dsp48_macro_0_0__93  |     1|
+|82    |design_1_xbip_dsp48_macro_0_0__94  |     1|
+|83    |design_1_xbip_dsp48_macro_0_0__95  |     1|
+|84    |design_1_xbip_dsp48_macro_0_0__96  |     1|
+|85    |design_1_xbip_dsp48_macro_0_0__97  |     1|
+|86    |design_1_xbip_dsp48_macro_0_0__98  |     1|
+|87    |design_1_xbip_dsp48_macro_0_0__99  |     1|
+|88    |BUFG                               |     1|
+|89    |LUT1                               |     5|
+|90    |LUT2                               |    17|
+|91    |LUT3                               |  1185|
+|92    |LUT4                               |    10|
+|93    |LUT5                               |    14|
+|94    |LUT6                               |   639|
+|95    |SRL16E                             |   120|
+|96    |SRLC32E                            |    24|
+|97    |FDRE                               |  3777|
+|98    |IBUF                               |    33|
+|99    |OBUF                               |    32|
++------+-----------------------------------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-----------------------------+------+
+|      |Instance                        |Module                       |Cells |
++------+--------------------------------+-----------------------------+------+
+|1     |top                             |                             |  7153|
+|2     |  \buffers[0].buffer            |Buffer__xdcDup__1            |  1531|
+|3     |    \brams[0].bram              |bram_wrapper__xdcDup__1      |     8|
+|4     |      bram_i                    |bram__xdcDup__1              |     8|
+|5     |    \brams[1].bram              |bram_wrapper__xdcDup__2      |     8|
+|6     |      bram_i                    |bram__xdcDup__2              |     8|
+|7     |    \brams[2].bram              |bram_wrapper__xdcDup__3      |     8|
+|8     |      bram_i                    |bram__xdcDup__3              |     8|
+|9     |    \brams[3].bram              |bram_wrapper__xdcDup__4      |     8|
+|10    |      bram_i                    |bram__xdcDup__4              |     8|
+|11    |    \shiftregs[0].sr            |ShiftReg_9                   |   408|
+|12    |    \shiftregs[1].sr            |ShiftReg_10                  |   408|
+|13    |    \shiftregs[2].sr            |ShiftReg_11                  |   224|
+|14    |    \shiftregs[3].sr            |ShiftReg_12                  |   224|
+|15    |    \shiftregs[4].sr            |ShiftReg_13                  |   208|
+|16    |  \buffers[0].channel[0].conv   |ConvWrapper__xdcDup__1       |    17|
+|17    |    mult_acc                    |design_1_wrapper__xdcDup__1  |    17|
+|18    |      design_1_i                |design_1__xdcDup__1          |    16|
+|19    |  \buffers[0].channel[10].conv  |ConvWrapper__xdcDup__2       |    24|
+|20    |    mult_acc                    |design_1_wrapper__xdcDup__2  |    24|
+|21    |      design_1_i                |design_1__xdcDup__2          |    16|
+|22    |  \buffers[0].channel[11].conv  |ConvWrapper__xdcDup__3       |    24|
+|23    |    mult_acc                    |design_1_wrapper__xdcDup__3  |    24|
+|24    |      design_1_i                |design_1__xdcDup__3          |    16|
+|25    |  \buffers[0].channel[12].conv  |ConvWrapper__xdcDup__4       |    24|
+|26    |    mult_acc                    |design_1_wrapper__xdcDup__4  |    24|
+|27    |      design_1_i                |design_1__xdcDup__4          |    16|
+|28    |  \buffers[0].channel[13].conv  |ConvWrapper__xdcDup__5       |    24|
+|29    |    mult_acc                    |design_1_wrapper__xdcDup__5  |    24|
+|30    |      design_1_i                |design_1__xdcDup__5          |    16|
+|31    |  \buffers[0].channel[14].conv  |ConvWrapper__xdcDup__6       |    24|
+|32    |    mult_acc                    |design_1_wrapper__xdcDup__6  |    24|
+|33    |      design_1_i                |design_1__xdcDup__6          |    16|
+|34    |  \buffers[0].channel[15].conv  |ConvWrapper__xdcDup__7       |    24|
+|35    |    mult_acc                    |design_1_wrapper__xdcDup__7  |    24|
+|36    |      design_1_i                |design_1__xdcDup__7          |    16|
+|37    |  \buffers[0].channel[16].conv  |ConvWrapper__xdcDup__8       |    24|
+|38    |    mult_acc                    |design_1_wrapper__xdcDup__8  |    24|
+|39    |      design_1_i                |design_1__xdcDup__8          |    16|
+|40    |  \buffers[0].channel[17].conv  |ConvWrapper__xdcDup__9       |    24|
+|41    |    mult_acc                    |design_1_wrapper__xdcDup__9  |    24|
+|42    |      design_1_i                |design_1__xdcDup__9          |    16|
+|43    |  \buffers[0].channel[18].conv  |ConvWrapper__xdcDup__10      |    24|
+|44    |    mult_acc                    |design_1_wrapper__xdcDup__10 |    24|
+|45    |      design_1_i                |design_1__xdcDup__10         |    16|
+|46    |  \buffers[0].channel[19].conv  |ConvWrapper__xdcDup__11      |    24|
+|47    |    mult_acc                    |design_1_wrapper__xdcDup__11 |    24|
+|48    |      design_1_i                |design_1__xdcDup__11         |    16|
+|49    |  \buffers[0].channel[1].conv   |ConvWrapper__xdcDup__12      |    24|
+|50    |    mult_acc                    |design_1_wrapper__xdcDup__12 |    24|
+|51    |      design_1_i                |design_1__xdcDup__12         |    16|
+|52    |  \buffers[0].channel[20].conv  |ConvWrapper__xdcDup__13      |    24|
+|53    |    mult_acc                    |design_1_wrapper__xdcDup__13 |    24|
+|54    |      design_1_i                |design_1__xdcDup__13         |    16|
+|55    |  \buffers[0].channel[21].conv  |ConvWrapper__xdcDup__14      |    24|
+|56    |    mult_acc                    |design_1_wrapper__xdcDup__14 |    24|
+|57    |      design_1_i                |design_1__xdcDup__14         |    16|
+|58    |  \buffers[0].channel[22].conv  |ConvWrapper__xdcDup__15      |    24|
+|59    |    mult_acc                    |design_1_wrapper__xdcDup__15 |    24|
+|60    |      design_1_i                |design_1__xdcDup__15         |    16|
+|61    |  \buffers[0].channel[23].conv  |ConvWrapper__xdcDup__16      |    24|
+|62    |    mult_acc                    |design_1_wrapper__xdcDup__16 |    24|
+|63    |      design_1_i                |design_1__xdcDup__16         |    16|
+|64    |  \buffers[0].channel[24].conv  |ConvWrapper__xdcDup__17      |    24|
+|65    |    mult_acc                    |design_1_wrapper__xdcDup__17 |    24|
+|66    |      design_1_i                |design_1__xdcDup__17         |    16|
+|67    |  \buffers[0].channel[2].conv   |ConvWrapper__xdcDup__18      |    24|
+|68    |    mult_acc                    |design_1_wrapper__xdcDup__18 |    24|
+|69    |      design_1_i                |design_1__xdcDup__18         |    16|
+|70    |  \buffers[0].channel[3].conv   |ConvWrapper__xdcDup__19      |    24|
+|71    |    mult_acc                    |design_1_wrapper__xdcDup__19 |    24|
+|72    |      design_1_i                |design_1__xdcDup__19         |    16|
+|73    |  \buffers[0].channel[4].conv   |ConvWrapper__xdcDup__20      |    24|
+|74    |    mult_acc                    |design_1_wrapper__xdcDup__20 |    24|
+|75    |      design_1_i                |design_1__xdcDup__20         |    16|
+|76    |  \buffers[0].channel[5].conv   |ConvWrapper__xdcDup__21      |    24|
+|77    |    mult_acc                    |design_1_wrapper__xdcDup__21 |    24|
+|78    |      design_1_i                |design_1__xdcDup__21         |    16|
+|79    |  \buffers[0].channel[6].conv   |ConvWrapper__xdcDup__22      |    24|
+|80    |    mult_acc                    |design_1_wrapper__xdcDup__22 |    24|
+|81    |      design_1_i                |design_1__xdcDup__22         |    16|
+|82    |  \buffers[0].channel[7].conv   |ConvWrapper__xdcDup__23      |    24|
+|83    |    mult_acc                    |design_1_wrapper__xdcDup__23 |    24|
+|84    |      design_1_i                |design_1__xdcDup__23         |    16|
+|85    |  \buffers[0].channel[8].conv   |ConvWrapper__xdcDup__24      |    24|
+|86    |    mult_acc                    |design_1_wrapper__xdcDup__24 |    24|
+|87    |      design_1_i                |design_1__xdcDup__24         |    16|
+|88    |  \buffers[0].channel[9].conv   |ConvWrapper__xdcDup__25      |    24|
+|89    |    mult_acc                    |design_1_wrapper__xdcDup__25 |    24|
+|90    |      design_1_i                |design_1__xdcDup__25         |    16|
+|91    |  \buffers[1].buffer            |Buffer__xdcDup__2            |  1531|
+|92    |    \brams[0].bram              |bram_wrapper__xdcDup__5      |     8|
+|93    |      bram_i                    |bram__xdcDup__5              |     8|
+|94    |    \brams[1].bram              |bram_wrapper__xdcDup__6      |     8|
+|95    |      bram_i                    |bram__xdcDup__6              |     8|
+|96    |    \brams[2].bram              |bram_wrapper__xdcDup__7      |     8|
+|97    |      bram_i                    |bram__xdcDup__7              |     8|
+|98    |    \brams[3].bram              |bram_wrapper__xdcDup__8      |     8|
+|99    |      bram_i                    |bram__xdcDup__8              |     8|
+|100   |    \shiftregs[0].sr            |ShiftReg_4                   |   408|
+|101   |    \shiftregs[1].sr            |ShiftReg_5                   |   408|
+|102   |    \shiftregs[2].sr            |ShiftReg_6                   |   224|
+|103   |    \shiftregs[3].sr            |ShiftReg_7                   |   224|
+|104   |    \shiftregs[4].sr            |ShiftReg_8                   |   208|
+|105   |  \buffers[1].channel[0].conv   |ConvWrapper__xdcDup__26      |    16|
+|106   |    mult_acc                    |design_1_wrapper__xdcDup__26 |    16|
+|107   |      design_1_i                |design_1__xdcDup__26         |    16|
+|108   |  \buffers[1].channel[10].conv  |ConvWrapper__xdcDup__27      |    24|
+|109   |    mult_acc                    |design_1_wrapper__xdcDup__27 |    24|
+|110   |      design_1_i                |design_1__xdcDup__27         |    16|
+|111   |  \buffers[1].channel[11].conv  |ConvWrapper__xdcDup__28      |    24|
+|112   |    mult_acc                    |design_1_wrapper__xdcDup__28 |    24|
+|113   |      design_1_i                |design_1__xdcDup__28         |    16|
+|114   |  \buffers[1].channel[12].conv  |ConvWrapper__xdcDup__29      |    24|
+|115   |    mult_acc                    |design_1_wrapper__xdcDup__29 |    24|
+|116   |      design_1_i                |design_1__xdcDup__29         |    16|
+|117   |  \buffers[1].channel[13].conv  |ConvWrapper__xdcDup__30      |    24|
+|118   |    mult_acc                    |design_1_wrapper__xdcDup__30 |    24|
+|119   |      design_1_i                |design_1__xdcDup__30         |    16|
+|120   |  \buffers[1].channel[14].conv  |ConvWrapper__xdcDup__31      |    24|
+|121   |    mult_acc                    |design_1_wrapper__xdcDup__31 |    24|
+|122   |      design_1_i                |design_1__xdcDup__31         |    16|
+|123   |  \buffers[1].channel[15].conv  |ConvWrapper__xdcDup__32      |    24|
+|124   |    mult_acc                    |design_1_wrapper__xdcDup__32 |    24|
+|125   |      design_1_i                |design_1__xdcDup__32         |    16|
+|126   |  \buffers[1].channel[16].conv  |ConvWrapper__xdcDup__33      |    24|
+|127   |    mult_acc                    |design_1_wrapper__xdcDup__33 |    24|
+|128   |      design_1_i                |design_1__xdcDup__33         |    16|
+|129   |  \buffers[1].channel[17].conv  |ConvWrapper__xdcDup__34      |    24|
+|130   |    mult_acc                    |design_1_wrapper__xdcDup__34 |    24|
+|131   |      design_1_i                |design_1__xdcDup__34         |    16|
+|132   |  \buffers[1].channel[18].conv  |ConvWrapper__xdcDup__35      |    24|
+|133   |    mult_acc                    |design_1_wrapper__xdcDup__35 |    24|
+|134   |      design_1_i                |design_1__xdcDup__35         |    16|
+|135   |  \buffers[1].channel[19].conv  |ConvWrapper__xdcDup__36      |    24|
+|136   |    mult_acc                    |design_1_wrapper__xdcDup__36 |    24|
+|137   |      design_1_i                |design_1__xdcDup__36         |    16|
+|138   |  \buffers[1].channel[1].conv   |ConvWrapper__xdcDup__37      |    24|
+|139   |    mult_acc                    |design_1_wrapper__xdcDup__37 |    24|
+|140   |      design_1_i                |design_1__xdcDup__37         |    16|
+|141   |  \buffers[1].channel[20].conv  |ConvWrapper__xdcDup__38      |    24|
+|142   |    mult_acc                    |design_1_wrapper__xdcDup__38 |    24|
+|143   |      design_1_i                |design_1__xdcDup__38         |    16|
+|144   |  \buffers[1].channel[21].conv  |ConvWrapper__xdcDup__39      |    24|
+|145   |    mult_acc                    |design_1_wrapper__xdcDup__39 |    24|
+|146   |      design_1_i                |design_1__xdcDup__39         |    16|
+|147   |  \buffers[1].channel[22].conv  |ConvWrapper__xdcDup__40      |    24|
+|148   |    mult_acc                    |design_1_wrapper__xdcDup__40 |    24|
+|149   |      design_1_i                |design_1__xdcDup__40         |    16|
+|150   |  \buffers[1].channel[23].conv  |ConvWrapper__xdcDup__41      |    24|
+|151   |    mult_acc                    |design_1_wrapper__xdcDup__41 |    24|
+|152   |      design_1_i                |design_1__xdcDup__41         |    16|
+|153   |  \buffers[1].channel[24].conv  |ConvWrapper__xdcDup__42      |    25|
+|154   |    mult_acc                    |design_1_wrapper__xdcDup__42 |    25|
+|155   |      design_1_i                |design_1__xdcDup__42         |    16|
+|156   |  \buffers[1].channel[2].conv   |ConvWrapper__xdcDup__43      |    24|
+|157   |    mult_acc                    |design_1_wrapper__xdcDup__43 |    24|
+|158   |      design_1_i                |design_1__xdcDup__43         |    16|
+|159   |  \buffers[1].channel[3].conv   |ConvWrapper__xdcDup__44      |    24|
+|160   |    mult_acc                    |design_1_wrapper__xdcDup__44 |    24|
+|161   |      design_1_i                |design_1__xdcDup__44         |    16|
+|162   |  \buffers[1].channel[4].conv   |ConvWrapper__xdcDup__45      |    24|
+|163   |    mult_acc                    |design_1_wrapper__xdcDup__45 |    24|
+|164   |      design_1_i                |design_1__xdcDup__45         |    16|
+|165   |  \buffers[1].channel[5].conv   |ConvWrapper__xdcDup__46      |    24|
+|166   |    mult_acc                    |design_1_wrapper__xdcDup__46 |    24|
+|167   |      design_1_i                |design_1__xdcDup__46         |    16|
+|168   |  \buffers[1].channel[6].conv   |ConvWrapper__xdcDup__47      |    24|
+|169   |    mult_acc                    |design_1_wrapper__xdcDup__47 |    24|
+|170   |      design_1_i                |design_1__xdcDup__47         |    16|
+|171   |  \buffers[1].channel[7].conv   |ConvWrapper__xdcDup__48      |    24|
+|172   |    mult_acc                    |design_1_wrapper__xdcDup__48 |    24|
+|173   |      design_1_i                |design_1__xdcDup__48         |    16|
+|174   |  \buffers[1].channel[8].conv   |ConvWrapper__xdcDup__49      |    24|
+|175   |    mult_acc                    |design_1_wrapper__xdcDup__49 |    24|
+|176   |      design_1_i                |design_1__xdcDup__49         |    16|
+|177   |  \buffers[1].channel[9].conv   |ConvWrapper__xdcDup__50      |    24|
+|178   |    mult_acc                    |design_1_wrapper__xdcDup__50 |    24|
+|179   |      design_1_i                |design_1__xdcDup__50         |    16|
+|180   |  \buffers[2].buffer            |Buffer                       |  1531|
+|181   |    \brams[0].bram              |bram_wrapper__xdcDup__9      |     8|
+|182   |      bram_i                    |bram__xdcDup__9              |     8|
+|183   |    \brams[1].bram              |bram_wrapper__xdcDup__10     |     8|
+|184   |      bram_i                    |bram__xdcDup__10             |     8|
+|185   |    \brams[2].bram              |bram_wrapper__xdcDup__11     |     8|
+|186   |      bram_i                    |bram__xdcDup__11             |     8|
+|187   |    \brams[3].bram              |bram_wrapper                 |     8|
+|188   |      bram_i                    |bram                         |     8|
+|189   |    \shiftregs[0].sr            |ShiftReg                     |   408|
+|190   |    \shiftregs[1].sr            |ShiftReg_0                   |   408|
+|191   |    \shiftregs[2].sr            |ShiftReg_1                   |   224|
+|192   |    \shiftregs[3].sr            |ShiftReg_2                   |   224|
+|193   |    \shiftregs[4].sr            |ShiftReg_3                   |   208|
+|194   |  \buffers[2].channel[0].conv   |ConvWrapper__xdcDup__51      |    16|
+|195   |    mult_acc                    |design_1_wrapper__xdcDup__51 |    16|
+|196   |      design_1_i                |design_1__xdcDup__51         |    16|
+|197   |  \buffers[2].channel[10].conv  |ConvWrapper__xdcDup__52      |    24|
+|198   |    mult_acc                    |design_1_wrapper__xdcDup__52 |    24|
+|199   |      design_1_i                |design_1__xdcDup__52         |    16|
+|200   |  \buffers[2].channel[11].conv  |ConvWrapper__xdcDup__53      |    24|
+|201   |    mult_acc                    |design_1_wrapper__xdcDup__53 |    24|
+|202   |      design_1_i                |design_1__xdcDup__53         |    16|
+|203   |  \buffers[2].channel[12].conv  |ConvWrapper__xdcDup__54      |    24|
+|204   |    mult_acc                    |design_1_wrapper__xdcDup__54 |    24|
+|205   |      design_1_i                |design_1__xdcDup__54         |    16|
+|206   |  \buffers[2].channel[13].conv  |ConvWrapper__xdcDup__55      |    24|
+|207   |    mult_acc                    |design_1_wrapper__xdcDup__55 |    24|
+|208   |      design_1_i                |design_1__xdcDup__55         |    16|
+|209   |  \buffers[2].channel[14].conv  |ConvWrapper__xdcDup__56      |    24|
+|210   |    mult_acc                    |design_1_wrapper__xdcDup__56 |    24|
+|211   |      design_1_i                |design_1__xdcDup__56         |    16|
+|212   |  \buffers[2].channel[15].conv  |ConvWrapper__xdcDup__57      |    24|
+|213   |    mult_acc                    |design_1_wrapper__xdcDup__57 |    24|
+|214   |      design_1_i                |design_1__xdcDup__57         |    16|
+|215   |  \buffers[2].channel[16].conv  |ConvWrapper__xdcDup__58      |    24|
+|216   |    mult_acc                    |design_1_wrapper__xdcDup__58 |    24|
+|217   |      design_1_i                |design_1__xdcDup__58         |    16|
+|218   |  \buffers[2].channel[17].conv  |ConvWrapper__xdcDup__59      |    24|
+|219   |    mult_acc                    |design_1_wrapper__xdcDup__59 |    24|
+|220   |      design_1_i                |design_1__xdcDup__59         |    16|
+|221   |  \buffers[2].channel[18].conv  |ConvWrapper__xdcDup__60      |    24|
+|222   |    mult_acc                    |design_1_wrapper__xdcDup__60 |    24|
+|223   |      design_1_i                |design_1__xdcDup__60         |    16|
+|224   |  \buffers[2].channel[19].conv  |ConvWrapper__xdcDup__61      |    24|
+|225   |    mult_acc                    |design_1_wrapper__xdcDup__61 |    24|
+|226   |      design_1_i                |design_1__xdcDup__61         |    16|
+|227   |  \buffers[2].channel[1].conv   |ConvWrapper__xdcDup__62      |    24|
+|228   |    mult_acc                    |design_1_wrapper__xdcDup__62 |    24|
+|229   |      design_1_i                |design_1__xdcDup__62         |    16|
+|230   |  \buffers[2].channel[20].conv  |ConvWrapper__xdcDup__63      |    24|
+|231   |    mult_acc                    |design_1_wrapper__xdcDup__63 |    24|
+|232   |      design_1_i                |design_1__xdcDup__63         |    16|
+|233   |  \buffers[2].channel[21].conv  |ConvWrapper__xdcDup__64      |    24|
+|234   |    mult_acc                    |design_1_wrapper__xdcDup__64 |    24|
+|235   |      design_1_i                |design_1__xdcDup__64         |    16|
+|236   |  \buffers[2].channel[22].conv  |ConvWrapper__xdcDup__65      |    24|
+|237   |    mult_acc                    |design_1_wrapper__xdcDup__65 |    24|
+|238   |      design_1_i                |design_1__xdcDup__65         |    16|
+|239   |  \buffers[2].channel[23].conv  |ConvWrapper__xdcDup__66      |    24|
+|240   |    mult_acc                    |design_1_wrapper__xdcDup__66 |    24|
+|241   |      design_1_i                |design_1__xdcDup__66         |    16|
+|242   |  \buffers[2].channel[24].conv  |ConvWrapper__xdcDup__67      |    26|
+|243   |    mult_acc                    |design_1_wrapper__xdcDup__67 |    26|
+|244   |      design_1_i                |design_1__xdcDup__67         |    16|
+|245   |  \buffers[2].channel[2].conv   |ConvWrapper__xdcDup__68      |    24|
+|246   |    mult_acc                    |design_1_wrapper__xdcDup__68 |    24|
+|247   |      design_1_i                |design_1__xdcDup__68         |    16|
+|248   |  \buffers[2].channel[3].conv   |ConvWrapper__xdcDup__69      |    24|
+|249   |    mult_acc                    |design_1_wrapper__xdcDup__69 |    24|
+|250   |      design_1_i                |design_1__xdcDup__69         |    16|
+|251   |  \buffers[2].channel[4].conv   |ConvWrapper__xdcDup__70      |    24|
+|252   |    mult_acc                    |design_1_wrapper__xdcDup__70 |    24|
+|253   |      design_1_i                |design_1__xdcDup__70         |    16|
+|254   |  \buffers[2].channel[5].conv   |ConvWrapper__xdcDup__71      |    24|
+|255   |    mult_acc                    |design_1_wrapper__xdcDup__71 |    24|
+|256   |      design_1_i                |design_1__xdcDup__71         |    16|
+|257   |  \buffers[2].channel[6].conv   |ConvWrapper__xdcDup__72      |    24|
+|258   |    mult_acc                    |design_1_wrapper__xdcDup__72 |    24|
+|259   |      design_1_i                |design_1__xdcDup__72         |    16|
+|260   |  \buffers[2].channel[7].conv   |ConvWrapper__xdcDup__73      |    24|
+|261   |    mult_acc                    |design_1_wrapper__xdcDup__73 |    24|
+|262   |      design_1_i                |design_1__xdcDup__73         |    16|
+|263   |  \buffers[2].channel[8].conv   |ConvWrapper__xdcDup__74      |    24|
+|264   |    mult_acc                    |design_1_wrapper__xdcDup__74 |    24|
+|265   |      design_1_i                |design_1__xdcDup__74         |    16|
+|266   |  \buffers[2].channel[9].conv   |ConvWrapper                  |    24|
+|267   |    mult_acc                    |design_1_wrapper             |    24|
+|268   |      design_1_i                |design_1                     |    16|
+|269   |  out                           |DDR_Shiftreg                 |   584|
++------+--------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 736.152 ; gain = 474.875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 249 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 736.152 ; gain = 155.965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 736.152 ; gain = 474.875
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 INFO: [Common 17-83] Releasing license: Synthesis
-9 Infos, 5 Warnings, 1 Critical Warnings and 2 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 20:59:39 2018...
+40 Infos, 199 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 741.188 ; gain = 489.133
+INFO: [Common 17-1381] The checkpoint 'H:/FPGA-Neural-Network-/fpga/fpga.runs/synth_1/ConvEngine.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ConvEngine_utilization_synth.rpt -pb ConvEngine_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 741.188 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 29 13:58:38 2018...

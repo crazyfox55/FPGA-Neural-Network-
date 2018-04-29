@@ -27,10 +27,11 @@ module Buffer #(
 (
     input [7:0] ddr_data,
     input CLK,
-    output [7:0] shiftreg_buffer [0:4] [0:44]
+    output [7:0] shiftreg_buffer [0:4] [0:44],
+    input reset
     );
-    logic [4:0] [7:0] bram_rvals;
-    logic [3:0] [7:0] bram_wvals;
+    logic  [7:0] bram_rvals [0:4];
+    logic  [7:0] bram_wvals [0:3];
     logic [10:0] bram_idx;
     
     assign bram_rvals[0] = ddr_data;
@@ -59,7 +60,7 @@ module Buffer #(
                           .BRAM_PORTB_0_en(1'b1));
     end
     for( i = 0; i < 5; i = i + 1) begin: shiftregs
-        ShiftReg #(.WIDTH(45),.DWIDTH(8)) sr(.head(bram_rvals[i]), .CLK(CLK), .body(shiftreg_buffer[i]), .tail(bram_wvals[i]));
+        ShiftReg #(.WIDTH(45),.DWIDTH(8)) sr(.head(bram_rvals[i]), .CLK(CLK), .body(shiftreg_buffer[i]), .tail(bram_wvals[i]), .reset(reset));
     end
     endgenerate
 endmodule

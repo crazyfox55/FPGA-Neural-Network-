@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Apr 26 21:03:38 2018
-# Process ID: 32736
+# Start of session at: Sun Apr 29 13:57:01 2018
+# Process ID: 16380
 # Current directory: H:/FPGA-Neural-Network-/fpga/fpga.runs/design_1_xbip_dsp48_macro_0_0_synth_1
 # Command line: vivado.exe -log design_1_xbip_dsp48_macro_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbip_dsp48_macro_0_0.tcl
 # Log file: H:/FPGA-Neural-Network-/fpga/fpga.runs/design_1_xbip_dsp48_macro_0_0_synth_1/design_1_xbip_dsp48_macro_0_0.vds
@@ -11,4 +11,34 @@
 #-----------------------------------------------------------
 source design_1_xbip_dsp48_macro_0_0.tcl -notrace
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xbip_dsp48_macro_0_0, cache-ID = 2452ce44bf3c91fb.
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 356.531 ; gain = 95.480
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/synth/design_1_xbip_dsp48_macro_0_0.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (6#1) [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/synth/design_1_xbip_dsp48_macro_0_0.vhd:69]
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 404.746 ; gain = 143.695
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 404.746 ; gain = 143.695
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 609.207 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 609.207 ; gain = 348.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 609.207 ; gain = 348.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 609.207 ; gain = 348.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 609.207 ; gain = 348.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 609.207 ; gain = 348.156
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 704.211 ; gain = 443.160
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 704.211 ; gain = 443.160
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     1|
+|2     |LUT1    |     1|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 715.355 ; gain = 454.305
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 715.355 ; gain = 462.574

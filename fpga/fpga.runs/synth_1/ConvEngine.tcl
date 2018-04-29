@@ -16,6 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -24,7 +27,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir H:/FPGA-Neural-Network-/fpga/fpga.cache/wt [current_project]
 set_property parent.project_path H:/FPGA-Neural-Network-/fpga/fpga.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
@@ -48,11 +51,6 @@ read_verilog -library xil_defaultlib {
   H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 }
 add_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/design_1_xbip_dsp48_macro_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_board.xdc]
-set_property used_in_implementation false [get_files -all h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1.xdc]
-set_property used_in_implementation false [get_files -all h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_late.xdc]
-set_property used_in_implementation false [get_files -all h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 add_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd

@@ -1,0 +1,880 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date             : Sun Apr 29 14:00:02 2018
+| Host             : CS-S110 running 64-bit major release  (build 9200)
+| Command          : report_power -file ConvEngine_power_routed.rpt -pb ConvEngine_power_summary_routed.pb -rpx ConvEngine_power_routed.rpx
+| Design           : ConvEngine
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 115.410 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 114.649                           |
+| Device Static (W)        | 0.761                             |
+| Effective TJA (C/W)      | 11.5                              |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |    28.312 |     6015 |       --- |             --- |
+|   LUT as Logic          |    23.583 |     1269 |     17600 |            7.21 |
+|   Register              |     3.578 |     3777 |     35200 |           10.73 |
+|   LUT as Shift Register |     1.145 |       84 |      6000 |            1.40 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   Others                |     0.000 |      223 |       --- |             --- |
+| Signals                 |    65.921 |     5729 |       --- |             --- |
+| Block RAM               |     1.776 |        6 |        60 |           10.00 |
+| DSPs                    |    14.824 |       75 |        80 |           93.75 |
+| I/O                     |     3.817 |       65 |       100 |           65.00 |
+| Static Power            |     0.761 |          |           |                 |
+| Total                   |   115.410 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |   110.993 |     110.857 |      0.136 |
+| Vccaux    |       1.800 |     0.342 |       0.302 |      0.040 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     1.746 |       1.745 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.126 |       0.108 |      0.018 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------------------+-----------+
+| Name                                               | Power (W) |
++----------------------------------------------------+-----------+
+| ConvEngine                                         |   114.649 |
+|   buffers[0].buffer                                |    28.086 |
+|     brams[0].bram                                  |     0.214 |
+|       bram_i                                       |     0.214 |
+|         blk_mem_gen_0                              |     0.214 |
+|           U0                                       |     0.214 |
+|             inst_blk_mem_gen                       |     0.214 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.214 |
+|                 valid.cstr                         |     0.214 |
+|                   ramloop[0].ram.r                 |     0.214 |
+|                     prim_noinit.ram                |     0.214 |
+|     brams[1].bram                                  |     0.201 |
+|       bram_i                                       |     0.201 |
+|         blk_mem_gen_0                              |     0.201 |
+|           U0                                       |     0.201 |
+|             inst_blk_mem_gen                       |     0.201 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.201 |
+|                 valid.cstr                         |     0.201 |
+|                   ramloop[0].ram.r                 |     0.201 |
+|                     prim_noinit.ram                |     0.201 |
+|     brams[2].bram                                  |     0.202 |
+|       bram_i                                       |     0.202 |
+|         blk_mem_gen_0                              |     0.202 |
+|           U0                                       |     0.202 |
+|             inst_blk_mem_gen                       |     0.202 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.202 |
+|                 valid.cstr                         |     0.202 |
+|                   ramloop[0].ram.r                 |     0.202 |
+|                     prim_noinit.ram                |     0.202 |
+|     brams[3].bram                                  |     0.208 |
+|       bram_i                                       |     0.208 |
+|         blk_mem_gen_0                              |     0.208 |
+|           U0                                       |     0.208 |
+|             inst_blk_mem_gen                       |     0.208 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.208 |
+|                 valid.cstr                         |     0.208 |
+|                   ramloop[0].ram.r                 |     0.208 |
+|                     prim_noinit.ram                |     0.208 |
+|     shiftregs[0].sr                                |    12.865 |
+|     shiftregs[1].sr                                |     8.026 |
+|     shiftregs[2].sr                                |     2.080 |
+|     shiftregs[3].sr                                |     2.120 |
+|     shiftregs[4].sr                                |     1.981 |
+|   buffers[0].channel[0].conv                       |     1.189 |
+|     mult_acc                                       |     1.189 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[10].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[11].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[0].channel[12].conv                      |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[13].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[14].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[15].conv                      |     0.214 |
+|     mult_acc                                       |     0.214 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[16].conv                      |     0.223 |
+|     mult_acc                                       |     0.223 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[0].channel[17].conv                      |     0.222 |
+|     mult_acc                                       |     0.222 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[0].channel[18].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[19].conv                      |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[1].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[20].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[21].conv                      |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[22].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.205 |
+|         xbip_dsp48_macro_0                         |     0.205 |
+|           U0                                       |     0.205 |
+|             i_synth                                |     0.205 |
+|               i_synth_option.i_synth_model         |     0.205 |
+|                 opt_7series.i_uniwrap              |     0.205 |
+|   buffers[0].channel[23].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[0].channel[24].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[0].channel[2].conv                       |     0.214 |
+|     mult_acc                                       |     0.214 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[3].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[4].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[0].channel[5].conv                       |     0.229 |
+|     mult_acc                                       |     0.229 |
+|       design_1_i                                   |     0.216 |
+|         xbip_dsp48_macro_0                         |     0.216 |
+|           U0                                       |     0.216 |
+|             i_synth                                |     0.216 |
+|               i_synth_option.i_synth_model         |     0.216 |
+|                 opt_7series.i_uniwrap              |     0.216 |
+|   buffers[0].channel[6].conv                       |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.205 |
+|         xbip_dsp48_macro_0                         |     0.205 |
+|           U0                                       |     0.205 |
+|             i_synth                                |     0.205 |
+|               i_synth_option.i_synth_model         |     0.205 |
+|                 opt_7series.i_uniwrap              |     0.205 |
+|   buffers[0].channel[7].conv                       |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[0].channel[8].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[0].channel[9].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].buffer                                |    28.422 |
+|     brams[0].bram                                  |     0.205 |
+|       bram_i                                       |     0.205 |
+|         blk_mem_gen_0                              |     0.205 |
+|           U0                                       |     0.205 |
+|             inst_blk_mem_gen                       |     0.205 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.205 |
+|                 valid.cstr                         |     0.205 |
+|                   ramloop[0].ram.r                 |     0.205 |
+|                     prim_noinit.ram                |     0.205 |
+|     brams[1].bram                                  |     0.195 |
+|       bram_i                                       |     0.195 |
+|         blk_mem_gen_0                              |     0.195 |
+|           U0                                       |     0.195 |
+|             inst_blk_mem_gen                       |     0.195 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.195 |
+|                 valid.cstr                         |     0.195 |
+|                   ramloop[0].ram.r                 |     0.195 |
+|                     prim_noinit.ram                |     0.195 |
+|     brams[2].bram                                  |     0.202 |
+|       bram_i                                       |     0.202 |
+|         blk_mem_gen_0                              |     0.202 |
+|           U0                                       |     0.202 |
+|             inst_blk_mem_gen                       |     0.202 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.202 |
+|                 valid.cstr                         |     0.202 |
+|                   ramloop[0].ram.r                 |     0.202 |
+|                     prim_noinit.ram                |     0.202 |
+|     brams[3].bram                                  |     0.190 |
+|       bram_i                                       |     0.190 |
+|         blk_mem_gen_0                              |     0.190 |
+|           U0                                       |     0.190 |
+|             inst_blk_mem_gen                       |     0.190 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.190 |
+|                 valid.cstr                         |     0.190 |
+|                   ramloop[0].ram.r                 |     0.190 |
+|                     prim_noinit.ram                |     0.190 |
+|     shiftregs[0].sr                                |    13.063 |
+|     shiftregs[1].sr                                |     8.105 |
+|     shiftregs[2].sr                                |     2.155 |
+|     shiftregs[3].sr                                |     2.108 |
+|     shiftregs[4].sr                                |     2.012 |
+|   buffers[1].channel[0].conv                       |     0.201 |
+|     mult_acc                                       |     0.201 |
+|       design_1_i                                   |     0.201 |
+|         xbip_dsp48_macro_0                         |     0.201 |
+|           U0                                       |     0.201 |
+|             i_synth                                |     0.201 |
+|               i_synth_option.i_synth_model         |     0.201 |
+|                 opt_7series.i_uniwrap              |     0.201 |
+|   buffers[1].channel[10].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.201 |
+|         xbip_dsp48_macro_0                         |     0.201 |
+|           U0                                       |     0.201 |
+|             i_synth                                |     0.201 |
+|               i_synth_option.i_synth_model         |     0.201 |
+|                 opt_7series.i_uniwrap              |     0.201 |
+|   buffers[1].channel[11].conv                      |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[12].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.201 |
+|         xbip_dsp48_macro_0                         |     0.201 |
+|           U0                                       |     0.201 |
+|             i_synth                                |     0.201 |
+|               i_synth_option.i_synth_model         |     0.201 |
+|                 opt_7series.i_uniwrap              |     0.201 |
+|   buffers[1].channel[13].conv                      |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[14].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[1].channel[15].conv                      |     0.215 |
+|     mult_acc                                       |     0.215 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[16].conv                      |     0.221 |
+|     mult_acc                                       |     0.221 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[1].channel[17].conv                      |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[1].channel[18].conv                      |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[1].channel[19].conv                      |     0.214 |
+|     mult_acc                                       |     0.214 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[1].conv                       |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[1].channel[20].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[21].conv                      |     0.221 |
+|     mult_acc                                       |     0.221 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[1].channel[22].conv                      |     0.221 |
+|     mult_acc                                       |     0.221 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[1].channel[23].conv                      |     0.215 |
+|     mult_acc                                       |     0.215 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[24].conv                      |     1.265 |
+|     mult_acc                                       |     1.265 |
+|       design_1_i                                   |     0.210 |
+|         xbip_dsp48_macro_0                         |     0.210 |
+|           U0                                       |     0.210 |
+|             i_synth                                |     0.210 |
+|               i_synth_option.i_synth_model         |     0.210 |
+|                 opt_7series.i_uniwrap              |     0.210 |
+|   buffers[1].channel[2].conv                       |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[1].channel[3].conv                       |     0.223 |
+|     mult_acc                                       |     0.223 |
+|       design_1_i                                   |     0.209 |
+|         xbip_dsp48_macro_0                         |     0.209 |
+|           U0                                       |     0.209 |
+|             i_synth                                |     0.209 |
+|               i_synth_option.i_synth_model         |     0.209 |
+|                 opt_7series.i_uniwrap              |     0.209 |
+|   buffers[1].channel[4].conv                       |     0.225 |
+|     mult_acc                                       |     0.225 |
+|       design_1_i                                   |     0.209 |
+|         xbip_dsp48_macro_0                         |     0.209 |
+|           U0                                       |     0.209 |
+|             i_synth                                |     0.209 |
+|               i_synth_option.i_synth_model         |     0.209 |
+|                 opt_7series.i_uniwrap              |     0.209 |
+|   buffers[1].channel[5].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[1].channel[6].conv                       |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[1].channel[7].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[8].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[1].channel[9].conv                       |     0.214 |
+|     mult_acc                                       |     0.214 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[2].buffer                                |    28.443 |
+|     brams[0].bram                                  |     0.203 |
+|       bram_i                                       |     0.203 |
+|         blk_mem_gen_0                              |     0.203 |
+|           U0                                       |     0.203 |
+|             inst_blk_mem_gen                       |     0.203 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.203 |
+|                 valid.cstr                         |     0.203 |
+|                   ramloop[0].ram.r                 |     0.203 |
+|                     prim_noinit.ram                |     0.203 |
+|     brams[1].bram                                  |     0.192 |
+|       bram_i                                       |     0.192 |
+|         blk_mem_gen_0                              |     0.192 |
+|           U0                                       |     0.192 |
+|             inst_blk_mem_gen                       |     0.192 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.192 |
+|                 valid.cstr                         |     0.192 |
+|                   ramloop[0].ram.r                 |     0.192 |
+|                     prim_noinit.ram                |     0.192 |
+|     brams[2].bram                                  |     0.212 |
+|       bram_i                                       |     0.212 |
+|         blk_mem_gen_0                              |     0.212 |
+|           U0                                       |     0.212 |
+|             inst_blk_mem_gen                       |     0.212 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.212 |
+|                 valid.cstr                         |     0.212 |
+|                   ramloop[0].ram.r                 |     0.212 |
+|                     prim_noinit.ram                |     0.212 |
+|     brams[3].bram                                  |     0.218 |
+|       bram_i                                       |     0.218 |
+|         blk_mem_gen_0                              |     0.218 |
+|           U0                                       |     0.218 |
+|             inst_blk_mem_gen                       |     0.218 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.218 |
+|                 valid.cstr                         |     0.218 |
+|                   ramloop[0].ram.r                 |     0.218 |
+|                     prim_noinit.ram                |     0.218 |
+|     shiftregs[0].sr                                |    13.115 |
+|     shiftregs[1].sr                                |     8.036 |
+|     shiftregs[2].sr                                |     2.147 |
+|     shiftregs[3].sr                                |     2.098 |
+|     shiftregs[4].sr                                |     2.023 |
+|   buffers[2].channel[0].conv                       |     0.203 |
+|     mult_acc                                       |     0.203 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[10].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[11].conv                      |     0.222 |
+|     mult_acc                                       |     0.222 |
+|       design_1_i                                   |     0.205 |
+|         xbip_dsp48_macro_0                         |     0.205 |
+|           U0                                       |     0.205 |
+|             i_synth                                |     0.205 |
+|               i_synth_option.i_synth_model         |     0.205 |
+|                 opt_7series.i_uniwrap              |     0.205 |
+|   buffers[2].channel[12].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[2].channel[13].conv                      |     0.221 |
+|     mult_acc                                       |     0.221 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[2].channel[14].conv                      |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[15].conv                      |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[16].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[17].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[2].channel[18].conv                      |     0.216 |
+|     mult_acc                                       |     0.216 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[19].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[2].channel[1].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.201 |
+|         xbip_dsp48_macro_0                         |     0.201 |
+|           U0                                       |     0.201 |
+|             i_synth                                |     0.201 |
+|               i_synth_option.i_synth_model         |     0.201 |
+|                 opt_7series.i_uniwrap              |     0.201 |
+|   buffers[2].channel[20].conv                      |     0.222 |
+|     mult_acc                                       |     0.222 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[2].channel[21].conv                      |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.205 |
+|         xbip_dsp48_macro_0                         |     0.205 |
+|           U0                                       |     0.205 |
+|             i_synth                                |     0.205 |
+|               i_synth_option.i_synth_model         |     0.205 |
+|                 opt_7series.i_uniwrap              |     0.205 |
+|   buffers[2].channel[22].conv                      |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[23].conv                      |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.201 |
+|         xbip_dsp48_macro_0                         |     0.201 |
+|           U0                                       |     0.201 |
+|             i_synth                                |     0.201 |
+|               i_synth_option.i_synth_model         |     0.201 |
+|                 opt_7series.i_uniwrap              |     0.201 |
+|   buffers[2].channel[24].conv                      |     1.455 |
+|     mult_acc                                       |     1.455 |
+|       design_1_i                                   |     0.202 |
+|         xbip_dsp48_macro_0                         |     0.202 |
+|           U0                                       |     0.202 |
+|             i_synth                                |     0.202 |
+|               i_synth_option.i_synth_model         |     0.202 |
+|                 opt_7series.i_uniwrap              |     0.202 |
+|   buffers[2].channel[2].conv                       |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[3].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[4].conv                       |     0.215 |
+|     mult_acc                                       |     0.215 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[5].conv                       |     0.224 |
+|     mult_acc                                       |     0.224 |
+|       design_1_i                                   |     0.208 |
+|         xbip_dsp48_macro_0                         |     0.208 |
+|           U0                                       |     0.208 |
+|             i_synth                                |     0.208 |
+|               i_synth_option.i_synth_model         |     0.208 |
+|                 opt_7series.i_uniwrap              |     0.208 |
+|   buffers[2].channel[6].conv                       |     0.217 |
+|     mult_acc                                       |     0.217 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   buffers[2].channel[7].conv                       |     0.219 |
+|     mult_acc                                       |     0.219 |
+|       design_1_i                                   |     0.206 |
+|         xbip_dsp48_macro_0                         |     0.206 |
+|           U0                                       |     0.206 |
+|             i_synth                                |     0.206 |
+|               i_synth_option.i_synth_model         |     0.206 |
+|                 opt_7series.i_uniwrap              |     0.206 |
+|   buffers[2].channel[8].conv                       |     0.218 |
+|     mult_acc                                       |     0.218 |
+|       design_1_i                                   |     0.203 |
+|         xbip_dsp48_macro_0                         |     0.203 |
+|           U0                                       |     0.203 |
+|             i_synth                                |     0.203 |
+|               i_synth_option.i_synth_model         |     0.203 |
+|                 opt_7series.i_uniwrap              |     0.203 |
+|   buffers[2].channel[9].conv                       |     0.220 |
+|     mult_acc                                       |     0.220 |
+|       design_1_i                                   |     0.204 |
+|         xbip_dsp48_macro_0                         |     0.204 |
+|           U0                                       |     0.204 |
+|             i_synth                                |     0.204 |
+|               i_synth_option.i_synth_model         |     0.204 |
+|                 opt_7series.i_uniwrap              |     0.204 |
+|   out                                              |     0.713 |
++----------------------------------------------------+-----------+
+
+

@@ -66,34 +66,37 @@ module axis_fifo_v1_0 #
 // (SystemVerilog logic not reg)
 reg [C_AXIS_TDATA_WIDTH-1:0] mem[(2**ADDR_WIDTH)-1:0];
 
-parameter WAIT = 3'd0;
-parameter RECV = 3'd1;
-parameter SEND = 3'd3;
-parameter SLST = 3'd4;
+parameter WAIT = 2'd0;
+parameter RECV = 2'd1;
+parameter SEND = 2'd1;
+parameter SLST = 2'd3;
 
 // (SystemVerilog logic not reg)
-reg [2:0] nextState, State;
+reg [1:0] nextIState, IState;
+reg [1:0] nextOState, OState;
 reg [ADDR_WIDTH-1:0] cnt, ocnt;
 
 // FSM state transition
 always @(posedge s00_axis_aclk) begin
     if (s00_axis_aresetn == 1'b0) begin
-        State <= WAIT;
+        IState <= WAIT;
+        OState <= WAIT;
     end else begin
-        State <= nextState;
+        IState <= nextIState;
+        OState <= nextOState;
     end
 end
 
 // FSM output logic
 wire wren;
 wire cnt_reset, cnt_up, ocnt_up;
-assign s00_axis_tready = (State == WAIT) | (State == RECV);
-assign m00_axis_tvalid = (State == SEND) | (State == SLST);
-assign m00_axis_tlast = (State == SLST);
-assign cnt_reset = (State==WAIT) & ~s00_axis_tvalid;
+assign s00_axis_tready = (IState == WAIT) | (IState == RECV);
+assign m00_axis_tvalid = (OState == SEND) | (OState == SLST);
+assign m00_axis_tlast = (OState == SLST);
+assign cnt_reset = (IState==WAIT) & ~s00_axis_tvalid;
 assign cnt_up = wren;
-assign ocnt_up = (State == SEND) & m00_axis_tready;
-assign wren = ((State == WAIT) | (State == RECV)) & s00_axis_tvalid;
+assign ocnt_up = (OState == SEND) & m00_axis_tready;
+assign wren = ((IState == WAIT) | (IState == RECV)) & s00_axis_tvalid;
 
 // cnt counts the number of received data in the packet
 // (SystemVerilog always_ff)
@@ -123,14 +126,18 @@ end
 
 // memory read ADD 100!
 wire [31:0] mem_in;
-assign mem_in = mem[ocnt];
-ConvEngine engine(.ddr_rval(mem_in),.ddr_wval(m00_axis_tdata), .CLK(s00_axis_aclk));
+wire [31:0] mem_out;
+assign mem_in = mem[cnt];
+assign m00_axis_tdata = mem[ocnt];
+
+ConvEngine engine(.ddr_rval(mem_in),.ddr_wval(mem_out), .CLK(s00_axis_aclk));
 // memory write
 // (SystemVerilog always_ff)
 always @(posedge s00_axis_aclk) begin
     if (s00_axis_aresetn != 1'b0) begin
         if (wren) begin
             mem[cnt] <= s00_axis_tdata;
+            mem[ocnt] <= mem_out;
         end
     end
 end
@@ -138,41 +145,59 @@ end
 // FSM next state logic
 // (SystemVerilog always_comb)
 always @* begin
-    nextState = State;
+    nextIState = IState;
+    nextOState = OState;
     
-    case(State)
+    case(IState)
         WAIT : begin
             if (s00_axis_tvalid == 1'b1) begin
-                nextState = RECV;
+                nextIState = RECV;
             end else begin
-                nextState = WAIT;
+                nextIState = WAIT;
             end
         end
         RECV : begin
             if (s00_axis_tvalid == 1'b0) begin
-                nextState = RECV;
+                nextIState = RECV;
             end else if (s00_axis_tlast == 1'b1) begin
-                nextState = SEND; 
+                nextIState = SLST; 
             end else begin
-                nextState = RECV;
+                nextIState = RECV;
             end
         end
-        SEND : begin
-            if (m00_axis_tready == 1'b0) begin
-                nextState = SEND;
-            end else if (ocnt == cnt-2) begin
-                nextState = SLST;
-            end else begin
-                nextState = SEND;
-            end
-         end
+        
          SLST : begin
             if (m00_axis_tready == 1'b1) begin
-                nextState = WAIT;
+                nextIState = WAIT;
             end else begin
-                nextState = SLST;
+                nextIState = SLST;
             end
          end
+     endcase
+     case(OState)
+            WAIT : begin
+                 if (s00_axis_tready == 1'b1) begin
+                     nextOState = SEND;
+                 end else begin
+                     nextOState = WAIT;
+                 end
+             end
+             SEND : begin
+                 if (m00_axis_tready == 1'b0) begin
+                     nextOState = SEND;
+                 end else if (ocnt == cnt-2) begin
+                     nextOState = SLST;
+                 end else begin
+                     nextOState = SEND;
+                 end
+             end
+             SLST : begin
+                 if (m00_axis_tready == 1'b1) begin
+                     nextOState = WAIT;
+                 end else begin
+                     nextOState = SLST;
+                 end
+              end
      endcase
 end
         
