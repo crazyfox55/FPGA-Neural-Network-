@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='h:/fpga-neural-network-/ip_repo/edit_axis_fifo_v1_0.runs/impl_1'
+HD_PWD='H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

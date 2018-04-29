@@ -159,34 +159,27 @@ proc create_root_design { parentCell } {
   set A_0 [ create_bd_port -dir I -from 7 -to 0 -type data A_0 ]
   set B_0 [ create_bd_port -dir I -from 7 -to 0 -type data B_0 ]
   set P_0 [ create_bd_port -dir O -from 15 -to 0 -type data P_0 ]
-  set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] $reset_rtl
+  set SEL_0 [ create_bd_port -dir I -from 0 -to 0 -type data SEL_0 ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {125000000} \
    CONFIG.PHASE {0.000} \
  ] $sys_clock
 
-  # Create instance: clk_wiz, and set properties
-  set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz ]
-  set_property -dict [ list \
-   CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
-   CONFIG.PRIM_SOURCE {No_buffer} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $clk_wiz
-
   # Create instance: xbip_dsp48_macro_0, and set properties
   set xbip_dsp48_macro_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 xbip_dsp48_macro_0 ]
   set_property -dict [ list \
+   CONFIG.a_binarywidth {0} \
    CONFIG.a_width {8} \
-   CONFIG.areg_3 {true} \
-   CONFIG.areg_4 {true} \
+   CONFIG.areg_3 {false} \
+   CONFIG.areg_4 {false} \
    CONFIG.b_binarywidth {0} \
    CONFIG.b_width {8} \
-   CONFIG.breg_3 {true} \
-   CONFIG.breg_4 {true} \
+   CONFIG.breg_3 {false} \
+   CONFIG.breg_4 {false} \
+   CONFIG.c_binarywidth {0} \
+   CONFIG.concat_binarywidth {0} \
+   CONFIG.concat_width {48} \
    CONFIG.creg_3 {false} \
    CONFIG.creg_4 {false} \
    CONFIG.creg_5 {false} \
@@ -198,20 +191,26 @@ proc create_root_design { parentCell } {
    CONFIG.has_carryout {false} \
    CONFIG.has_pcout {false} \
    CONFIG.instruction1 {A*B+P} \
-   CONFIG.mreg_5 {true} \
+   CONFIG.instruction2 {A*B} \
+   CONFIG.mreg_5 {false} \
+   CONFIG.opreg_3 {false} \
+   CONFIG.opreg_4 {false} \
+   CONFIG.opreg_5 {false} \
    CONFIG.output_properties {User_Defined} \
    CONFIG.p_binarywidth {0} \
    CONFIG.p_full_width {48} \
    CONFIG.p_width {16} \
+   CONFIG.pcin_binarywidth {0} \
+   CONFIG.pipeline_options {By_Tier} \
    CONFIG.preg_6 {true} \
+   CONFIG.tier_6 {true} \
  ] $xbip_dsp48_macro_0
 
   # Create port connections
   connect_bd_net -net A_0_1 [get_bd_ports A_0] [get_bd_pins xbip_dsp48_macro_0/A]
   connect_bd_net -net B_0_1 [get_bd_ports B_0] [get_bd_pins xbip_dsp48_macro_0/B]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins clk_wiz/clk_out1] [get_bd_pins xbip_dsp48_macro_0/CLK]
-  connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz/reset]
-  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz/clk_in1]
+  connect_bd_net -net SEL_0_1 [get_bd_ports SEL_0] [get_bd_pins xbip_dsp48_macro_0/SEL]
+  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins xbip_dsp48_macro_0/CLK]
   connect_bd_net -net xbip_dsp48_macro_0_P [get_bd_ports P_0] [get_bd_pins xbip_dsp48_macro_0/P]
 
   # Create address segments

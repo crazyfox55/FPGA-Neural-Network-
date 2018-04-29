@@ -39,7 +39,7 @@ module ConvWrapper #(
     
     assign pxOut = dwOut[15:8];
     
-    design_1_wrapper mult_acc(.A_0(px[select]),.B_0(conv),.P_0(dwOut),.reset_rtl(reset), .sys_clock(CLK));
+    design_1_wrapper mult_acc(.A_0(px[select]),.B_0(conv),.P_0(dwOut),.SEL_0(reset), .sys_clock(CLK));
     
     
 endmodule

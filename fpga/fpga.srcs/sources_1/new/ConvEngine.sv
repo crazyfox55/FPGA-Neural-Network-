@@ -21,8 +21,8 @@
 
 
 module ConvEngine(
-        input [23:0] ddr_wval,
-        output logic [24:0] ddr_rval,
+        output logic [31:0] ddr_wval,
+        input [31:0] ddr_rval,
         
         input CLK        
     );
@@ -35,8 +35,8 @@ module ConvEngine(
     logic [2:0] [7:0] pxOut_buffer  [0:24];
     logic [7:0] conv_val;
     logic [7:0] ddr_write [0:5];
-    logic [7:0] ddr_read [0:5];
-    logic [24:0] ddr_read_head;
+    logic [7:0] ddr_read [0:7];
+    logic [7:0] ddr_read_head [0:2];
     logic [1:0] beat;
     wire signed [7:0] conv_regs [24:0]= {8'h0,8'h0, 8'h0, 8'h0, 8'h0,
                                          8'h0,8'hFF,8'hFF,8'hFF,8'h0,
@@ -48,7 +48,7 @@ module ConvEngine(
     assign conv_val = conv_regs[count];
     
     always_ff@(posedge CLK) begin
-        beat <=  beat + 1;
+        beat <=  beat - 1;
     end
     
     always_ff@(posedge CLK) begin
@@ -71,7 +71,7 @@ module ConvEngine(
     generate
     genvar i,j,k;
     for(i = 0; i < 3; i = i + 1) begin: buffers
-        Buffer buffer(.ddr_data(ddr_read_head), .CLK(CLK), .shiftreg_buffer(shiftreg_buffer_val[i]));
+        Buffer buffer(.ddr_data(ddr_read_head[i]), .CLK(CLK), .shiftreg_buffer(shiftreg_buffer_val[i]));
         for(j = 0; j < 25; j = j + 1) begin: channel
             logic [7:0] px_bus [0:4];
             for(k = 0; k<5; k = k + 1) begin
@@ -82,16 +82,16 @@ module ConvEngine(
     end
     endgenerate
     for(i = 0; i < 3; i =  i + 1) begin
+        assign ddr_read_head[i] = ddr_read[i+beat];
+    end
+    for(i = 0; i < 4; i =  i + 1) begin
         always_ff@(posedge CLK) begin
-            ddr_read[i+3] <= ddr_read[i]; 
-             if(beat>0) begin
-                ddr_write[i] <= ddr_wval[8*i+:8];
-                ddr_rval[8*i+:8] <= ddr_read;
-             end 
-        end
-       
-       
-        assign ddr_read_head[8*i+:8] = ddr_read[i+3];
+            if(beat>0) begin
+                 ddr_read[i] <= ddr_read[i+4]; 
+                 ddr_wval[8*i+:8] <= ddr_write[i];
+                 ddr_read[i+4] <= ddr_rval[8*i+:8];
+            end 
+         end
     end
     DDR_Shiftreg out(.CLK(CLK), .ddr_queue_vals(pxOut_buffer), .write_enable(write), .ddr_write(ddr_write));
 endmodule
