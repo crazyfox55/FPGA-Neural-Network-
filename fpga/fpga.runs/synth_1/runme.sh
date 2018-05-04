@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ConvEngine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConvEngine.tcl
+EAStep vivado -log design_2_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl

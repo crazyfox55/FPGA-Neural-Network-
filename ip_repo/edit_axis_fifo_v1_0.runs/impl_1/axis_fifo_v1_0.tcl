@@ -61,8 +61,10 @@ proc step_failed { step } {
 }
 
 set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config  -ruleid {1}  -id {IP_Flow 19-4963}  -string {{WARNING: [IP_Flow 19-4963] design_1_xbip_dsp48_macro_0_0 has board value specified. The packaged IP will be restricted to usage with board 'digilentinc.com:zybo-z7-10:part0:1.0'}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design

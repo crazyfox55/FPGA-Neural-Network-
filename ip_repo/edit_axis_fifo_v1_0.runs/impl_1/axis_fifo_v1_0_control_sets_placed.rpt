@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sun Apr 29 13:51:52 2018
+| Date         : Fri May  4 14:16:47 2018
 | Host         : CS-S110 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file axis_fifo_v1_0_control_sets_placed.rpt
 | Design       : axis_fifo_v1_0
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |    72 |
+| Number of unique control sets |    11 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            3646 |          910 |
+| No           | No                    | No                     |               4 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              38 |           13 |
-| Yes          | No                    | No                     |              96 |           56 |
+| No           | Yes                   | No                     |             600 |          196 |
+| Yes          | No                    | No                     |             872 |          177 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             205 |           99 |
+| Yes          | Yes                   | No                     |            3158 |          781 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

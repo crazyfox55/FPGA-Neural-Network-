@@ -1,0 +1,911 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed May  2 14:48:23 2018
+# Process ID: 12524
+# Current directory: H:/FPGA-Neural-Network-/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12620 H:\FPGA-Neural-Network-\ip_repo\edit_axis_fifo_v1_0.xpr
+# Log file: H:/FPGA-Neural-Network-/ip_repo/vivado.log
+# Journal file: H:/FPGA-Neural-Network-/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.xpr
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_xbip_dsp48_macro_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bram_blk_mem_gen_0_0' generated file not found 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 884.375 ; gain = 147.230
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+launch_runs bram_blk_mem_gen_0_0_synth_1
+[Wed May  2 14:48:50 2018] Launched bram_blk_mem_gen_0_0_synth_1...
+Run output will be captured here: H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.runs/bram_blk_mem_gen_0_0_synth_1/runme.log
+wait_on_run bram_blk_mem_gen_0_0_synth_1
+[Wed May  2 14:48:50 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:48:56 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:01 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:06 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:16 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:27 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:37 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:49:48 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:50:08 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+[Wed May  2 14:50:29 2018] Waiting for bram_blk_mem_gen_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log bram_blk_mem_gen_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_blk_mem_gen_0_0.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source bram_blk_mem_gen_0_0.tcl -notrace
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 354.750 ; gain = 94.680
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_0' [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_0/synth/bram_blk_mem_gen_0_0.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_0' (9#1) [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_0/synth/bram_blk_mem_gen_0_0.vhd:73]
+Finished RTL Elaboration : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 563.383 ; gain = 303.313
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 563.383 ; gain = 303.313
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 656.582 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 656.582 ; gain = 396.512
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 656.582 ; gain = 396.512
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 656.582 ; gain = 396.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 656.582 ; gain = 396.512
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 656.582 ; gain = 396.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 663.723 ; gain = 403.652
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 665.727 ; gain = 405.656
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB18E1 |     1|
+|2     |RAMB36E1 |     5|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 674.867 ; gain = 414.797
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:44 . Memory (MB): peak = 687.398 ; gain = 434.219
+[Wed May  2 14:50:45 2018] bram_blk_mem_gen_0_0_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:10 ; elapsed = 00:01:55 . Memory (MB): peak = 884.375 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: axis_fifo_v1_0
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:70]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:71]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:72]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 897.305 ; gain = 12.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter WAIT bound to: 2'b00 
+	Parameter RECV bound to: 2'b01 
+	Parameter SEND bound to: 2'b01 
+	Parameter SLST bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-3848] Net bram_in[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[0] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_rvals[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[4] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_0' (7#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTA_0_din' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:87]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTB_0_dout' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:91]
+WARNING: [Synth 8-350] instance 'bram' of module 'bram_wrapper' requires 9 connections, but only 7 given [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:151]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:177]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+ERROR: [Synth 8-3391] Unable to infer a block/distributed RAM for 'mem_reg' because the memory pattern used is not supported. Failed to dissolve the memory into bits because the number of bits (131072) is too large. Use 'set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 131072}' to allow the memory to be dissolved into individual bits
+ERROR: [Synth 8-285] failed synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 939.184 ; gain = 54.809
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+25 Infos, 19 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+make_wrapper -files [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -fileset [get_filesets sources_1] -inst_template
+open_bd_design {H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd}
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Successfully read diagram <bram> from BD file <H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 981.531 ; gain = 41.922
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+delete_bd_objs [get_bd_intf_nets BRAM_PORTB_0_1] [get_bd_intf_nets BRAM_PORTA_0_1]
+delete_bd_objs [get_bd_cells blk_mem_gen_0]
+delete_bd_objs [get_bd_intf_ports BRAM_PORTA_0] [get_bd_intf_ports BRAM_PORTB_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.0 mig_7series_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {rst_polarity "ACTIVE_LOW" }  [get_bd_pins mig_7series_0/sys_rst]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset_rtl
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl /mig_7series_0/sys_rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /mig_7series_0/sys_rst. Users may need to specify the location constraint manually.
+delete_bd_objs [get_bd_nets reset_rtl_1] [get_bd_cells mig_7series_0]
+delete_bd_objs [get_bd_ports reset_rtl]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Width_A {96} CONFIG.Write_Depth_A {1872} CONFIG.Read_Width_A {96} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {96} CONFIG.Read_Width_B {96} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortA_Output_of_Memory_Core {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_0]
+startgroup
+make_bd_pins_external  [get_bd_cells blk_mem_gen_0]
+make_bd_intf_pins_external  [get_bd_cells blk_mem_gen_0]
+endgroup
+make_wrapper -files [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -top
+Wrote  : <H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd> 
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/sim/bram.v
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v
+generate_target all [get_files  H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+INFO: [BD 41-1662] The design 'bram.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/sim/bram.v
+VHDL Output written to : H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+Exporting to file H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hw_handoff/bram.hwh
+Generated Block Design Tcl file H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hw_handoff/bram_bd.tcl
+Generated Hardware Definition File H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.hwdef
+catch { config_ip_cache -export [get_ips -all bram_blk_mem_gen_0_1] }
+export_ip_user_files -of_objects [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+launch_runs -jobs 4 bram_blk_mem_gen_0_1_synth_1
+[Wed May  2 15:06:27 2018] Launched bram_blk_mem_gen_0_1_synth_1...
+Run output will be captured here: H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.runs/bram_blk_mem_gen_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -directory H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files/sim_scripts -ip_user_files_dir H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files -ipstatic_source_dir H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files/ipstatic -lib_map_path [list {modelsim=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/modelsim} {questa=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/questa} {riviera=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/riviera} {activehdl=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run bram_blk_mem_gen_0_1_synth_1
+[Wed May  2 15:06:44 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:06:50 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:06:55 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:07:01 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:07:12 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:07:22 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:07:33 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:07:43 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+[Wed May  2 15:08:04 2018] Waiting for bram_blk_mem_gen_0_1_synth_1 to finish...
+
+*** Running vivado
+    with args -log bram_blk_mem_gen_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_blk_mem_gen_0_1.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source bram_blk_mem_gen_0_1.tcl -notrace
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 355.230 ; gain = 95.074
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_1' [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_1/synth/bram_blk_mem_gen_0_1.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_1' (9#1) [h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_1/synth/bram_blk_mem_gen_0_1.vhd:75]
+Finished RTL Elaboration : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 563.895 ; gain = 303.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 563.895 ; gain = 303.738
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 657.012 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 657.012 ; gain = 396.855
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 657.012 ; gain = 396.855
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 657.012 ; gain = 396.855
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 657.012 ; gain = 396.855
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:31 . Memory (MB): peak = 657.012 ; gain = 396.855
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 664.152 ; gain = 403.996
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 666.156 ; gain = 406.000
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB18E1 |     1|
+|2     |RAMB36E1 |     5|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 676.301 ; gain = 416.145
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:42 . Memory (MB): peak = 688.824 ; gain = 436.875
+[Wed May  2 15:08:20 2018] bram_blk_mem_gen_0_1_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:35 . Memory (MB): peak = 1273.961 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: axis_fifo_v1_0
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:70]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:71]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:72]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1280.438 ; gain = 6.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter WAIT bound to: 2'b00 
+	Parameter RECV bound to: 2'b01 
+	Parameter SEND bound to: 2'b01 
+	Parameter SLST bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-3848] Net bram_in[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[0] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_rvals[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[4] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_1' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_1' (7#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTA_0_din' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:87]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTB_0_dout' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:91]
+WARNING: [Synth 8-350] instance 'bram' of module 'bram_wrapper' requires 11 connections, but only 7 given [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:151]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:177]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+ERROR: [Synth 8-3391] Unable to infer a block/distributed RAM for 'mem_reg' because the memory pattern used is not supported. Failed to dissolve the memory into bits because the number of bits (131072) is too large. Use 'set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 131072}' to allow the memory to be dissolved into individual bits
+ERROR: [Synth 8-285] failed synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1322.418 ; gain = 48.457
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+25 Infos, 19 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+set_param synth.elaboration.rodinMoreOptions {rt::set_parameter var_size_limit 131072}
+rt::set_parameter var_size_limit 131072
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: axis_fifo_v1_0
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:70]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:71]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:72]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1322.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter WAIT bound to: 2'b00 
+	Parameter RECV bound to: 2'b01 
+	Parameter SEND bound to: 2'b01 
+	Parameter SLST bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-3848] Net bram_in[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[0] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_rvals[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[4] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_1' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_1' (7#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTA_0_din' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:87]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTB_0_dout' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:91]
+WARNING: [Synth 8-350] instance 'bram' of module 'bram_wrapper' requires 11 connections, but only 7 given [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:151]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:177]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+ERROR: [Synth 8-3391] Unable to infer a block/distributed RAM for 'mem_reg' because the memory pattern used is not supported. Failed to dissolve the memory into bits because the number of bits (131072) is too large. Use 'set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 131072}' to allow the memory to be dissolved into individual bits
+ERROR: [Synth 8-285] failed synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1325.008 ; gain = 2.590
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+25 Infos, 19 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 131072}
+rt::set_parameter dissolveMemorySizeLimit 131072
+generate_target all [get_files  H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'bram' - hence not re-generating.
+export_ip_user_files -of_objects [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+export_simulation -of_objects [get_files H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd] -directory H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files/sim_scripts -ip_user_files_dir H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files -ipstatic_source_dir H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.ip_user_files/ipstatic -lib_map_path [list {modelsim=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/modelsim} {questa=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/questa} {riviera=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/riviera} {activehdl=H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: axis_fifo_v1_0
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:70]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:71]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:72]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1325.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter WAIT bound to: 2'b00 
+	Parameter RECV bound to: 2'b01 
+	Parameter SEND bound to: 2'b01 
+	Parameter SLST bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-3848] Net bram_in[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[0] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_rvals[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[4] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_1' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_1' (7#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTA_0_din' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:87]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTB_0_dout' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:91]
+WARNING: [Synth 8-350] instance 'bram' of module 'bram_wrapper' requires 11 connections, but only 7 given [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:151]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:177]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity axis_fifo_v1_0 does not have driver. [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:50]
+INFO: [Synth 8-256] done synthesizing module 'axis_fifo_v1_0' (12#1) [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+WARNING: [Synth 8-3331] design ConvWrapper has unconnected port dataReady
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][7]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][6]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][5]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][4]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][3]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][2]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][1]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[3][0]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][7]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][6]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][5]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][4]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][3]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][2]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][1]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[2][0]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][7]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][6]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][5]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][4]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][3]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][2]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][1]
+WARNING: [Synth 8-3331] design Buffer has unconnected port bram_in[1][0]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_aclk
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_aresetn
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1881.625 ; gain = 556.617
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[95] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[94] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[93] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[92] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[91] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[90] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[89] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[88] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[87] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[86] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[85] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[84] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[83] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[82] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[81] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[80] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[79] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[78] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[77] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[76] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[75] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[74] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[73] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[72] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[71] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[70] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[69] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[68] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[67] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[66] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[65] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[64] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[63] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[62] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[61] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[60] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[59] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[58] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[57] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[56] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[55] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[54] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[53] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[52] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[51] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[50] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[49] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[48] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[47] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[46] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[45] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[44] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[43] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[42] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[41] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[40] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[39] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[38] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[37] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[36] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[35] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[34] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[33] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[32] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[31] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[30] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[29] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[28] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[27] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[26] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[25] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[24] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[23] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[22] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[21] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[20] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[19] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[18] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[17] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[16] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[15] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[14] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[13] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[12] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[11] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[10] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[9] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[8] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[7] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[6] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[5] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[4] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[3] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[2] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[1] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[0] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_en to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_we[0] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin buffers[0].buffer:reset to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:95]
+WARNING: [Synth 8-3295] tying undriven pin buffers[1].buffer:reset to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:95]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:01:13 . Memory (MB): peak = 1881.625 ; gain = 556.617
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_1/bram_blk_mem_gen_0_1.dcp' for cell 'engine/bram/bram_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/design_1_xbip_dsp48_macro_0_0.dcp' for cell 'engine/buffers[0].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:48 ; elapsed = 00:02:20 . Memory (MB): peak = 2609.699 ; gain = 1284.691
+36 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 2609.699 ; gain = 1284.691
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed May  2 15:20:56 2018] Launched synth_1...
+Run output will be captured here: H:/FPGA-Neural-Network-/ip_repo/edit_axis_fifo_v1_0.runs/synth_1/runme.log
+open_bd_design {H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd}
+reset_run synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/bram.bd]
+refresh_design
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:70]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:71]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo_v1_0 with formal parameter declaration list [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:72]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2718.633 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axis_fifo_v1_0' [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter WAIT bound to: 2'b00 
+	Parameter RECV bound to: 2'b01 
+	Parameter SEND bound to: 2'b01 
+	Parameter SLST bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'ConvEngine' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ConvWrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter IDX_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbip_dsp48_macro_0_0' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbip_dsp48_macro_0_0' (1#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/design_1_xbip_dsp48_macro_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (2#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (3#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3848] Net dataReady in module/entity ConvWrapper does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'ConvWrapper' (4#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvWrapper.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Buffer' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'ShiftReg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+	Parameter WIDTH bound to: 45 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftReg' (5#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ShiftReg.sv:23]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-324] index 4 out of range [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:50]
+WARNING: [Synth 8-3848] Net bram_in[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_in[0] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:31]
+WARNING: [Synth 8-3848] Net bram_rvals[1] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[2] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[3] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+WARNING: [Synth 8-3848] Net bram_rvals[4] in module/entity Buffer does not have driver. [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'Buffer' (6#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/Buffer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'bram' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-638] synthesizing module 'bram_blk_mem_gen_0_1' [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_blk_mem_gen_0_1' (7#1) [H:/FPGA-Neural-Network-/ip_repo/.Xil/Vivado-12524-CS-S135/realtime/bram_blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram' (8#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/synth/bram.v:13]
+INFO: [Synth 8-256] done synthesizing module 'bram_wrapper' (9#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/hdl/bram_wrapper.v:12]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTA_0_din' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:87]
+WARNING: [Synth 8-689] width (72) of port connection 'BRAM_PORTB_0_dout' does not match port width (96) of module 'bram_wrapper' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:91]
+WARNING: [Synth 8-350] instance 'bram' of module 'bram_wrapper' requires 11 connections, but only 7 given [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+INFO: [Synth 8-638] synthesizing module 'DDR_Shiftreg' [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Shiftreg' (10#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/DDR_Shiftreg.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'ConvEngine' (11#1) [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:151]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:177]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity axis_fifo_v1_0 does not have driver. [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:50]
+INFO: [Synth 8-256] done synthesizing module 'axis_fifo_v1_0' (12#1) [H:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0/hdl/axis_fifo_v1_0.v:20]
+WARNING: [Synth 8-3331] design ConvWrapper has unconnected port dataReady
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_aclk
+WARNING: [Synth 8-3331] design axis_fifo_v1_0 has unconnected port m00_axis_aresetn
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 3170.430 ; gain = 451.797
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[95] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[94] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[93] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[92] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[91] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[90] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[89] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[88] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[87] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[86] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[85] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[84] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[83] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[82] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[81] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[80] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[79] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[78] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[77] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[76] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[75] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[74] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[73] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[72] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[71] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[70] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[69] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[68] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[67] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[66] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[65] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[64] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[63] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[62] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[61] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[60] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[59] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[58] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[57] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[56] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[55] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[54] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[53] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[52] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[51] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[50] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[49] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[48] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[47] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[46] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[45] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[44] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[43] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[42] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[41] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[40] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[39] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[38] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[37] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[36] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[35] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[34] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[33] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[32] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[31] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[30] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[29] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[28] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[27] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[26] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[25] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[24] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[23] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[22] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[21] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[20] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[19] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[18] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[17] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[16] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[15] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[14] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[13] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[12] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[11] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[10] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[9] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[8] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[7] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[6] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[5] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[4] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[3] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[2] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[1] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_din[0] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_en to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin bram:BRAM_PORTB_0_we[0] to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:85]
+WARNING: [Synth 8-3295] tying undriven pin buffers[0].buffer:reset to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:95]
+WARNING: [Synth 8-3295] tying undriven pin buffers[1].buffer:reset to constant 0 [H:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/new/ConvEngine.sv:95]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:01:08 . Memory (MB): peak = 3170.430 ; gain = 451.797
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/bram/ip/bram_blk_mem_gen_0_1/bram_blk_mem_gen_0_1.dcp' for cell 'engine/bram/bram_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'h:/FPGA-Neural-Network-/fpga/fpga.srcs/sources_1/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/design_1_xbip_dsp48_macro_0_0.dcp' for cell 'engine/buffers[0].channel[0].conv/mult_acc/design_1_i/xbip_dsp48_macro_0'
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:01:44 ; elapsed = 00:02:13 . Memory (MB): peak = 3270.707 ; gain = 552.074
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May  2 15:41:27 2018...

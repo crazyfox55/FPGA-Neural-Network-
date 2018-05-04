@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri May  4 17:01:48 2018
+# Process ID: 14892
+# Current directory: H:/FPGA-Neural-Network-/fpga/fpga.runs/impl_1
+# Command line: vivado.exe -log design_2_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_2_wrapper.tcl -notrace
+# Log file: H:/FPGA-Neural-Network-/fpga/fpga.runs/impl_1/design_2_wrapper.vdi
+# Journal file: H:/FPGA-Neural-Network-/fpga/fpga.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_2_wrapper.tcl -notrace

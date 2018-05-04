@@ -1,72 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1525028219">
-  <File Type="PWROPT-DCP" Name="ConvEngine_pwropt.dcp"/>
-  <File Type="ROUTE-PWR" Name="ConvEngine_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="ConvEngine.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="ConvEngine_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="ConvEngine_reports.tcl"/>
-  <File Type="BG-DRC" Name="ConvEngine.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ConvEngine_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="ConvEngine_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="ConvEngine.hwdef"/>
-  <File Type="OPT-DCP" Name="ConvEngine_opt.dcp"/>
-  <File Type="OPT-DRC" Name="ConvEngine_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="ConvEngine_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="ConvEngine_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="ConvEngine_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="ConvEngine_placed.dcp"/>
-  <File Type="PLACE-IO" Name="ConvEngine_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ConvEngine_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="ConvEngine_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ConvEngine_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="ConvEngine_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ConvEngine_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ConvEngine_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="ConvEngine_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ConvEngine_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ConvEngine_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ConvEngine_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="ConvEngine_drc_physopted.rpt"/>
-  <File Type="BG-BIT" Name="ConvEngine.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="ConvEngine_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ConvEngine_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="ConvEngine_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ConvEngine_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="ConvEngine_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ConvEngine_drc_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="ConvEngine.msk"/>
-  <File Type="ROUTE-DRC-RPX" Name="ConvEngine_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="ConvEngine.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ConvEngine_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="ConvEngine.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ConvEngine_methodology_drc_routed.rpx"/>
-  <File Type="BG-BIN" Name="ConvEngine.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ConvEngine_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ConvEngine_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="ConvEngine_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ConvEngine_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ConvEngine_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="ConvEngine_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ConvEngine_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="ConvEngine_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="ConvEngine.vdi"/>
-  <File Type="ROUTE-CLK" Name="ConvEngine_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ConvEngine_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ConvEngine_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ConvEngine_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ConvEngine_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ConvEngine_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="ConvEngine.nky"/>
-  <File Type="BITSTR-BMM" Name="ConvEngine_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="ConvEngine.mmi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1525471300">
+  <File Type="PWROPT-DCP" Name="design_2_wrapper_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="design_2_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="design_2_wrapper.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="design_2_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="design_2_wrapper_reports.tcl"/>
+  <File Type="BG-DRC" Name="design_2_wrapper.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="design_2_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="design_2_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="design_2_wrapper.hwdef"/>
+  <File Type="OPT-DCP" Name="design_2_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="design_2_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="design_2_wrapper_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="design_2_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="design_2_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="design_2_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="design_2_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="design_2_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="design_2_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="design_2_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="design_2_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="design_2_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="design_2_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="design_2_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="design_2_wrapper_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="design_2_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="design_2_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="design_2_wrapper_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="design_2_wrapper.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="design_2_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="design_2_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="design_2_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="design_2_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="design_2_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="design_2_wrapper_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="design_2_wrapper.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="design_2_wrapper_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="design_2_wrapper.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_2_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="design_2_wrapper.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_2_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="design_2_wrapper.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_2_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="design_2_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="design_2_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="design_2_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="design_2_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="design_2_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="design_2_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="design_2_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="design_2_wrapper.vdi"/>
+  <File Type="ROUTE-CLK" Name="design_2_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_2_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_2_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_2_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_2_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_2_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="design_2_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="design_2_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="design_2_wrapper.mmi"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ConvEngine.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="ConvEngine.sysdef"/>
+  <File Type="BITSTR-LTX" Name="design_2_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="design_2_wrapper.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -74,6 +89,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/bram/bram.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -81,6 +97,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/bram/hdl/bram_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -88,6 +105,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -95,6 +113,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Buffer.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -102,6 +121,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ConvWrapper.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -109,6 +129,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/DDR_Shiftreg.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -116,6 +137,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ShiftReg.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -123,6 +145,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/ConvEngine.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -131,26 +154,9 @@
     <File Path="$PSRCDIR/component.xml">
       <FileInfo SFType="IPXACT"/>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ConvEngine"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="design_2_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -160,7 +166,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -171,6 +179,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axis_fifo_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="bram_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbip_dsp48_macro_0_0"/>
 </GenRun>
