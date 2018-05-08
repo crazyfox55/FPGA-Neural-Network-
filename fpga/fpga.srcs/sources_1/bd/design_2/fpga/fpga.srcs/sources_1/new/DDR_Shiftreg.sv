@@ -26,6 +26,7 @@ module DDR_Shiftreg
         input  [23:0] ddr_queue_vals [0:24],
         input write_enable,
         input hold,
+        input reset,
         output [7:0] ddr_write [0:5]
     );
     logic [23:0]  body [0:24];
@@ -38,7 +39,9 @@ module DDR_Shiftreg
     genvar i;
     for(i = 1; i<25;i = i + 1) begin
         always_ff@(posedge CLK) begin
-            if(!write_enable) begin
+            if(reset) begin
+                body[i] <= 0;
+            end else if(!write_enable) begin
                 body[i] <= body[i-1];
             end else if(hold) begin
                 body[i] <= body[i];
@@ -52,7 +55,9 @@ module DDR_Shiftreg
     end 
     for(i = 3; i<6; i = i + 1) begin
         always_ff@(posedge CLK) begin
-            if(hold) begin
+            if(reset) begin
+                ddr_write_queue[i] <= 0;
+            end else if(hold) begin
                 ddr_write_queue[i] <= ddr_write_queue[i];
             end else begin
                 ddr_write_queue[i] <= ddr_write_queue[i-3];

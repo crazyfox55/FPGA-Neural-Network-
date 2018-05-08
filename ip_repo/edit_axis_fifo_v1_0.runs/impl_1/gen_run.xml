@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1525461268">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1525543459">
   <File Type="PWROPT-DCP" Name="axis_fifo_v1_0_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="axis_fifo_v1_0_power_routed.rpt"/>
   <File Type="PA-TCL" Name="axis_fifo_v1_0.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="axis_fifo_v1_0_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="axis_fifo_v1_0_reports.tcl"/>
   <File Type="BG-DRC" Name="axis_fifo_v1_0.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="axis_fifo_v1_0_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="axis_fifo_v1_0_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="axis_fifo_v1_0.hwdef"/>
   <File Type="OPT-DCP" Name="axis_fifo_v1_0_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="axis_fifo_v1_0.hwdef"/>
   <File Type="OPT-DRC" Name="axis_fifo_v1_0_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="axis_fifo_v1_0_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="axis_fifo_v1_0_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="axis_fifo_v1_0_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="axis_fifo_v1_0_placed.dcp"/>
   <File Type="PLACE-IO" Name="axis_fifo_v1_0_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="axis_fifo_v1_0_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="axis_fifo_v1_0_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="axis_fifo_v1_0_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="axis_fifo_v1_0_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="axis_fifo_v1_0_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="axis_fifo_v1_0_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="axis_fifo_v1_0_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="axis_fifo_v1_0_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="axis_fifo_v1_0_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="axis_fifo_v1_0_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="axis_fifo_v1_0_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="axis_fifo_v1_0.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="axis_fifo_v1_0_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="axis_fifo_v1_0_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="axis_fifo_v1_0_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="axis_fifo_v1_0_routed_bb.dcp"/>
@@ -48,18 +37,13 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="axis_fifo_v1_0_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="axis_fifo_v1_0_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="axis_fifo_v1_0_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="axis_fifo_v1_0_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="axis_fifo_v1_0.vdi"/>
   <File Type="ROUTE-CLK" Name="axis_fifo_v1_0_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="axis_fifo_v1_0_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="axis_fifo_v1_0_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="axis_fifo_v1_0_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="axis_fifo_v1_0_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="axis_fifo_v1_0_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="axis_fifo_v1_0.nky"/>
   <File Type="BITSTR-BMM" Name="axis_fifo_v1_0_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="axis_fifo_v1_0.mmi"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="axis_fifo_v1_0.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="axis_fifo_v1_0.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -162,4 +146,5 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="bram_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbip_dsp48_macro_0_0"/>
 </GenRun>

@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../ip_repo/axis_fifo_test_1.0/hdl/axis_fifo_test_v1_0.v" \
+"../../../../../../DMA_Test.sim/Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue May  8 04:04:26 2018
+# Process ID: 109940
+# Current directory: h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace

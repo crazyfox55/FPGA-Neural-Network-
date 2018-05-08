@@ -1,19 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 29 13:48:50 2018" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun May  6 11:50:24 2018" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="15" NAME="P_0" RIGHT="0" SIGIS="data" SIGNAME="xbip_dsp48_macro_0_P">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="P"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="7" NAME="A_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="A"/>
@@ -24,9 +14,24 @@
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="B"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" LEFT="0" NAME="SEL_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_SEL_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="SEL"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="47" NAME="P_0" RIGHT="0" SIGIS="data" SIGNAME="xbip_dsp48_macro_0_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="P"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SCLR_0" SIGIS="rst" SIGNAME="External_Ports_SCLR_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xbip_dsp48_macro_0" PORT="SCLR"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -52,7 +57,7 @@
         <PARAMETER NAME="C_HAS_CEM" VALUE="0"/>
         <PARAMETER NAME="C_HAS_CEP" VALUE="0"/>
         <PARAMETER NAME="C_HAS_CESEL" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SCLR" VALUE="1"/>
         <PARAMETER NAME="C_HAS_INDEP_SCLR" VALUE="0"/>
         <PARAMETER NAME="C_HAS_SCLRD" VALUE="0"/>
         <PARAMETER NAME="C_HAS_SCLRA" VALUE="0"/>
@@ -78,7 +83,7 @@
         <PARAMETER NAME="C_D_WIDTH" VALUE="18"/>
         <PARAMETER NAME="C_CONCAT_WIDTH" VALUE="48"/>
         <PARAMETER NAME="C_P_MSB" VALUE="47"/>
-        <PARAMETER NAME="C_P_LSB" VALUE="32"/>
+        <PARAMETER NAME="C_P_LSB" VALUE="0"/>
         <PARAMETER NAME="C_SEL_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_HAS_ACOUT" VALUE="0"/>
         <PARAMETER NAME="C_HAS_BCOUT" VALUE="0"/>
@@ -151,9 +156,9 @@
         <PARAMETER NAME="c_width" VALUE="48"/>
         <PARAMETER NAME="c_binarywidth" VALUE="0"/>
         <PARAMETER NAME="pcin_binarywidth" VALUE="0"/>
-        <PARAMETER NAME="output_properties" VALUE="User_Defined"/>
+        <PARAMETER NAME="output_properties" VALUE="Full_Precision"/>
         <PARAMETER NAME="p_full_width" VALUE="48"/>
-        <PARAMETER NAME="p_width" VALUE="16"/>
+        <PARAMETER NAME="p_width" VALUE="48"/>
         <PARAMETER NAME="p_binarywidth" VALUE="0"/>
         <PARAMETER NAME="has_carryout" VALUE="false"/>
         <PARAMETER NAME="has_acout" VALUE="false"/>
@@ -169,7 +174,7 @@
         <PARAMETER NAME="has_m_ce" VALUE="false"/>
         <PARAMETER NAME="has_p_ce" VALUE="false"/>
         <PARAMETER NAME="has_sel_ce" VALUE="false"/>
-        <PARAMETER NAME="has_sclr" VALUE="false"/>
+        <PARAMETER NAME="has_sclr" VALUE="true"/>
         <PARAMETER NAME="has_d_sclr" VALUE="false"/>
         <PARAMETER NAME="has_a_sclr" VALUE="false"/>
         <PARAMETER NAME="has_b_sclr" VALUE="false"/>
@@ -187,6 +192,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="SCLR" SIGIS="rst" SIGNAME="External_Ports_SCLR_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SCLR_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="0" NAME="SEL" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_SEL_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="SEL_0"/>
@@ -202,7 +212,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="B_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="P" RIGHT="0" SIGIS="data" SIGNAME="xbip_dsp48_macro_0_P">
+        <PORT DIR="O" LEFT="47" NAME="P" RIGHT="0" SIGIS="data" SIGNAME="xbip_dsp48_macro_0_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="P_0"/>
           </CONNECTIONS>

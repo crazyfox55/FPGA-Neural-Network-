@@ -58,6 +58,8 @@ axis_fifo_v1_0 dut(
 .m00_axis_tready(m00_axis_tready),
 .m00_axis_tlast(m00_axis_tlast));
 
+reg [12 : 0] i;
+reg [8:0] pk_i;
 initial begin
     s00_axis_tvalid = 0;
     s00_axis_tdata = 32'dx;
@@ -71,55 +73,66 @@ initial begin
     #(PERIOD);
     while (s00_axis_tready != 1'b1) #(PERIOD);
     if (s00_axis_tready != 1'b1) $error("not ready");
-    s00_axis_tvalid = 1;
-    s00_axis_tdata = 1;
-    #(PERIOD);
-    if (s00_axis_tready != 1'b1) $error("not ready");
-    s00_axis_tdata = 2;
-    #(PERIOD);
-    if (s00_axis_tready != 1'b1) $error("not ready");
-    s00_axis_tdata = 3;
-    #(PERIOD);
-    if (s00_axis_tready != 1'b1) $error("not ready");
-    s00_axis_tdata = 4;
-    #(PERIOD);
-    if (s00_axis_tready != 1'b1) $error("not ready");
-    s00_axis_tdata = 5;
-    s00_axis_tlast = 1;
-    #(PERIOD);
-    s00_axis_tlast = 0;
-    s00_axis_tvalid = 0;
-    while (m00_axis_tvalid == 1'b1) begin
-        $display("master sends %d, last=%d, ready=%d", m00_axis_tdata, m00_axis_tlast, m00_axis_tready);
-        #(PERIOD);
-    end
     
-    // second packet
-    #(PERIOD*3);
-    while (s00_axis_tready != 1'b1) #(PERIOD);
-        if (s00_axis_tready != 1'b1) $error("not ready");
+    for(i = 0; i < 4096; i = i + 1) begin
         s00_axis_tvalid = 1;
-        s00_axis_tdata = 100;
-        #(PERIOD);
-        if (s00_axis_tready != 1'b1) $error("not ready");
-        s00_axis_tdata = 200;
-        #(PERIOD);
-        if (s00_axis_tready != 1'b1) $error("not ready");
-        s00_axis_tdata = 300;
-        #(PERIOD);
-        if (s00_axis_tready != 1'b1) $error("not ready");
-        s00_axis_tdata =400;
-        #(PERIOD);
-        if (s00_axis_tready != 1'b1) $error("not ready");
-        s00_axis_tdata = 500;
-        s00_axis_tlast = 1;
-        #(PERIOD);
-        s00_axis_tlast = 0;
-        s00_axis_tvalid = 0;
-        while (m00_axis_tvalid == 1'b1) begin
-            $display("master sends %d, last=%d, ready=%d", m00_axis_tdata, m00_axis_tlast, m00_axis_tready);
+        for(pk_i = 0; pk_i < 256; pk_i = pk_i + 1) begin
+            s00_axis_tdata = 32'h2288AA22;
+            if(pk_i == 255) begin
+                s00_axis_tlast = 1;
+            end
             #(PERIOD);
         end
+        s00_axis_tvalid = 0;
+        s00_axis_tlast = 0;
+        #(PERIOD*500);
+    end
+//    if (s00_axis_tready != 1'b1) $error("not ready");
+//    s00_axis_tdata = 2;
+//    #(PERIOD);
+//    if (s00_axis_tready != 1'b1) $error("not ready");
+//    s00_axis_tdata = 3;
+//    #(PERIOD);
+//    if (s00_axis_tready != 1'b1) $error("not ready");
+//    s00_axis_tdata = 4;
+//    #(PERIOD);
+//    if (s00_axis_tready != 1'b1) $error("not ready");
+//    s00_axis_tdata = 5;
+//    s00_axis_tlast = 1;
+//    #(PERIOD);
+//    s00_axis_tlast = 0;
+//    s00_axis_tvalid = 0;
+//    while (m00_axis_tvalid == 1'b1) begin
+//        $display("master sends %d, last=%d, ready=%d", m00_axis_tdata, m00_axis_tlast, m00_axis_tready);
+//        #(PERIOD);
+//    end
+    
+    // second packet
+//    #(PERIOD*3);
+//    while (s00_axis_tready != 1'b1) #(PERIOD);
+//        if (s00_axis_tready != 1'b1) $error("not ready");
+//        s00_axis_tvalid = 1;
+//        s00_axis_tdata = 100;
+//        #(PERIOD);
+//        if (s00_axis_tready != 1'b1) $error("not ready");
+//        s00_axis_tdata = 200;
+//        #(PERIOD);
+//        if (s00_axis_tready != 1'b1) $error("not ready");
+//        s00_axis_tdata = 300;
+//        #(PERIOD);
+//        if (s00_axis_tready != 1'b1) $error("not ready");
+//        s00_axis_tdata =400;
+//        #(PERIOD);
+//        if (s00_axis_tready != 1'b1) $error("not ready");
+//        s00_axis_tdata = 500;
+//        s00_axis_tlast = 1;
+//        #(PERIOD);
+//        s00_axis_tlast = 0;
+//        s00_axis_tvalid = 0;
+//        while (m00_axis_tvalid == 1'b1) begin
+//            $display("master sends %d, last=%d, ready=%d", m00_axis_tdata, m00_axis_tlast, m00_axis_tready);
+//            #(PERIOD);
+//        end
     
     
 end 

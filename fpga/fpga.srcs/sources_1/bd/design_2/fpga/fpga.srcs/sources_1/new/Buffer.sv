@@ -29,13 +29,20 @@ module Buffer #(
     input CLK,
     input hold,
     output [7:0] shiftreg_buffer [0:4] [0:44],
-    input reset
+    input reset,
+    input creset
     );
     logic  [7:0] bram_rvals [0:4];
-    logic  [7:0] bram_wvals [0:4];
+    logic  [7:0] bram_wvals [0:5];
     logic [10:0] bram_idx;
     
-    assign bram_rvals[0] = ddr_data;
+    always_comb begin
+        if(reset) begin
+            bram_rvals[0] = 0;
+        end else begin
+            bram_rvals[0] = ddr_data;
+        end
+    end
     
     always_ff@(posedge CLK) begin
         if(hold) begin

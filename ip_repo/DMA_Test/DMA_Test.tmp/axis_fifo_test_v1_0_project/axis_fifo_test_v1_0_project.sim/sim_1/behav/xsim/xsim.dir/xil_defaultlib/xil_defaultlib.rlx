@@ -1,0 +1,7 @@
+0.6
+2017.3
+Oct  4 2017
+20:11:37
+h:/fpga-neural-network-/ip_repo/dma_test/DMA_Test.sim/Testbench.v,1525758564,verilog,,,,testbench,,,,,,,,
+h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim/glbl.v,1507081072,verilog,,,,glbl,,,,,,,,
+h:/fpga-neural-network-/ip_repo/ip_repo/axis_fifo_test_1.0/hdl/axis_fifo_test_v1_0.v,1525760995,verilog,,h:/fpga-neural-network-/ip_repo/dma_test/DMA_Test.sim/Testbench.v,,axis_fifo_test_v1_0,,,,,,,,

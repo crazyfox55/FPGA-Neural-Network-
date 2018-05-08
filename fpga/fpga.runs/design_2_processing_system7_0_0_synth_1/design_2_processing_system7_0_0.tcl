@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z010clg400-1
@@ -32,8 +33,6 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 set_property ip_repo_paths {
   h:/FPGA-Neural-Network-/ip_repo/myip_1.0
-  h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
-  h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
   h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
 } [current_project]
 set_property ip_output_repo h:/FPGA-Neural-Network-/fpga/fpga.cache/ip [current_project]

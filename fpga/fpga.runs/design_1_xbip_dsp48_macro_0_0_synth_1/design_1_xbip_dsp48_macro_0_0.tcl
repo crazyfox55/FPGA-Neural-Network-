@@ -34,8 +34,6 @@ set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 set_property ip_repo_paths {
   h:/FPGA-Neural-Network-/ip_repo/myip_1.0
   h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
-  h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
-  h:/FPGA-Neural-Network-/ip_repo/axis_fifo_1.0
 } [current_project]
 set_property ip_output_repo h:/FPGA-Neural-Network-/fpga/fpga.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

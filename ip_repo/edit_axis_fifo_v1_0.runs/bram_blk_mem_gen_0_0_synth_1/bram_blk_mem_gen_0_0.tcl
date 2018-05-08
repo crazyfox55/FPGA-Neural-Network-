@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config  -ruleid {1}  -id {IP_Flow 19-4963}  -string {{WARNING: [IP_Flow 19-4963] design_1_xbip_dsp48_macro_0_0 has board value specified. The packaged IP will be restricted to usage with board 'digilentinc.com:zybo-z7-10:part0:1.0'}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z010clg400-1

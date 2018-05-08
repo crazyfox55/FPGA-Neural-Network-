@@ -15,8 +15,7 @@ vmap xbip_utils_v3_0_8 questa_lib/msim/xbip_utils_v3_0_8
 vmap xbip_pipe_v3_0_4 questa_lib/msim/xbip_pipe_v3_0_4
 vmap xbip_dsp48_macro_v3_0_15 questa_lib/msim/xbip_dsp48_macro_v3_0_15
 
-vlog -work xil_defaultlib -64 -sv -L xil_defaultlib "+incdir+../../../../../fpga/fpga.srcs/sources_1/bd/design_1/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../../fpga/fpga.srcs/sources_1/bd/design_1/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
-"C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+vlog -work xil_defaultlib -64 -sv -L xil_defaultlib "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
@@ -37,10 +36,9 @@ vcom -work xbip_dsp48_macro_v3_0_15 -64 -93 \
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/sim/design_1_xbip_dsp48_macro_0_0.vhd" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../../fpga/fpga.srcs/sources_1/bd/design_1/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../../fpga/fpga.srcs/sources_1/bd/design_1/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1_clk_wiz.v" \
-"../../../bd/design_1/ip/design_1_clk_wiz_1/design_1_clk_wiz_1.v" \
+vlog -work xil_defaultlib -64 "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
 "../../../bd/design_1/sim/design_1.v" \
+
 
 vlog -work xil_defaultlib \
 "glbl.v"

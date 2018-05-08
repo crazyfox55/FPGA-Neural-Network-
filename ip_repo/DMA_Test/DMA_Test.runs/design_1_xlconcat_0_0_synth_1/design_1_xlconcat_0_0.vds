@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon May  7 23:29:51 2018
+# Process ID: 86544
+# Current directory: H:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.runs/design_1_xlconcat_0_0_synth_1
+# Command line: vivado.exe -log design_1_xlconcat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xlconcat_0_0.tcl
+# Log file: H:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.runs/design_1_xlconcat_0_0_synth_1/design_1_xlconcat_0_0.vds
+# Journal file: H:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.runs/design_1_xlconcat_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_xlconcat_0_0.tcl -notrace
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml, Invalid xml file C:/Xilinx/Vivado/2017.3/data/boards/board_files/zybo-z7-10/board.xml: equal sign expected
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 353.953 ; gain = 96.164
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_0' [h:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [h:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (1#1) [h:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconcat_0_0' (2#1) [h:/FPGA-Neural-Network-/ip_repo/DMA_Test/DMA_Test.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 396.414 ; gain = 138.625
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 396.414 ; gain = 138.625
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 603.809 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 603.809 ; gain = 346.020
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 603.809 ; gain = 346.020
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 603.809 ; gain = 346.020
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 603.809 ; gain = 346.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 603.809 ; gain = 346.020
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 644.527 ; gain = 386.738
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 644.527 ; gain = 386.738
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 654.668 ; gain = 396.879
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 668.102 ; gain = 417.211

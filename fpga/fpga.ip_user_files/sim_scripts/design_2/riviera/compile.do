@@ -18,6 +18,7 @@ vlib riviera/axi_vip_v1_1_0
 vlib riviera/processing_system7_vip_v1_0_2
 vlib riviera/proc_sys_reset_v5_0_12
 vlib riviera/xlconstant_v1_1_3
+vlib riviera/xlconcat_v2_1_1
 vlib riviera/xbip_dsp48_wrapper_v3_0_4
 vlib riviera/xbip_utils_v3_0_8
 vlib riviera/xbip_pipe_v3_0_4
@@ -45,6 +46,7 @@ vmap axi_vip_v1_1_0 riviera/axi_vip_v1_1_0
 vmap processing_system7_vip_v1_0_2 riviera/processing_system7_vip_v1_0_2
 vmap proc_sys_reset_v5_0_12 riviera/proc_sys_reset_v5_0_12
 vmap xlconstant_v1_1_3 riviera/xlconstant_v1_1_3
+vmap xlconcat_v2_1_1 riviera/xlconcat_v2_1_1
 vmap xbip_dsp48_wrapper_v3_0_4 riviera/xbip_dsp48_wrapper_v3_0_4
 vmap xbip_utils_v3_0_8 riviera/xbip_utils_v3_0_8
 vmap xbip_pipe_v3_0_4 riviera/xbip_pipe_v3_0_4
@@ -210,6 +212,12 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../fpga.srcs/sources_1/bd/des
 "../../../bd/design_2/ip/design_2_axi_smc_0/sim/design_2_axi_smc_0.v" \
 "../../../bd/design_2/sim/design_2.v" \
 
+vlog -work xlconcat_v2_1_1  -v2k5 "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
+"../../../../fpga.srcs/sources_1/bd/design_2/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
+"../../../bd/design_2/ip/design_2_xlconcat_0_0/sim/design_2_xlconcat_0_0.v" \
+
 vcom -work xbip_dsp48_wrapper_v3_0_4 -93 \
 "../../../../fpga.srcs/sources_1/bd/design_2/fpga/fpga.srcs/sources_1/bd/design_1/ipshared/da55/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
 
@@ -243,8 +251,8 @@ vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../fpga.srcs/sources_1/bd/d
 "../../../bd/design_2/fpga/fpga.srcs/sources_1/new/ShiftReg.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
-"../../../bd/design_2/ipshared/223d/hdl/axis_fifo_v1_0.v" \
-"../../../bd/design_2/ip/design_2_axis_fifo_0_1/sim/design_2_axis_fifo_0_1.v" \
+"../../../bd/design_2/ipshared/5861/hdl/axis_fifo_v1_0.v" \
+"../../../bd/design_2/ip/design_2_axis_fifo_0_0/sim/design_2_axis_fifo_0_0.v" \
 
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/d5d3/hdl/verilog" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/e0a2/hdl" "+incdir+../../../../fpga.srcs/sources_1/bd/design_2/ipshared/571c/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
 "../../../../fpga.srcs/sources_1/bd/design_2/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \

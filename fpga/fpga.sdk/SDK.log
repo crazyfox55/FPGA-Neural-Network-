@@ -1,0 +1,573 @@
+18:26:14 INFO  : Registering command handlers for SDK TCF services
+18:26:15 INFO  : Launching XSCT server: xsct.bat -interactive H:\FPGA-Neural-Network-\fpga\fpga.sdk\temp_xsdb_launch_script.tcl
+18:26:17 INFO  : XSCT server has started successfully.
+18:26:18 INFO  : Successfully done setting XSCT server connection channel  
+18:26:18 INFO  : Processing command line option -hwspec H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper.hdf.
+18:26:18 INFO  : Successfully done setting SDK workspace  
+14:59:35 INFO  : Launching XSCT server: xsct.bat -interactive H:\FPGA-Neural-Network-\fpga\fpga.sdk\temp_xsdb_launch_script.tcl
+14:59:37 INFO  : XSCT server has started successfully.
+14:59:37 INFO  : Successfully done setting XSCT server connection channel  
+14:59:38 INFO  : Successfully done setting SDK workspace  
+14:59:43 INFO  : Registering command handlers for SDK TCF services
+14:59:43 INFO  : Processing command line option -hwspec H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper.hdf.
+14:59:44 INFO  : Checking for hwspec changes in the project design_2_wrapper_hw_platform_0.
+14:59:44 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1525636559038,  Project:1525471573574
+14:59:44 INFO  : The hardware specification for project 'design_2_wrapper_hw_platform_0' is different from H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper.hdf.
+14:59:44 INFO  : Copied contents of H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper.hdf into \design_2_wrapper_hw_platform_0\system.hdf.
+15:00:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:00:32 INFO  : 
+15:00:33 INFO  : Updating hardware inferred compiler options for test_application.
+15:00:33 INFO  : Clearing existing target manager status.
+15:00:33 WARN  : Given IPC port value is invalid. Using default port 2350
+15:00:33 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+15:00:35 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:00:35 INFO  : Closing and re-opening the MSS file of ther project test_application_bsp
+15:00:36 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:00:38 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:07:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:07:54 INFO  : FPGA configured successfully with bitstream "H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/design_2_wrapper.bit"
+15:15:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:15:25 INFO  : 'fpga -state' command is executed.
+15:15:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:15:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:15:26 INFO  : 'jtag frequency' command is executed.
+15:15:26 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:15:26 INFO  : Context for 'APU' is selected.
+15:15:26 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:15:26 INFO  : 'configparams force-mem-access 1' command is executed.
+15:15:26 INFO  : Context for 'APU' is selected.
+15:15:26 INFO  : 'stop' command is executed.
+15:15:26 INFO  : 'ps7_init' command is executed.
+15:15:26 INFO  : 'ps7_post_config' command is executed.
+15:15:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:15:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:27 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:15:27 INFO  : 'configparams force-mem-access 0' command is executed.
+15:15:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:15:27 INFO  : Memory regions updated for context APU
+15:15:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:27 INFO  : 'con' command is executed.
+15:15:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:15:27 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:15:55 INFO  : Disconnected from the channel tcfchan#1.
+15:15:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:15:56 INFO  : 'fpga -state' command is executed.
+15:15:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:15:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:15:57 INFO  : 'jtag frequency' command is executed.
+15:15:57 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:15:57 INFO  : Context for 'APU' is selected.
+15:16:02 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:16:02 INFO  : 'configparams force-mem-access 1' command is executed.
+15:16:02 INFO  : Context for 'APU' is selected.
+15:16:02 INFO  : 'stop' command is executed.
+15:16:02 INFO  : 'ps7_init' command is executed.
+15:16:02 INFO  : 'ps7_post_config' command is executed.
+15:16:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:16:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:02 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:16:02 INFO  : 'configparams force-mem-access 0' command is executed.
+15:16:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:16:02 INFO  : Memory regions updated for context APU
+15:16:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:02 INFO  : 'con' command is executed.
+15:16:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:16:02 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:25:47 INFO  : Disconnected from the channel tcfchan#2.
+15:25:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:25:48 INFO  : 'fpga -state' command is executed.
+15:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:25:48 INFO  : 'jtag frequency' command is executed.
+15:25:49 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:25:49 INFO  : Context for 'APU' is selected.
+15:25:49 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:25:49 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:49 INFO  : Context for 'APU' is selected.
+15:25:49 INFO  : 'stop' command is executed.
+15:25:49 INFO  : 'ps7_init' command is executed.
+15:25:49 INFO  : 'ps7_post_config' command is executed.
+15:25:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:25:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:49 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:49 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:49 INFO  : Memory regions updated for context APU
+15:25:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:49 INFO  : 'con' command is executed.
+15:25:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:25:49 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:26:18 INFO  : Disconnected from the channel tcfchan#3.
+15:26:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:26:19 INFO  : 'fpga -state' command is executed.
+15:26:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:26:20 INFO  : 'jtag frequency' command is executed.
+15:26:20 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:26:20 INFO  : Context for 'APU' is selected.
+15:26:20 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:26:20 INFO  : 'configparams force-mem-access 1' command is executed.
+15:26:20 INFO  : Context for 'APU' is selected.
+15:26:20 INFO  : 'stop' command is executed.
+15:26:20 INFO  : 'ps7_init' command is executed.
+15:26:20 INFO  : 'ps7_post_config' command is executed.
+15:26:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:26:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:21 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:21 INFO  : 'configparams force-mem-access 0' command is executed.
+15:26:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:26:21 INFO  : Memory regions updated for context APU
+15:26:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:21 INFO  : 'con' command is executed.
+15:26:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:26:21 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:34:03 INFO  : Disconnected from the channel tcfchan#4.
+15:34:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:34:05 INFO  : 'fpga -state' command is executed.
+15:34:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:34:05 INFO  : 'jtag frequency' command is executed.
+15:34:05 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:34:05 INFO  : Context for 'APU' is selected.
+15:34:05 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:34:05 INFO  : 'configparams force-mem-access 1' command is executed.
+15:34:05 INFO  : Context for 'APU' is selected.
+15:34:05 INFO  : 'stop' command is executed.
+15:34:05 INFO  : 'ps7_init' command is executed.
+15:34:06 INFO  : 'ps7_post_config' command is executed.
+15:34:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:34:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:34:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:34:06 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:34:06 INFO  : 'configparams force-mem-access 0' command is executed.
+15:34:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:34:06 INFO  : Memory regions updated for context APU
+15:34:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:34:06 INFO  : 'con' command is executed.
+15:34:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:34:06 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:35:31 INFO  : Disconnected from the channel tcfchan#5.
+15:35:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:35:32 INFO  : 'fpga -state' command is executed.
+15:35:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:35:32 INFO  : 'jtag frequency' command is executed.
+15:35:32 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:35:32 INFO  : Context for 'APU' is selected.
+15:35:32 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:35:32 INFO  : 'configparams force-mem-access 1' command is executed.
+15:35:32 INFO  : Context for 'APU' is selected.
+15:35:32 INFO  : 'stop' command is executed.
+15:35:33 INFO  : 'ps7_init' command is executed.
+15:35:33 INFO  : 'ps7_post_config' command is executed.
+15:35:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:35:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:33 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:35:33 INFO  : 'configparams force-mem-access 0' command is executed.
+15:35:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:35:33 INFO  : Memory regions updated for context APU
+15:35:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:33 INFO  : 'con' command is executed.
+15:35:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:35:33 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:37:03 INFO  : Disconnected from the channel tcfchan#6.
+15:37:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:37:04 INFO  : 'fpga -state' command is executed.
+15:37:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:37:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:37:04 INFO  : 'jtag frequency' command is executed.
+15:37:04 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:37:04 INFO  : Context for 'APU' is selected.
+15:37:04 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:37:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:37:04 INFO  : Context for 'APU' is selected.
+15:37:04 INFO  : 'stop' command is executed.
+15:37:05 INFO  : 'ps7_init' command is executed.
+15:37:05 INFO  : 'ps7_post_config' command is executed.
+15:37:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:37:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:05 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:37:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:37:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:37:05 INFO  : Memory regions updated for context APU
+15:37:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:05 INFO  : 'con' command is executed.
+15:37:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:37:05 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+15:41:14 INFO  : Disconnected from the channel tcfchan#7.
+15:41:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+15:41:15 INFO  : 'fpga -state' command is executed.
+15:41:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:41:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+15:41:15 INFO  : 'jtag frequency' command is executed.
+15:41:15 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:41:15 INFO  : Context for 'APU' is selected.
+15:41:15 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+15:41:15 INFO  : 'configparams force-mem-access 1' command is executed.
+15:41:15 INFO  : Context for 'APU' is selected.
+15:41:15 INFO  : 'stop' command is executed.
+15:41:15 INFO  : 'ps7_init' command is executed.
+15:41:15 INFO  : 'ps7_post_config' command is executed.
+15:41:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:41:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:41:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:41:16 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:41:16 INFO  : 'configparams force-mem-access 0' command is executed.
+15:41:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:41:16 INFO  : Memory regions updated for context APU
+15:41:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:41:16 INFO  : 'con' command is executed.
+15:41:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+15:41:16 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+16:07:13 INFO  : Disconnected from the channel tcfchan#8.
+16:07:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+16:07:15 INFO  : 'fpga -state' command is executed.
+16:07:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:07:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+16:07:15 INFO  : 'jtag frequency' command is executed.
+16:07:15 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:07:15 INFO  : Context for 'APU' is selected.
+16:07:15 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+16:07:15 INFO  : 'configparams force-mem-access 1' command is executed.
+16:07:15 INFO  : Context for 'APU' is selected.
+16:07:15 INFO  : 'stop' command is executed.
+16:07:15 INFO  : 'ps7_init' command is executed.
+16:07:15 INFO  : 'ps7_post_config' command is executed.
+16:07:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:07:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:16 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:07:16 INFO  : 'configparams force-mem-access 0' command is executed.
+16:07:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:07:16 INFO  : Memory regions updated for context APU
+16:07:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:16 INFO  : 'con' command is executed.
+16:07:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+16:07:16 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+16:08:16 INFO  : Disconnected from the channel tcfchan#9.
+16:08:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+16:08:17 INFO  : 'fpga -state' command is executed.
+16:08:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:08:17 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+16:08:17 INFO  : 'jtag frequency' command is executed.
+16:08:17 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:08:18 INFO  : Context for 'APU' is selected.
+16:08:18 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+16:08:18 INFO  : 'configparams force-mem-access 1' command is executed.
+16:08:18 INFO  : Context for 'APU' is selected.
+16:08:18 INFO  : 'stop' command is executed.
+16:08:18 INFO  : 'ps7_init' command is executed.
+16:08:18 INFO  : 'ps7_post_config' command is executed.
+16:08:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:08:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:08:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:08:18 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:08:18 INFO  : 'configparams force-mem-access 0' command is executed.
+16:08:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:08:18 INFO  : Memory regions updated for context APU
+16:08:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:08:18 INFO  : 'con' command is executed.
+16:08:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+16:08:18 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+16:09:19 INFO  : Disconnected from the channel tcfchan#10.
+16:09:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+16:09:20 INFO  : 'fpga -state' command is executed.
+16:09:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:09:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+16:09:20 INFO  : 'jtag frequency' command is executed.
+16:09:20 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:09:20 INFO  : Context for 'APU' is selected.
+16:09:20 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+16:09:20 INFO  : 'configparams force-mem-access 1' command is executed.
+16:09:20 INFO  : Context for 'APU' is selected.
+16:09:20 INFO  : 'stop' command is executed.
+16:09:21 INFO  : 'ps7_init' command is executed.
+16:09:21 INFO  : 'ps7_post_config' command is executed.
+16:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:09:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:09:21 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:09:21 INFO  : 'configparams force-mem-access 0' command is executed.
+16:09:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:09:21 INFO  : Memory regions updated for context APU
+16:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:09:21 INFO  : 'con' command is executed.
+16:09:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+16:09:21 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+16:13:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+16:13:07 INFO  : FPGA configured successfully with bitstream "H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/design_2_wrapper.bit"
+16:13:14 INFO  : Disconnected from the channel tcfchan#11.
+16:13:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA" && level==0} -index 1' command is executed.
+16:13:15 INFO  : 'fpga -state' command is executed.
+16:13:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6C79AA' is selected.
+16:13:15 INFO  : 'jtag frequency' command is executed.
+16:13:15 INFO  : Sourcing of 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:13:15 INFO  : Context for 'APU' is selected.
+16:13:15 INFO  : Hardware design information is loaded from 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf'.
+16:13:15 INFO  : 'configparams force-mem-access 1' command is executed.
+16:13:15 INFO  : Context for 'APU' is selected.
+16:13:15 INFO  : 'stop' command is executed.
+16:13:15 INFO  : 'ps7_init' command is executed.
+16:13:16 INFO  : 'ps7_post_config' command is executed.
+16:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:16 INFO  : The application 'H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:13:16 INFO  : 'configparams force-mem-access 0' command is executed.
+16:13:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+loadhw -hw H:/FPGA-Neural-Network-/fpga/fpga.sdk/design_2_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+dow H:/FPGA-Neural-Network-/fpga/fpga.sdk/test_application/Debug/test_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:13:16 INFO  : Memory regions updated for context APU
+16:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:16 INFO  : 'con' command is executed.
+16:13:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6C79AA"} -index 0
+con
+----------------End of Script----------------
+
+16:13:16 INFO  : Launch script is exported to file 'H:\FPGA-Neural-Network-\fpga\fpga.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_application.elf_on_local.tcl'
+22:06:47 INFO  : Disconnected from the channel tcfchan#12.
+22:06:55 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

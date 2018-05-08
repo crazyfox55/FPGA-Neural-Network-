@@ -59,10 +59,11 @@ USE xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_v3_0_15;
 ENTITY design_1_xbip_dsp48_macro_0_0 IS
   PORT (
     CLK : IN STD_LOGIC;
+    SCLR : IN STD_LOGIC;
     SEL : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    P : OUT STD_LOGIC_VECTOR(47 DOWNTO 0)
   );
 END design_1_xbip_dsp48_macro_0_0;
 
@@ -143,7 +144,7 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
       CARRYOUT : OUT STD_LOGIC;
       CARRYCASCOUT : OUT STD_LOGIC;
       PCOUT : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
-      P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      P : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
       CED : IN STD_LOGIC;
       CED1 : IN STD_LOGIC;
       CED2 : IN STD_LOGIC;
@@ -188,7 +189,7 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
   END COMPONENT xbip_dsp48_macro_v3_0_15;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} DATA_WIDTH 16}";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} DATA_WIDTH 48}";
   ATTRIBUTE X_INTERFACE_INFO OF P: SIGNAL IS "xilinx.com:signal:data:1.0 p_intf DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF B: SIGNAL IS "XIL_INTERFACENAME b_intf, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF B: SIGNAL IS "xilinx.com:signal:data:1.0 b_intf DATA";
@@ -196,6 +197,8 @@ ARCHITECTURE design_1_xbip_dsp48_macro_0_0_arch OF design_1_xbip_dsp48_macro_0_0
   ATTRIBUTE X_INTERFACE_INFO OF A: SIGNAL IS "xilinx.com:signal:data:1.0 a_intf DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF SEL: SIGNAL IS "XIL_INTERFACENAME sel_intf, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF SEL: SIGNAL IS "xilinx.com:signal:data:1.0 sel_intf DATA";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF SCLR: SIGNAL IS "XIL_INTERFACENAME sclr_intf, POLARITY ACTIVE_HIGH";
+  ATTRIBUTE X_INTERFACE_INFO OF SCLR: SIGNAL IS "xilinx.com:signal:reset:1.0 sclr_intf RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF CLK: SIGNAL IS "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF p_intf:pcout_intf:carrycascout_intf:carryout_intf:bcout_intf:acout_intf:concat_intf:d_intf:c_intf:b_intf:a_intf:bcin_intf:acin_intf:pcin_intf:carryin_intf:carrycascin_intf:sel_intf, ASSOCIATED_RESET SCLR:SCLRD:SCLRA:SCLRB:SCLRCONCAT:SCLRC:SCLRM:SCLRP:SCLRSEL, ASSOCIATED_CLKEN CE:CED:CED1:CED2:CED3:CEA:CEA1:CEA2:CEA3:CEA4:CEB:CEB1:CEB2:CEB3:CEB4:CECONCAT:CECONCAT3:CECONCAT4:CECONCAT5:CEC:CEC1:CEC2:CEC3:CEC4:CEC5:CEM:CEP:CESEL:CESEL1:CESEL2:CESEL3:CESEL4:CESEL5, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN design_1_sys_clock";
   ATTRIBUTE X_INTERFACE_INFO OF CLK: SIGNAL IS "xilinx.com:signal:clock:1.0 clk_intf CLK";
 BEGIN
@@ -214,7 +217,7 @@ BEGIN
       C_HAS_CEM => 0,
       C_HAS_CEP => 0,
       C_HAS_CESEL => 0,
-      C_HAS_SCLR => 0,
+      C_HAS_SCLR => 1,
       C_HAS_INDEP_SCLR => 0,
       C_HAS_SCLRD => 0,
       C_HAS_SCLRA => 0,
@@ -240,7 +243,7 @@ BEGIN
       C_D_WIDTH => 18,
       C_CONCAT_WIDTH => 48,
       C_P_MSB => 47,
-      C_P_LSB => 32,
+      C_P_LSB => 0,
       C_SEL_WIDTH => 1,
       C_HAS_ACOUT => 0,
       C_HAS_BCOUT => 0,
@@ -256,7 +259,7 @@ BEGIN
     PORT MAP (
       CLK => CLK,
       CE => '1',
-      SCLR => '0',
+      SCLR => SCLR,
       SEL => SEL,
       CARRYCASCIN => '0',
       CARRYIN => '0',

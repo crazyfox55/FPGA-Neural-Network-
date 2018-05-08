@@ -158,7 +158,11 @@ proc create_root_design { parentCell } {
   # Create ports
   set A_0 [ create_bd_port -dir I -from 7 -to 0 -type data A_0 ]
   set B_0 [ create_bd_port -dir I -from 7 -to 0 -type data B_0 ]
-  set P_0 [ create_bd_port -dir O -from 15 -to 0 -type data P_0 ]
+  set P_0 [ create_bd_port -dir O -from 47 -to 0 -type data P_0 ]
+  set SCLR_0 [ create_bd_port -dir I -type rst SCLR_0 ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $SCLR_0
   set SEL_0 [ create_bd_port -dir I -from 0 -to 0 -type data SEL_0 ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
@@ -190,16 +194,17 @@ proc create_root_design { parentCell } {
    CONFIG.has_carrycascout {false} \
    CONFIG.has_carryout {false} \
    CONFIG.has_pcout {false} \
+   CONFIG.has_sclr {true} \
    CONFIG.instruction1 {A*B+P} \
    CONFIG.instruction2 {A*B} \
    CONFIG.mreg_5 {false} \
    CONFIG.opreg_3 {false} \
    CONFIG.opreg_4 {false} \
    CONFIG.opreg_5 {false} \
-   CONFIG.output_properties {User_Defined} \
+   CONFIG.output_properties {Full_Precision} \
    CONFIG.p_binarywidth {0} \
    CONFIG.p_full_width {48} \
-   CONFIG.p_width {16} \
+   CONFIG.p_width {48} \
    CONFIG.pcin_binarywidth {0} \
    CONFIG.pipeline_options {By_Tier} \
    CONFIG.preg_6 {true} \
@@ -209,6 +214,7 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net A_0_1 [get_bd_ports A_0] [get_bd_pins xbip_dsp48_macro_0/A]
   connect_bd_net -net B_0_1 [get_bd_ports B_0] [get_bd_pins xbip_dsp48_macro_0/B]
+  connect_bd_net -net SCLR_0_1 [get_bd_ports SCLR_0] [get_bd_pins xbip_dsp48_macro_0/SCLR]
   connect_bd_net -net SEL_0_1 [get_bd_ports SEL_0] [get_bd_pins xbip_dsp48_macro_0/SEL]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins xbip_dsp48_macro_0/CLK]
   connect_bd_net -net xbip_dsp48_macro_0_P [get_bd_ports P_0] [get_bd_pins xbip_dsp48_macro_0/P]

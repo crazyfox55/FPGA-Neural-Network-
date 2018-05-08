@@ -32,22 +32,23 @@ module ConvWrapper #(
         input hold,
         input CLK,
         input reset,
+        input hreset,
         output [7:0] pxOut
     );
-    logic [15:0] dwOut;
+    logic [47:0] dwOut;
     logic [7:0] px_select;
     
     assign pxOut = dwOut[15:8];
     
-    always_ff@(posedge CLK) begin
+    always_comb begin
         if(hold) begin
-            px_select <= 1'b0;
+            px_select = 1'b0;
         end else begin
-            px_select <= px[select];
+            px_select = px[select];
         end
     end
     
-    design_1_wrapper mult_acc(.A_0(px_select),.B_0(conv),.P_0(dwOut),.SEL_0(reset), .sys_clock(CLK));
+    design_1_wrapper mult_acc(.A_0(px_select),.B_0(conv),.P_0(dwOut),.SEL_0(reset), .sys_clock(CLK), .SCLR_0(reset));
     
     
 endmodule

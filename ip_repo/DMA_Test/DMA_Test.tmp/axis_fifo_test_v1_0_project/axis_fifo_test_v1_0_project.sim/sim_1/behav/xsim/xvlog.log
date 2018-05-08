@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "h:/fpga-neural-network-/ip_repo/ip_repo/axis_fifo_test_1.0/hdl/axis_fifo_test_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_fifo_test_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "h:/fpga-neural-network-/ip_repo/dma_test/DMA_Test.sim/Testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+WARNING: [VRFC 10-986] literal value truncated to fit in 4 bits [h:/fpga-neural-network-/ip_repo/dma_test/DMA_Test.sim/Testbench.v:48]
+INFO: [VRFC 10-2263] Analyzing Verilog file "h:/fpga-neural-network-/ip_repo/dma_test/dma_test.tmp/axis_fifo_test_v1_0_project/axis_fifo_test_v1_0_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
